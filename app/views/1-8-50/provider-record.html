@@ -1,0 +1,622 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a id="backlink" href="#" class="govuk-back-link">Back</a>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <br>
+      {% include "./includes/search.html" %}
+      {% include "./includes/auto-js.html" %}
+  </div>
+</div>
+
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+       <h1 class="govuk-heading-xl">
+         <!-- Provider name 1  -->
+         {{ data['input-autocomplete'] }}</h1>
+
+       <!-- <p class="assignment-links"><a class="govuk-link" href="#">Submit another file</a> <a class="govuk-link" href="manage-assignments">Manage assignments</a> <a class="govuk-link" href="#">Amend Provider name</a></p> -->
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <span class="govuk-!-font-size-19" ><a href="unsubmitted-files" class="govuk-link">Unsubmitted files</a></span><br>
+    <span class="govuk-!-font-size-19" ><a href="funding-claims" class="govuk-link">Funding claim submissions</a></span>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+      <div class="sub-navigation">
+
+        <span class="govuk-!-font-size-19" ><a class="govuk-link" href="submit-a-file">Submit a file</a></span>
+        <span class="govuk-!-font-size-19" ><a class="govuk-link" href="manage-assignments">Manage assignments</a></span>
+        <span class="govuk-!-font-size-19" ><a class="govuk-link" href="amend-provider-details">Amend Provider details</a></span>
+        <span class="govuk-!-font-size-19" ><a class="govuk-link" href="action-history">Action history</a></span>
+
+
+      </div>
+
+
+       <!-- <p class="assignment-links"><a class="govuk-link" href="#">Submit another file</a> <a class="govuk-link" href="manage-assignments">Manage assignments</a> <a class="govuk-link" href="#">Amend Provider name</a></p> -->
+  </div>
+</div>
+<br><br>
+<div class="govuk-grid-row">
+
+
+<div class="govuk-grid-column-full">
+  <div class="govuk-tabs" data-module="tabs">
+    <h2 class="govuk-tabs__title">
+      Submission and reports history
+    </h2>
+
+    <ul class="govuk-tabs__list">
+      <li class="govuk-tabs__list-item">
+         <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#past-day">
+          Current submissions
+         </a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#past-week">
+          Closed periods
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#qar-frm">
+          QAR and FRM reports
+        </a>
+      </li>
+    </ul>
+
+   <section class="govuk-tabs__panel" id="past-day">
+     <h2 class="govuk-heading-l" id="submission">Current submissions</h2>
+
+
+
+     <div class="govuk-form-group">
+       <fieldset class="govuk-fieldset" aria-describedby="streamType">
+         <!-- <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+           <h1 class="govuk-fieldset__heading">
+             Which types of waste do you transport?
+           </h1>
+         </legend> -->
+         <span class="govuk-hint">
+           Filter your submission types
+         </span>
+         <div id="typeFilter" class="govuk-checkboxes">
+           <div class="govuk-checkboxes__item">
+             <input id="ILR" class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="ilr">
+             <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+               ILR
+             </label>
+           </div>
+           <div class="govuk-checkboxes__item">
+             <input id="EAS" class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="eas">
+             <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+               EAS
+             </label>
+           </div>
+           <div class="govuk-checkboxes__item">
+             <input id="ESF" class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="esf">
+             <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+               ESF
+             </label>
+           </div>
+         </div>
+       </fieldset>
+     </div>
+
+
+
+  <h3 class="govuk-heading-m">Submissions for R06
+    <span class="govuk-caption-m">ESF: 2019_02_Supp</span>
+  </h3>
+
+  <table class="govuk-table">
+  <caption class="govuk-table__caption govuk-visually-hidden">Dates and file name</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col">Date</th>
+        <th class="govuk-table__header" scope="col">Type</th>
+      <th class="govuk-table__header" scope="col">File</th>
+         <th class="govuk-table__header" scope="col">Submitted by</th>
+        <th class="govuk-table__header" scope="col">Reference</th>
+    <th class="govuk-table__header" scope="col">Reports</th>
+
+    </tr>
+  </thead>
+  <tbody id="submissions" class="govuk-table__body">
+
+    <tr class="govuk-table__row ilr">
+      <th class="govuk-table__header" scope="row">14 January 2019 at 1:00pm</th>
+        <td class="govuk-table__cell">ILR</td>
+        <td class="govuk-table__cell"><a href="#">ILR-12345678-1819-20180806-05092018-02.XML</a></td>
+        <td class="govuk-table__cell">Bob Afett</td>
+         <td class="govuk-table__cell">300</td>
+        <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download reports</a></td>
+    </tr>
+    <tr class="govuk-table__row esf">
+      <th class="govuk-table__header" scope="row">14 January 2019 at 8:00am</th>
+        <td class="govuk-table__cell">ESF</td>
+        <td class="govuk-table__cell"><a href="#">SUPPDATA-12345678-ESF-8976-20180806-151209.CSV</a></td>
+        <td class="govuk-table__cell">Bob Afett</td>
+         <td class="govuk-table__cell">295</td>
+        <td class="govuk-table__cell">Failed</td>
+
+    </tr>
+    <tr class="govuk-table__row ilr">
+      <th class="govuk-table__header" scope="row">11 January 2019 at 1:00pm</th>
+        <td class="govuk-table__cell">ILR</td>
+        <td class="govuk-table__cell"><a href="#">ILR-12345678-1819-20180806-05092018-01.XML</a></td>
+        <td class="govuk-table__cell">Bob Afett</td>
+         <td class="govuk-table__cell">200</td>
+        <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download reports</a></td>
+
+    </tr>
+    <tr class="govuk-table__row eas">
+      <th class="govuk-table__header" scope="row">15 December 2019 at 1:00pm</th>
+        <td class="govuk-table__cell">EAS</td>
+        <td class="govuk-table__cell"><a href="#">EAS-12345678-1819-20180806-05092018-01.XML</a></td>
+        <td class="govuk-table__cell">Bob Afett</td>
+         <td class="govuk-table__cell">500</td>
+        <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download reports</a></td>
+
+    </tr>
+  </tbody>
+  </table>
+
+  <h3 class="govuk-heading-m">Submissions for R05
+  <span class="govuk-caption-m">ESF: 2019_01_Supp</span>
+  </h3>
+
+  <table class="govuk-table">
+  <caption class="govuk-table__caption govuk-visually-hidden">Dates and file name</caption>
+  <thead class="govuk-table__head">
+  <tr class="govuk-table__row">
+    <th class="govuk-table__header" scope="col">Date</th>
+      <th class="govuk-table__header" scope="col">Type</th>
+    <th class="govuk-table__header" scope="col">File</th>
+       <th class="govuk-table__header" scope="col">Submitted by</th>
+      <th class="govuk-table__header" scope="col">Reference</th>
+  <th class="govuk-table__header" scope="col">Reports</th>
+
+  </tr>
+  </thead>
+  <tbody id="submissions" class="govuk-table__body">
+  <tr class="govuk-table__row ilr">
+    <th class="govuk-table__header" scope="row">14 December 2018 at 1:00pm</th>
+      <td class="govuk-table__cell">ILR</td>
+      <td class="govuk-table__cell"><a href="#">ILR-12345678-1819-20180806-05092018-02.XML</a></td>
+      <td class="govuk-table__cell">Bob Afett</td>
+       <td class="govuk-table__cell">300</td>
+      <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download reports</a></td>
+
+  </tr>
+  <tr class="govuk-table__row esf">
+    <th class="govuk-table__header" scope="row">14 December 2018 at 8:00am</th>
+      <td class="govuk-table__cell">ESF</td>
+      <td class="govuk-table__cell"><a href="#">SUPPDATA-12345678-ESF-8976-20180806-151209.CSV</a></td>
+      <td class="govuk-table__cell">Bob Afett</td>
+       <td class="govuk-table__cell">295</td>
+      <td class="govuk-table__cell">Failed</td>
+
+  </tr>
+  <tr class="govuk-table__row ilr">
+    <th class="govuk-table__header" scope="row">11 December 2018 at 1:00pm</th>
+      <td class="govuk-table__cell">ILR</td>
+      <td class="govuk-table__cell"><a href="#">ILR-12345678-1819-20180806-05092018-01.XML</a></td>
+      <td class="govuk-table__cell">Bob Afett</td>
+       <td class="govuk-table__cell">200</td>
+      <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download reports</a></td>
+
+  </tr>
+  <tr class="govuk-table__row eas">
+    <th class="govuk-table__header" scope="row">15 December 2019 at 1:00pm</th>
+      <td class="govuk-table__cell">EAS</td>
+      <td class="govuk-table__cell"><a href="#">EAS-12345678-1819-20180806-05092018-01.XML</a></td>
+      <td class="govuk-table__cell">Bob Afett</td>
+       <td class="govuk-table__cell">500</td>
+      <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download reports</a></td>
+
+  </tr>
+  </tbody>
+  </table>
+
+  <h3 class="govuk-heading-m">Submissions for R04
+  <span class="govuk-caption-m">ESF: 2018_12_Supp</span>
+  </h3>
+
+            <table class="govuk-table">
+  <caption class="govuk-table__caption govuk-visually-hidden">Dates and file name</caption>
+  <thead class="govuk-table__head">
+  <tr class="govuk-table__row">
+    <th class="govuk-table__header" scope="col">Date</th>
+      <th class="govuk-table__header" scope="col">Type</th>
+    <th class="govuk-table__header" scope="col">File</th>
+       <th class="govuk-table__header" scope="col">Submitted by</th>
+      <th class="govuk-table__header" scope="col">Reference</th>
+  <th class="govuk-table__header" scope="col">Reports</th>
+
+  </tr>
+  </thead>
+  <tbody id="submissions" class="govuk-table__body">
+  <tr class="govuk-table__row ilr">
+    <th class="govuk-table__header" scope="row">14 November 2018 at 1:00pm</th>
+      <td class="govuk-table__cell">ILR</td>
+      <td class="govuk-table__cell"><a href="#">ILR-12345678-1819-20180806-05092018-02.XML</a></td>
+      <td class="govuk-table__cell">Bob Afett</td>
+       <td class="govuk-table__cell">300</td>
+      <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download reports</a></td>
+
+  </tr>
+  <tr class="govuk-table__row esf">
+    <th class="govuk-table__header" scope="row">14 November 2018 at 8:00am</th>
+      <td class="govuk-table__cell">ESF</td>
+      <td class="govuk-table__cell"><a href="#">SUPPDATA-12345678-ESF-8976-20180806-151209.CSV</a></td>
+      <td class="govuk-table__cell">Bob Afett</td>
+       <td class="govuk-table__cell">295</td>
+      <td class="govuk-table__cell">Failed</td>
+
+  </tr>
+  <tr class="govuk-table__row ilr">
+    <th class="govuk-table__header" scope="row">11 November 2018 at 1:00pm</th>
+      <td class="govuk-table__cell">ILR</td>
+      <td class="govuk-table__cell"><a href="#">ILR-12345678-1819-20180806-05092018-01.XML</a></td>
+      <td class="govuk-table__cell">Bob Afett</td>
+       <td class="govuk-table__cell">200</td>
+      <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download reports</a></td>
+
+  </tr>
+  <tr class="govuk-table__row eas">
+    <th class="govuk-table__header" scope="row">15 November 2018 at 1:00pm</th>
+      <td class="govuk-table__cell">EAS</td>
+      <td class="govuk-table__cell"><a href="#">EAS-12345678-1819-20180806-05092018-01.XML</a></td>
+      <td class="govuk-table__cell">Bob Afett</td>
+       <td class="govuk-table__cell">500</td>
+      <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download reports</a></td>
+
+  </tr>
+  </tbody>
+  </table>
+
+
+
+
+  </section>
+
+
+   <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+     <h2 class="govuk-heading-l" id="reports">Past submissions</h2>
+         <p>The reports download includes the last validation report and submission files. You can <a href="#">view period end reports</a> in the Hub.</p>
+         <span id="waste-hint" class="govuk-hint">
+           Filter by year
+         </span>
+         <div id="yearFilter" class="govuk-checkboxes">
+           <div class="govuk-checkboxes__item">
+             <input id="19" class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="19">
+             <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+               2018/19
+             </label>
+           </div>
+           <div class="govuk-checkboxes__item">
+             <input id="18" class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="18">
+             <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+               2017/18
+             </label>
+           </div>
+           <div class="govuk-checkboxes__item">
+             <input id="17" class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="17">
+             <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+               2016/017
+             </label>
+           </div>
+         </div>
+         <div class="year-groups 19">
+         <h3 class="govuk-heading-m">2018/19 academic year</h3>
+
+         <table class="govuk-table">
+   <caption class="govuk-table__caption govuk-visually-hidden">Return period and download</caption>
+   <thead class="govuk-table__head">
+     <tr class="govuk-table__row">
+       <th class="govuk-table__header" scope="col">Return period</th>
+       <th class="govuk-table__header" scope="col">Final reports at period end</th>
+
+     </tr>
+   </thead>
+   <tbody class="govuk-table__body">
+     <tr class="govuk-table__row">
+       <th class="govuk-table__header" scope="row">R01</th>
+         <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download reports</a> (Zip, 1.3MB)</td>
+     </tr>
+   </tbody>
+  </table>
+  </div>
+
+  <div class="year-groups 18">
+         <h3 class="govuk-heading-m">2017/18 academic year</h3>
+
+         <table class="govuk-table">
+   <caption class="govuk-table__caption govuk-visually-hidden">Return period and download</caption>
+   <thead class="govuk-table__head">
+     <tr class="govuk-table__row">
+       <th class="govuk-table__header" scope="col">Return period</th>
+         <th class="govuk-table__header" scope="col">Download</th>
+
+     </tr>
+   </thead>
+   <tbody class="govuk-table__body">
+     <tr class="govuk-table__row">
+       <th class="govuk-table__header" scope="row">R14</th>
+         <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a> (Zip, 1.3MB)</td>
+     </tr>
+     <tr class="govuk-table__row">
+       <th class="govuk-table__header" scope="row">R13</th>
+       <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.2MB)</td>
+     </tr>
+     <tr class="govuk-table__row">
+       <th class="govuk-table__header" scope="row">R12</th>
+       <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.8MB)</td>
+     </tr>
+        <tr class="govuk-table__row">
+       <th class="govuk-table__header" scope="row">R11</th>
+       <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.1MB)</td>
+     </tr>
+     <tr class="govuk-table__row">
+       <th class="govuk-table__header" scope="row">R10</th>
+       <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.2MB)</td>
+     </tr>
+       <tr class="govuk-table__row">
+       <th class="govuk-table__header" scope="row">R09</th>
+       <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.9MB)</td>
+     </tr>
+        <tr class="govuk-table__row">
+       <th class="govuk-table__header" scope="row">R08</th>
+       <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.7MB)</td>
+     </tr>
+     <tr class="govuk-table__row">
+       <th class="govuk-table__header" scope="row">R07</th>
+       <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.7MB)</td>
+     </tr>
+     <tr class="govuk-table__row">
+       <th class="govuk-table__header" scope="row">R06</th>
+       <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.3MB)</td>
+     </tr>
+     <tr class="govuk-table__row">
+       <th class="govuk-table__header" scope="row">R05</th>
+       <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a> (Zip, 1.3MB)</td>
+     </tr>
+     <tr class="govuk-table__row">
+       <th class="govuk-table__header" scope="row">R04</th>
+       <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.3MB)</td>
+     </tr>
+     <tr class="govuk-table__row">
+       <th class="govuk-table__header" scope="row">R03</th>
+       <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.5MB)</td>
+     </tr>
+     <tr class="govuk-table__row">
+       <th class="govuk-table__header" scope="row">R02</th>
+       <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.7MB)</td>
+     </tr>
+        <tr class="govuk-table__row">
+       <th class="govuk-table__header" scope="row">R01</th>
+       <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.7MB)</td>
+     </tr>
+   </tbody>
+  </table>
+  </div>
+  <div class="year-groups 17">
+        <h3 class="govuk-heading-m">2016/17 academic year</h3>
+
+         <table class="govuk-table">
+   <caption class="govuk-table__caption govuk-visually-hidden">Return period and download</caption>
+   <thead class="govuk-table__head">
+     <tr class="govuk-table__row">
+       <th class="govuk-table__header" scope="col">Return period</th>
+         <th class="govuk-table__header" scope="col">Download</th>
+
+     </tr>
+   </thead>
+   <tbody class="govuk-table__body">
+     <tr class="govuk-table__row">
+       <th class="govuk-table__header" scope="row">R14</th>
+         <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.3MB)</td>
+     </tr>
+     <tr class="govuk-table__row">
+       <th class="govuk-table__header" scope="row">R13</th>
+       <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.2MB)</td>
+     </tr>
+     <tr class="govuk-table__row">
+       <th class="govuk-table__header" scope="row">R12</th>
+       <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.8MB)</td>
+     </tr>
+   </tbody>
+  </table>
+  </div>
+
+
+  </section>
+
+  <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="qar-frm">
+  <h2 class="govuk-heading-l">QAR and FRM reports</h2>
+  <p>Some information about QAR and FRM reports</p>
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+      <span id="waste-hint" class="govuk-hint">
+        Filter by type
+      </span>
+      <div id="qarfrmFilter" class="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input id="19" class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="qar">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+            QAR
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input id="18" class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="frm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+            FRM
+          </label>
+        </div>
+
+      </div>
+    </fieldset>
+  </div>
+
+
+
+
+<h3 class="govuk-heading-m">Academic year 2018 to 2019</h3>
+
+
+<table class="govuk-table">
+<caption class="govuk-table__caption govuk-visually-hidden">Return period and download</caption>
+<thead class="govuk-table__head">
+  <tr class="govuk-table__row">
+    <th class="govuk-table__header" scope="col">Return period</th>
+
+    <th class="govuk-table__header" scope="col">Type</th>
+    <th class="govuk-table__header" scope="col">Download</th>
+
+  </tr>
+</thead>
+<tbody class="govuk-table__body">
+  <tr class="govuk-table__row qf qar">
+    <th class="govuk-table__header" scope="row">R14</th>
+    <td class="govuk-table__cell">QAR reports</td>
+    <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a> (Zip, 1.3MB)</td>
+  </tr>
+  <tr class="govuk-table__row qf qar">
+    <th class="govuk-table__header" scope="row">R13</th>
+    <td class="govuk-table__cell">QAR reports</td>
+    <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.2MB)</td>
+  </tr>
+  <tr class="govuk-table__row qf qar">
+    <th class="govuk-table__header" scope="row">R12</th>
+    <td class="govuk-table__cell">QAR reports</td>
+    <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.8MB)</td>
+  </tr>
+  <tr class="govuk-table__row qf frm">
+    <th class="govuk-table__header" scope="row">R12</th>
+    <td class="govuk-table__cell">FRM reports</td>
+    <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.8MB)</td>
+  </tr>
+     <tr class="govuk-table__row qf qar">
+    <th class="govuk-table__header" scope="row">R11</th>
+    <td class="govuk-table__cell">QAR reports</td>
+    <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.1MB)</td>
+  </tr>
+  <tr class="govuk-table__row qf qar">
+    <th class="govuk-table__header" scope="row">R10</th>
+    <td class="govuk-table__cell">QAR reports</td>
+    <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.2MB)</td>
+  </tr>
+  <tr class="govuk-table__row qf qar">
+    <th class="govuk-table__header" scope="row">R09</th>
+    <td class="govuk-table__cell">QAR reports</td>
+    <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.9MB)</td>
+  </tr>
+  <tr class="govuk-table__row qf qar">
+    <th class="govuk-table__header" scope="row">R08</th>
+    <td class="govuk-table__cell">QAR reports</td>
+    <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.7MB)</td>
+  </tr>
+  <tr class="govuk-table__row qf frm">
+    <th class="govuk-table__header" scope="row">R08</th>
+    <td class="govuk-table__cell">FRM reports</td>
+    <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.7MB)</td>
+  </tr>
+  <tr class="govuk-table__row qf qar">
+    <th class="govuk-table__header" scope="row">R07</th>
+    <td class="govuk-table__cell">QAR reports</td>
+    <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.7MB)</td>
+  </tr>
+  <tr class="govuk-table__row qf qar">
+    <th class="govuk-table__header" scope="row">R06</th>
+    <td class="govuk-table__cell">QAR reports</td>
+    <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.3MB)</td>
+  </tr>
+  <tr class="govuk-table__row qf qar">
+    <th class="govuk-table__header" scope="row">R05</th>
+    <td class="govuk-table__cell">QAR reports</td>
+    <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a> (Zip, 1.3MB)</td>
+  </tr>
+  <tr class="govuk-table__row qf qar">
+    <th class="govuk-table__header" scope="row">R04</th>
+    <td class="govuk-table__cell">QAR reports</td>
+    <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.3MB)</td>
+  </tr>
+  <tr class="govuk-table__row qf qar">
+    <th class="govuk-table__header" scope="row">R03</th>
+    <td class="govuk-table__cell">QAR reports</td>
+    <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.5MB)</td>
+  </tr>
+  <tr class="govuk-table__row qf qar">
+    <th class="govuk-table__header" scope="row">R02</th>
+    <td class="govuk-table__cell">QAR reports</td>
+    <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.7MB)</td>
+  </tr>
+
+  <tr class="govuk-table__row qf frm">
+    <th class="govuk-table__header" scope="row">R02</th>
+    <td class="govuk-table__cell">FRM reports</td>
+    <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.7MB)</td>
+  </tr>
+    <tr class="govuk-table__row qf qar">
+    <th class="govuk-table__header" scope="row">R01</th>
+    <td class="govuk-table__cell">QAR reports</td>
+    <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.7MB)</td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+</section>
+
+  </div>
+
+</div>
+<!-- <div class="govuk-grid-column-one-third">
+
+  <ul class="govuk-list">
+    <li>
+      <a class="govuk-link" href="#">Submit another file</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="#">Manage assignments</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="#">Amends Provider name</a>
+    </li>
+  </ul>
+
+ </div> -->
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}

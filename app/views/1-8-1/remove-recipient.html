@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+
+<!-- <script src="/public/javascripts/tt.js"></script> -->
+
+<a id="backlink" href="#" class="govuk-back-link">Back</a>
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Remove recipient</h1>
+
+    <p>Are you sure you want to remove <strong>name.surname@education.gov.uk</strong> form the DCT email distribution list?</p>
+
+  <a href="recipient-removed" class="govuk-button">
+    Remove recipient
+  </a>
+  <p><a href="email-dist">Cancel</a></p>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

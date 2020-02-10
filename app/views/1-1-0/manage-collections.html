@@ -1,0 +1,157 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Manage collections</h1>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    {% include "./includes/search.html" %}
+    {% include "./includes/auto-js.html" %}
+  </div>
+</div>
+
+
+
+<!-- <div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-one-third">
+    <p><a href="#">Create new collection</a></p>
+
+  </div>
+  <div class="govuk-grid-column-two-thirds">
+
+    <p><a href="#">Amend collection dates/times</a></p>
+
+    <h2 class="govuk-heading-m">Dates for 18/19 return periods</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              ILR Standard
+            </dt>
+            <dd class="govuk-summary-list__value">
+              R06 18/19
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Manage
+                <span class="govuk-visually-hidden"> ILR Standard</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              ILR Periodic
+            </dt>
+            <dd class="govuk-summary-list__value">
+              R06 18/19
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Manage
+                <span class="govuk-visually-hidden"> ILR Periodic</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              ESF
+            </dt>
+            <dd class="govuk-summary-list__value">
+              R06 18/19
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Manage
+                <span class="govuk-visually-hidden"> ESF</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              EAS
+            </dt>
+            <dd class="govuk-summary-list__value">
+              R06 18/19
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Manage
+                <span class="govuk-visually-hidden"> EAS</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+
+
+
+  </div>
+</div> -->
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="border-top ">
+      <h2 class="govuk-heading-m"><a class="" href="manage-ILR">ILR Standard</a></h2>
+      <!-- <span class="govuk-heading-xl no-margin-bottom">2</span> -->
+      <span class="govuk-body-s">Submissions enabled</span><br>
+      <span class="govuk-body-s">Current period R06</span><br>
+      <span class="govuk-body-s">Closing on 10 February</span>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <div class="border-top">
+      <h2 class="govuk-heading-m"><a class="" href="#">ILR Periodic</a></h2>
+      <!-- <span class="govuk-heading-xl no-margin-bottom">344</span> -->
+      <span class="govuk-body-s">Submissions closed</span><br>
+      <span class="govuk-body-s">Last period R03</span><br>
+      <span class="govuk-body-s">Closing on 10 February</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="border-top">
+      <h2 class="govuk-heading-m"><a class="" href="#">ESF</a></h2>
+      <!-- <span class="govuk-heading-xl no-margin-bottom">4</span> -->
+      <span class="govuk-body-s">Submissions enabled</span><br>
+      <span class="govuk-body-s">Current period R06</span><br>
+      <span class="govuk-body-s">Closing on 10 February</span>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <div class="border-top ">
+      <h2 class="govuk-heading-m"><a class="" href="#">EAS</a></h2>
+      <!-- <span class="govuk-heading-xl no-margin-bottom">18</span> -->
+      <span class="govuk-body-s">Submissions enabled</span><br>
+      <span class="govuk-body-s">Current period R06</span><br>
+      <span class="govuk-body-s">Closing on 10 February</span>
+    </div>
+  </div>
+ </div>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

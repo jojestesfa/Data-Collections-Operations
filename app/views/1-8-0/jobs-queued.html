@@ -1,0 +1,397 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+
+<!-- <script src="/public/javascripts/tt.js"></script> -->
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a id="backlink" href="#" class="govuk-back-link">Back</a>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <br>
+      {% include "./includes/search.html" %}
+      {% include "./includes/auto-js.html" %}
+  </div>
+</div>
+<br>
+<br>
+
+
+<div class="govuk-grid-row">
+
+
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Jobs queued</h1>
+
+    <div id="typeFilter" class="govuk-checkboxes">
+      <!-- <div class="govuk-checkboxes__item">
+        <input id="All" class="govuk-checkboxes__input" id="waste-0" name="waste" type="checkbox" value="all">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+          All
+        </label>
+      </div> -->
+      <div id="minusMargin" class="govuk-form-group margin-right">
+        <label class="govuk-label" for="sort">
+          Sort by
+        </label>
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="published" selected>Longest time in the queue</option>
+          <option value="published">Shortest time in the queue</option>
+          <option value="views">Alphabetical</option>
+          <option value="comments">UKPRN</option>
+        </select>
+      </div>
+      <!-- <div>&nbsp &nbsp &nbsp &nbsp &nbsp</div> -->
+      <div class="flex">
+        <div class="govuk-checkboxes__item">
+          <input id="ILR" class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="ilr">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+            ILR
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input id="EAS" class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="eas">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+            EAS
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input id="ESF" class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="esf">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            ESF
+          </label>
+        </div>
+      </div>
+
+
+    </div>
+    <br>
+
+
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <section class="margin-bottom">
+      <!-- <h2 class="govuk-heading-m centre-text"><a href="jobs-processing">Jobs processing</a></h2> -->
+      <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+        <circle class="circle-chart__background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15" />
+        <circle id="first" class="circle-chart__circle" stroke-width="3" stroke-dasharray="40,100" stroke-linecap="" fill="none" cx="16.91549431" cy="16.91549431" r="15" />
+        <g class="circle-chart__info">
+          <text id="firstDonut" class="circle-chart__percent counter" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" data-count="40">40</text>
+          <text id="jobText" class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2">All jobs</text>
+        </g>
+      </svg>
+    </section>
+  </div>
+
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <dl id="submissions" class="govuk-summary-list govuk-!-margin-bottom-9">
+
+      <div class="govuk-summary-list__row ilr eas esf">
+        <dt class="govuk-summary-list__value govuk-!-width-one-third">
+          <strong>Provider name</strong>
+        </dt>
+
+        <dd class="govuk-summary-list__value">
+          <strong>UKPRN</strong>
+        </dd>
+
+        <dd class="govuk-summary-list__value">
+          <strong>Time in queue</strong>
+        </dd>
+
+
+
+
+      </div>
+
+
+
+      <div class="govuk-summary-list__row ilr">
+        <dt class="govuk-summary-list__value">
+          <a href="#">City of Manchester learning partnership</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          12345678
+        </dd>
+        <dd class="govuk-summary-list__value">
+          12 minutes
+        </dd>
+
+
+      </div>
+
+      <div class="govuk-summary-list__row eas">
+        <dt class="govuk-summary-list__value">
+          <a href="#">Greater Manchester Bangladesh association and community centre</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          86476577
+        </dd>
+        <dd class="govuk-summary-list__value">
+          7 minutes
+        </dd>
+
+      </div>
+
+      <div class="govuk-summary-list__row esf">
+        <dt class="govuk-summary-list__value">
+          <a href="#">The Cheshire and Greater Manchester community rehabilitation company limited</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          00028424
+        </dd>
+        <dd class="govuk-summary-list__value">
+          <strong class="red-font">22 minutes</strong>
+        </dd>
+
+
+      </div>
+
+
+
+      <div class="govuk-summary-list__row ilr">
+        <dt class="govuk-summary-list__value">
+          <a href="#">Birmingham University</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          00646878
+        </dd>
+        <dd class="govuk-summary-list__value">
+          5 minutes
+        </dd>
+
+
+      </div>
+
+      <div class="govuk-summary-list__row ilr">
+        <dt class="govuk-summary-list__value">
+          <a href="#">London</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          00058382
+        </dd>
+        <dd class="govuk-summary-list__value">
+          3 minutes
+        </dd>
+
+
+      </div>
+
+      <div class="govuk-summary-list__row ilr">
+        <dt class="govuk-summary-list__value">
+          <a href="#">Sheffield</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          00048242
+        </dd>
+        <dd class="govuk-summary-list__value">
+          1 minutes
+        </dd>
+
+
+      </div>
+
+      <div class="govuk-summary-list__row esf">
+        <dt class="govuk-summary-list__value">
+          <a href="#">Bristol</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          00085829
+        </dd>
+        <dd class="govuk-summary-list__value">
+          9 minutes
+        </dd>
+
+
+      </div>
+
+      <div class="govuk-summary-list__row eas">
+        <dt class="govuk-summary-list__value">
+          <a href="#">Cornwall</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          00123456
+        </dd>
+        <dd class="govuk-summary-list__value">
+          8 minutes
+        </dd>
+
+
+      </div>
+
+      <div class="govuk-summary-list__row esf">
+        <dt class="govuk-summary-list__value">
+          <a href="#">Luton</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          87654321
+        </dd>
+        <dd class="govuk-summary-list__value">
+          5 minutes
+        </dd>
+
+
+      </div>
+      <div class="govuk-summary-list__row ilr">
+        <dt class="govuk-summary-list__value">
+          <a href="#">Manchester</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          34920428
+        </dd>
+        <dd class="govuk-summary-list__value">
+          12 minutes
+        </dd>
+
+
+      </div>
+
+      <div class="govuk-summary-list__row eas">
+        <dt class="govuk-summary-list__value">
+          <a href="#">Coventry</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          00942248
+        </dd>
+        <dd class="govuk-summary-list__value">
+          7 minutes
+        </dd>
+
+
+      </div>
+
+      <div class="govuk-summary-list__row esf">
+        <dt class="govuk-summary-list__value">
+          <a href="#">Leicester</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          00135928
+        </dd>
+        <dd class="govuk-summary-list__value">
+          2 minutes
+        </dd>
+
+
+      </div>
+
+
+
+      <div class="govuk-summary-list__row ilr">
+        <dt class="govuk-summary-list__value">
+          <a href="#">Birmingham</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          35290343
+        </dd>
+        <dd class="govuk-summary-list__value">
+          5 minutes
+        </dd>
+
+
+      </div>
+
+      <div class="govuk-summary-list__row ilr">
+        <dt class="govuk-summary-list__value">
+          <a href="#">London</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          87126534
+        </dd>
+        <dd class="govuk-summary-list__value">
+          3 minutes
+        </dd>
+
+
+      </div>
+
+      <div class="govuk-summary-list__row ilr">
+        <dt class="govuk-summary-list__value">
+          <a href="#">Sheffield</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          00992312
+        </dd>
+        <dd class="govuk-summary-list__value">
+          1 minutes
+        </dd>
+
+
+      </div>
+
+      <div class="govuk-summary-list__row esf">
+        <dt class="govuk-summary-list__value">
+          <a href="#">Bristol</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          34534920
+        </dd>
+        <dd class="govuk-summary-list__value">
+          9 minutes
+        </dd>
+        
+
+      </div>
+
+      <div class="govuk-summary-list__row eas">
+        <dt class="govuk-summary-list__value">
+          <a href="#">Cornwall</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          11242093
+        </dd>
+        <dd class="govuk-summary-list__value">
+          8 minutes
+        </dd>
+        
+
+      </div>
+
+      <div class="govuk-summary-list__row esf">
+        <dt class="govuk-summary-list__value">
+          <a href="#">Luton</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          00914782
+        </dd>
+        <dd class="govuk-summary-list__value">
+          5 minutes
+        </dd>
+        
+
+      </div>
+    </dl>
+
+    <a href="#" class="govuk-button">Download CSV</a>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+
+
+</script>
+
+
+
+
+
+
+
+
+{% endblock %}

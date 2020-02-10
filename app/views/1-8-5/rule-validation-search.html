@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+
+<!-- <script src="/public/javascripts/tt.js"></script> -->
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a id="backlink" href="#" class="govuk-back-link">Back</a>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <br>
+      
+      
+  </div>
+</div>
+<br>
+<br>
+
+
+<div class="govuk-grid-row">
+
+
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Search for a validation rule</h1>
+
+    <div class="standard-search">
+
+      <!-- <span class="govuk-heading-s"></span> -->
+      <form class="govuk-form-group" action="rule-validation">
+        <!-- <input class="govuk-input" id="name" name="name" type="text" placeholder="e.g. Manchester or 123456"> -->
+        <div id="tt-overlay" class="autocomplete-wrapper"></div>
+        <button id="searchProviders" type="search" class="govuk-button" ><img src="https://assets.publishing.service.gov.uk/frontend/govuk_publishing_components/search-button-ca89b2a79f944909ceb7370d3f0b78811d32b96e883348fcd8886f63dd619585.png"></img></button>
+      </form>
+  
+  </div>
+    
+<br><br><br>
+
+  </div>
+
+  
+
+</div>
+
+
+
+
+<script src="/public/accessible-autocomplete.min.js"></script>
+ <script type="text/javascript">
+       var countries = [
+       'EPAOrgID_01',
+       'EPAOrgID_02',
+       'EPAOrgID_03',
+       'EPAOrgID_04',
+       'EPAOrgID_05',
+       'EPAOrgID_06',
+       'EPAOrgID_07',
+       'EPAOrgID_08',
+       'EPAOrgID_09',
+       'EPAOrgID_10',
+       'EPAOrgID_11',
+       'EPAOrgID_12',
+       'EPAOrgID_13'
+       ]
+ </script>
+
+     <script type="text/javascript">
+      element = document.querySelector('#tt-overlay')
+      id = 'autocomplete-overlay'
+      accessibleAutocomplete({
+        displayMenu: 'overlay',
+        element: element,
+        id: id,
+        source: countries,
+        placeholder: 'e.g EPAOrgID_01',
+        // value: '{{ data['provider'] }}'
+      })
+    </script>
+
+
+
+
+
+
+
+
+{% endblock %}

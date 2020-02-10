@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+
+
+{% include "./includes/nav.html" %}
+
+
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">
+        1123 FRM report files published
+      </h1>
+    </div>
+
+    <p class="govuk-body">3 FRM report couldn't be uploaded. <a href="rule-validation">View the rule violation report</a></p>
+
+    <p class="govuk-body"><a href="dashboard">Back to dasboard</a></p>
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+      {% include "./includes/search.html" %}
+      {% include "./includes/auto-js.html" %}
+  </div>
+</div>
+
+
+{% endblock %}

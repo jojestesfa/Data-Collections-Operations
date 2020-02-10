@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+
+
+{% include "./includes/nav.html" %}
+
+<a href="manage-R06" class="govuk-back-link">Back</a>
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+       <h1 class="govuk-heading-xl">Review changes</h1>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+    {% include "./includes/search.html" %}
+    {% include "./includes/auto-js.html" %}
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+       <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          Your changes will affect other collections.
+
+        </strong>
+      </div>
+      <p><strong>EAS R3 will need to change - opening on 12 February 2019 instead of 11 February 2019.</strong></p>
+
+
+      <p><strong>Proposed closing date:</strong></p>
+      <p>12 February 2019 </p>
+      <p><a href="manage-R06">Edit date</a></p>
+
+
+      <br>
+
+
+
+
+       <a href="#" class="govuk-button">Confirm changes</a>
+       <!-- <a href="manage-ILR" class="govuk-link">Cancel</a> -->
+  </div>
+</div>
+
+
+{% endblock %}

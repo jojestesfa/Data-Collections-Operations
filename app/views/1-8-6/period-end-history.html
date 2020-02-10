@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+
+<!-- <script src="/public/javascripts/tt.js"></script> -->
+
+<a id="backlink" href="#" class="govuk-back-link">Back</a>
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Period end history</h1>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Select a time period
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="published" selected>2018 to 2019</option>
+        <option value="updated" >2017 to 2018</option>
+        <option value="views">2016 to 2017</option>
+        <option value="comments">2015 to 2016</option>
+      </select>
+    </div>
+
+    <div>
+      <h2 class="govuk-heading-m">R05</h2>
+      <p><strong>Started: </strong>10 April 2019 at 6.10pm</p>
+      <p><strong>Finished: </strong>10 April 2019 at 10.58pm</p>
+      <p class="flex space-between"><span><strong>Duration: </strong>4 hours 48 minutes</span> <span><a href="job-breakdown">Job breakdown</a></span></p>
+      <hr>
+    </div>
+    <div>
+      <h2 class="govuk-heading-m">R04</h2>
+      <p><strong>Started: </strong>10 March 2019 at 6.10pm</p>
+      <p><strong>Finished: </strong>10 March 2019 at 10.58pm</p>
+      <p class="flex space-between"><span><strong>Duration: </strong>5 hours 58 minutes</span> <span><a href="job-breakdown">Job breakdown</a></span></p>
+      <hr>
+    </div>
+    <div>
+      <h2 class="govuk-heading-m">R03</h2>
+      <p><strong>Started: </strong>10 February 2019 at 6.10pm</p>
+      <p><strong>Finished: </strong>10 February 2019 at 10.58pm</p>
+      <p class="flex space-between"><span><strong>Duration: </strong>7 hours 17 minutes</span> <span><a href="job-breakdown">Job breakdown</a></span></p>
+      <hr>
+    </div>
+    <div>
+      <h2 class="govuk-heading-m">R02</h2>
+      <p><strong>Started: </strong>10 January 2019 at 6.10pm</p>
+      <p><strong>Finished: </strong>10 January 2019 at 10.58pm</p>
+      <p class="flex space-between"><span><strong>Duration: </strong>3 hours 4 minutes</span> <span><a href="job-breakdown">Job breakdown</a></span></p>
+      <hr>
+    </div>
+    <div>
+      <h2 class="govuk-heading-m">R01</h2>
+      <p><strong>Started: </strong>10 December 2018 at 6.10pm</p>
+      <p><strong>Finished: </strong>10 December 2018 at 10.58pm</p>
+      <p class="flex space-between"><span><strong>Duration: </strong>6 hours 5 minutes</span> <span><a href="job-breakdown">Job breakdown</a></span></p>
+      <hr>
+    </div>
+
+
+
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock %}

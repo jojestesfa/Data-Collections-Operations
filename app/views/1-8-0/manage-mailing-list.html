@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+
+<!-- <script src="/public/javascripts/tt.js"></script> -->
+
+<a id="backlink" href="#" class="govuk-back-link">Back</a>
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Manage mailing list</h1>
+
+    <p><a class="govuk-button govuk-button--secondary" href="new-mailing-list">Add a new mailing list</a></p>
+
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+          DCT
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="remove-mailing-list">
+            Remove<span class="govuk-visually-hidden"> email</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+          Management
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="remove-mailing-list">
+            Remove<span class="govuk-visually-hidden"> email</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+          Apprenticeships
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="remove-mailing-list">
+            Remove<span class="govuk-visually-hidden"> email</span>
+          </a>
+        </dd>
+      </div>
+
+
+
+
+    </dl>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

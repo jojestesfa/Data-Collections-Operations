@@ -1,0 +1,194 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+
+<!-- <script src="/public/javascripts/tt.js"></script> -->
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a id="backlink" href="#" class="govuk-back-link">Back</a>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <br>
+      {% include "./includes/search.html" %}
+      {% include "./includes/auto-js.html" %}
+  </div>
+</div>
+<br>
+<br>
+
+
+<div class="govuk-grid-row">
+
+
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Submissions</h1>
+
+    <div id="typeFilter" class="govuk-checkboxes">
+      <!-- <div class="govuk-checkboxes__item">
+        <input id="All" class="govuk-checkboxes__input" id="waste-0" name="waste" type="checkbox" value="all">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+          All
+        </label>
+      </div> -->
+      <div id="minusMargin" class="govuk-form-group margin-right">
+        <label class="govuk-label" for="sort">
+          Sort by
+        </label>
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="published">Time taken - Slowest first</option>
+          <option value="views">Alphabetical</option>
+          <option value="comments" selected>First time submissions this period</option>
+        </select>
+      </div>
+      <!-- <div>&nbsp &nbsp &nbsp &nbsp &nbsp</div> -->
+      <div class="flex">
+        <div class="govuk-checkboxes__item">
+          <input id="ILR" class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="ilr">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+            ILR
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input id="EAS" class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="eas">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+            EAS
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input id="ESF" class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="esf">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            ESF
+          </label>
+        </div>
+      </div>
+
+
+    </div>
+    <br>
+
+
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <section class="margin-bottom">
+      <!-- <h2 class="govuk-heading-m centre-text"><a href="jobs-processing">Jobs processing</a></h2> -->
+      <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+        <circle class="circle-chart__background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15" />
+        <circle id="first" class="circle-chart__circle" stroke-width="3" stroke-dasharray="40,100" stroke-linecap="" fill="none" cx="16.91549431" cy="16.91549431" r="15" />
+        <g class="circle-chart__info">
+          <text id="firstDonut" class="circle-chart__percent counter" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" data-count="40">40</text>
+          <text id="jobText" class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2">All jobs</text>
+        </g>
+      </svg>
+    </section>
+  </div>
+
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-l">Providers returning for the first time
+      <span class="govuk-caption-l">1819 ILR - R01</span>
+    </h2>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    <div class="govuk-body">Number of providers</div>
+  </div>
+  <div class="govuk-grid-column-three-quarters">
+      
+    <div class="flex">
+      <div id="minusMargin" class="govuk-form-group margin-right">
+        <label class="govuk-label" for="sort">
+          View period
+        </label>
+        <select id="returnPeriod" class="govuk-select" id="sort" name="sort">
+          <option id="r01" value="published" selected>R01 - 1920</option>
+          <option id="r14" value="views">R14 - 1819</option>
+          <option id="r13" value="comments">R13 - 1819</option>
+        </select>
+      </div>
+      <div class="govuk-body period-key">
+        <span class="key-one">1920</span><span class="key-two" >1819</span>
+      </div>
+    </div>
+  
+      <div class="relative">
+        
+        <div class="fade-in"></div>
+        <div class="fade-in-b"></div>
+
+        <div class="fade-in two"></div>
+        <div class="fade-in-b two"></div>
+
+        <div class="fade-in three"></div>
+        <div class="fade-in-b three"></div>
+
+        <div class="fade-in four"></div>
+        <div class="fade-in-b four"></div>
+
+        <div class="fade-in five"></div>
+        <div class="fade-in-b five"></div>
+
+        <div class="fade-in six"></div>
+        <div class="fade-in-b six"></div>
+
+        <div class="fade-in seven"></div>
+        <div class="fade-in-b seven"></div>
+
+        <div class="fade-in eight"></div>
+        <div class="fade-in-b eight"></div>
+
+        <div class="fade-in nine"></div>
+        <div class="fade-in-b nine"></div>
+
+        <div class="fade-in ten"></div>
+        <div class="fade-in-b ten"></div>
+
+
+      </div>
+      <div class="relative numbers-before-close govuk-body">
+        <span>9</span>
+        <span>8</span>
+        <span>7</span>
+        <span>6</span>
+        <span>5</span>
+        <span>4</span>
+        <span>3</span>
+        <span>2</span>
+        <span>1</span>
+        <span>0</span>
+      </div>
+
+
+      
+  </div>
+</div>
+
+
+<script type="text/javascript">
+  
+</script>
+
+
+
+
+
+
+
+
+{% endblock %}

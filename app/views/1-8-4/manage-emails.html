@@ -1,0 +1,125 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+
+<!-- <script src="/public/javascripts/tt.js"></script> -->
+
+<a id="backlink" href="#" class="govuk-back-link">Back</a>
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Manage emails</h1>
+
+    <!-- <p><a class="govuk-button govuk-button--secondary" href="new-mailing-list">Add a new mailing list</a></p> -->
+
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Email template
+            </dt>
+            <dt class="govuk-summary-list__key">
+                Mailing list
+              </dt>
+              <dt class="govuk-summary-list__key govuk-summary-list__actions">
+                 Action
+                </dt>
+          </div>  
+      
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+          Collection closed
+        </dd>
+        <dd class="govuk-summary-list__value">
+          DCT mailing list
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="email-collection-closed">
+            Edit<span class="govuk-visually-hidden"> email</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+          Period end started
+        </dd>
+        <dd class="govuk-summary-list__value">
+          Management mailing list
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Edit<span class="govuk-visually-hidden"> email</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+          DAS period end released
+        </dd>
+        <dd class="govuk-summary-list__value">
+          DCT mailing list
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Edit<span class="govuk-visually-hidden"> email</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+          Handover to FCS
+        </dd>
+        <dd class="govuk-summary-list__value">
+          Management mailing list
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Edit<span class="govuk-visually-hidden"> email</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+          DAS reports published
+        </dd>
+        <dd class="govuk-summary-list__value">
+          Apprenticeships mailing list
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Edit<span class="govuk-visually-hidden"> email</span>
+          </a>
+        </dd>
+      </div>
+
+
+
+    </dl>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

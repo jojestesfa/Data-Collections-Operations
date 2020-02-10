@@ -1,0 +1,451 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+
+<!-- <script src="/public/javascripts/tt.js"></script> -->
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a id="backlink" href="#" class="govuk-back-link">Back</a>
+  </div>
+  
+</div>
+<br>
+<br>
+
+
+<div class="govuk-grid-row">
+
+
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Providers who triggered {{ data['input-autocomplete'] }}</h1>
+
+    <div id="typeFilter" class="govuk-checkboxes">
+      
+      
+    
+
+
+      <div class="govuk-form-group margin-right">
+        <label class="govuk-label" for="sort">
+          Academic year
+        </label>
+        <select class="govuk-select">
+          <option selected>2019 to 2020</option>
+          <option >2018 to 2019</option>
+          <option >2017 to 2018</option>
+          <option >2016 to 2017</option>
+          <option >2015 to 2016</option>
+          
+          
+          
+        </select>
+      </div>
+      <!-- <div>&nbsp &nbsp &nbsp &nbsp &nbsp</div> -->
+      
+
+    </div>
+    <br>
+
+
+
+  </div>
+
+  
+
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <dl id="submissions" class="govuk-summary-list govuk-!-margin-bottom-9">
+
+      <h3 class="govuk-heading-m">R14</h3>
+
+      <div class="govuk-summary-list__row ilr eas esf">
+        <dt class="govuk-summary-list__value govuk-!-width-one-third">
+          <strong>Provider name</strong>
+        </dt>
+
+        <dd class="govuk-summary-list__value">
+          <strong>UKPRN</strong>
+        </dd>
+
+        <dd class="govuk-summary-list__value">
+          <strong>Errors</strong>
+        </dd>
+
+        <dd class="govuk-summary-list__value">
+          <strong>Warnings</strong>
+        </dd>
+
+        <dd class="govuk-summary-list__value">
+          <strong>Submission date</strong>
+        </dd>
+
+
+      </div>
+
+
+
+      <div class="govuk-summary-list__row ilr">
+        <dt class="govuk-summary-list__value">
+          <a href="#">City of Manchester learning partnership</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          12345678
+        </dd>
+        <dd class="govuk-summary-list__value">
+          22
+        </dd>
+        <dd class="govuk-summary-list__value">
+          0
+        </dd>
+        <dd class="govuk-summary-list__value">
+          30/07/2019 
+          <!-- 16:17:47 -->
+        </dd>
+
+      </div>
+
+      <div class="govuk-summary-list__row eas">
+        <dt class="govuk-summary-list__value">
+          <a href="#">Greater Manchester Bangladesh association and community centre</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          86476577
+        </dd>
+        <dd class="govuk-summary-list__value">
+          79
+        </dd>
+        <dd class="govuk-summary-list__value">
+          0
+        </dd>
+        <dd class="govuk-summary-list__value">
+          24/07/2019
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row esf">
+        <dt class="govuk-summary-list__value">
+          <a href="#">The Cheshire and Greater Manchester community rehabilitation company limited</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          00028424
+        </dd>
+        <dd class="govuk-summary-list__value">
+          13
+        </dd>
+        <dd class="govuk-summary-list__value">
+          0
+        </dd>
+        <dd class="govuk-summary-list__value">
+          27/07/2019
+        </dd>
+      </div>
+
+
+
+      <div class="govuk-summary-list__row ilr">
+        <dt class="govuk-summary-list__value">
+          <a href="#">Birmingham University</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          00646878
+        </dd>
+        <dd class="govuk-summary-list__value">
+          5
+        </dd>
+        <dd class="govuk-summary-list__value">
+          0
+        </dd>
+        <dd class="govuk-summary-list__value">
+          29/07/2019
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row ilr">
+        <dt class="govuk-summary-list__value">
+          <a href="#">London</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          00058382
+        </dd>
+        <dd class="govuk-summary-list__value">
+          3
+        </dd>
+        <dd class="govuk-summary-list__value">
+          0
+        </dd>
+        <dd class="govuk-summary-list__value">
+          30/07/2019
+        </dd>
+      </div>
+
+      <br>
+      <h3 class="govuk-heading-m">R13</h3>
+      <div class="govuk-summary-list__row ilr">
+        <dt class="govuk-summary-list__value">
+          <a href="#">Sheffield</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          00048242
+        </dd>
+        <dd class="govuk-summary-list__value">
+          1
+        </dd>
+        <dd class="govuk-summary-list__value">
+          0
+        </dd>
+        <dd class="govuk-summary-list__value">
+          21/07/2019
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row esf">
+        <dt class="govuk-summary-list__value">
+          <a href="#">Bristol</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          00085829
+        </dd>
+        <dd class="govuk-summary-list__value">
+          9
+        </dd>
+        <dd class="govuk-summary-list__value">
+          0
+        </dd>
+        <dd class="govuk-summary-list__value">
+          26/07/2019
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row eas">
+        <dt class="govuk-summary-list__value">
+          <a href="#">Cornwall</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          00123456
+        </dd>
+        <dd class="govuk-summary-list__value">
+          8
+        </dd>
+        <dd class="govuk-summary-list__value">
+          0
+        </dd>
+        <dd class="govuk-summary-list__value">
+          29/07/2019
+        </dd>
+      </div>
+      <br>
+      <h3 class="govuk-heading-m">R12</h3>
+      <div class="govuk-summary-list__row esf">
+        <dt class="govuk-summary-list__value">
+          <a href="#">Luton</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          87654321
+        </dd>
+        <dd class="govuk-summary-list__value">
+          5
+        </dd>
+        <dd class="govuk-summary-list__value">
+          0
+        </dd>
+        <dd class="govuk-summary-list__value">
+          22/07/2019
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row ilr">
+        <dt class="govuk-summary-list__value">
+          <a href="#">Manchester</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          34920428
+        </dd>
+        <dd class="govuk-summary-list__value">
+          12
+        </dd>
+        <dd class="govuk-summary-list__value">
+          0
+        </dd>
+        <dd class="govuk-summary-list__value">
+          30/07/2019
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row eas">
+        <dt class="govuk-summary-list__value">
+          <a href="#">Coventry</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          00942248
+        </dd>
+        <dd class="govuk-summary-list__value">
+          7
+        </dd>
+        <dd class="govuk-summary-list__value">
+          0
+        </dd>
+        <dd class="govuk-summary-list__value">
+          30/07/2019
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row esf">
+        <dt class="govuk-summary-list__value">
+          <a href="#">Leicester</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          00135928
+        </dd>
+        <dd class="govuk-summary-list__value">
+          2
+        </dd>
+        <dd class="govuk-summary-list__value">
+          0
+        </dd>
+        <dd class="govuk-summary-list__value">
+          29/07/2019
+        </dd>
+      </div>
+
+      <br>
+      <h3 class="govuk-heading-m">R11</h3>
+
+      <div class="govuk-summary-list__row ilr">
+        <dt class="govuk-summary-list__value">
+          <a href="#">Birmingham</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          35290343
+        </dd>
+        <dd class="govuk-summary-list__value">
+          5
+        </dd>
+        <dd class="govuk-summary-list__value">
+          0
+        </dd>
+        <dd class="govuk-summary-list__value">
+          27/07/2019
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row ilr">
+        <dt class="govuk-summary-list__value">
+          <a href="#">London</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          87126534
+        </dd>
+        <dd class="govuk-summary-list__value">
+          3
+        </dd>
+        <dd class="govuk-summary-list__value">
+          0
+        </dd>
+        <dd class="govuk-summary-list__value">
+          25/07/2019
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row ilr">
+        <dt class="govuk-summary-list__value">
+          <a href="#">Sheffield</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          00992312
+        </dd>
+        <dd class="govuk-summary-list__value">
+          1
+        </dd>
+        <dd class="govuk-summary-list__value">
+          0
+        </dd>
+        <dd class="govuk-summary-list__value">
+          24/07/2019
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row esf">
+        <dt class="govuk-summary-list__value">
+          <a href="#">Bristol</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          34534920
+        </dd>
+        <dd class="govuk-summary-list__value">
+          19
+        </dd>
+        <dd class="govuk-summary-list__value">
+          0
+        </dd>
+        <dd class="govuk-summary-list__value">
+          30/07/2019
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row eas">
+        <dt class="govuk-summary-list__value">
+          <a href="#">Cornwall</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          11242093
+        </dd>
+        <dd class="govuk-summary-list__value">
+          8
+        </dd>
+        <dd class="govuk-summary-list__value">
+          0
+        </dd>
+        <dd class="govuk-summary-list__value">
+          21/07/2019
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row esf">
+        <dt class="govuk-summary-list__value">
+          <a href="#">Luton</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          00914782
+        </dd>
+        <dd class="govuk-summary-list__value">
+          5
+        </dd>
+        <dd class="govuk-summary-list__value">
+          0
+        </dd>
+        <dd class="govuk-summary-list__value">
+          28/07/2019
+        </dd>
+      </div>
+    </dl>
+
+    <a href="#" class="govuk-button">Download CSV</a>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+
+
+</script>
+
+
+
+
+
+
+
+
+{% endblock %}

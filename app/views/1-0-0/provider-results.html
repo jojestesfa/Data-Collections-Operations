@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<div class="main-nav">
+  <a class="govuk-heading-s" href="dashboard">Activity</a>
+  <a class="govuk-heading-s" href="manage-collections">Collections</a>
+  <!-- <a class="govuk-heading-s" href="#">Provider(s)</a> -->
+</div>
+<div class="app-masthead">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-heading-s govuk-!-font-size-27 white-text">Search for a provider</span>
+      <form class="govuk-form-group" action="provider-results">
+        <input class="govuk-input" id="name" name="name" type="text" placeholder="e.g. Manchester or 123456">
+        <button type="search" class="govuk-button" ><img src="https://assets.publishing.service.gov.uk/frontend/govuk_publishing_components/search-button-ca89b2a79f944909ceb7370d3f0b78811d32b96e883348fcd8886f63dd619585.png"></img></button>
+      </form>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        <a href="advanced-search">Advanced search</a>
+        <a href="#">Add a provider</a>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl"><label for="provider-search">Search
+          results <span class=
+          "govuk-visually-hidden">“Manchester”</span></label></h1>
+          <div class="govuk-form-group">
+              <!-- <input class="govuk-input govuk-!-width-two-thirds" id="provider-search" name="search-provider"
+              type="search" value="Manchester" aria-describedby="provider-search">
+              <a href="search-results.html" type="submit" class="govuk-button">Search</a> -->
+              <p>We found 3 results for "Manchester"</p>
+              <!-- <p>3 results found.</p> -->
+              <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+
+              <h3 class="govuk-heading-m"><a href="provider-record.html">Provider name 1</a></h3>
+              <ul class="govuk-list">
+                  <li><span class="govuk-!-font-weight-bold">UKPRN:</span> 12345</li>
+                  <li><span class="govuk-!-font-weight-bold">Last submission:</span> Monday 14 January by Bob Franks</li>
+
+
+
+              </ul>
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+               <h3 class="govuk-heading-m"><a href="provider-record.html">Provider name 2</a></h3>
+              <ul class="govuk-list">
+                  <li><span class="govuk-!-font-weight-bold">UKPRN:</span> 12345</li>
+                  <li><span class="govuk-!-font-weight-bold">Last submission:</span> Monday 7 January by Ann Franks
+                      </li>
+
+
+              </ul>
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+               <h3 class="govuk-heading-m"><a href="provider-record.html">Provider name 3</a></h3>
+              <ul class="govuk-list">
+                  <li><span class="govuk-!-font-weight-bold">UKPRN:</span> 12345</li>
+                  <li><span class="govuk-!-font-weight-bold">Last submission:</span> Wednesday 9 January by Ian Franks</li>
+
+
+
+              </ul>
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

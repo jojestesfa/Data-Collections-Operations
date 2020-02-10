@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+
+
+{% include "./includes/nav.html" %}
+
+<a href="add-new-provider" class="govuk-back-link">Back</a>
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+         <h1 class="govuk-fieldset__heading">
+           Enter your notification's headline
+         </h1>
+        </legend>
+
+        <div class="govuk-form-group">
+         <label class="govuk-label" for="address-line-1">
+
+           <span id="more-detail-hint" class="govuk-hint">
+             Try to make your headline short (no more than 20 words) but descriptive. It should make sense on its own.
+           </span>
+         </label>
+         <input class="govuk-input" id="address-line-1" name="address-line-1" type="text">
+        </div>
+
+
+
+
+    </fieldset>
+
+
+
+       <a href="notifications-content" class="govuk-button">Next</a>
+       <p><a href="dashboard" class="govuk-link">Cancel</a></p>
+  </div>
+</div>
+
+
+{% endblock %}

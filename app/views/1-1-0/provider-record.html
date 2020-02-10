@@ -1,0 +1,744 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+       <h1 class="govuk-heading-xl">
+         <!-- Provider name 1  -->
+         {{ data['input-autocomplete'] }}</h1>
+
+       <!-- <p class="assignment-links"><a class="govuk-link" href="#">Submit another file</a> <a class="govuk-link" href="manage-assignments">Manage assignments</a> <a class="govuk-link" href="#">Amend Provider name</a></p> -->
+  </div>
+  <div class="govuk-grid-column-one-third">
+    {% include "./includes/search.html" %}
+    {% include "./includes/auto-js.html" %}
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <ul class="govuk-list">
+      <li>
+        <a class="govuk-link" href="#">Submit another file</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="manage-assignments">Manage assignments</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="amend-provider-details">Amend Provider details</a>
+      </li>
+
+    </ul>
+
+       <!-- <p class="assignment-links"><a class="govuk-link" href="#">Submit another file</a> <a class="govuk-link" href="manage-assignments">Manage assignments</a> <a class="govuk-link" href="#">Amend Provider name</a></p> -->
+  </div>
+
+<div class="govuk-grid-column-two-thirds">
+<div class="govuk-tabs" data-module="tabs">
+ <h2 class="govuk-tabs__title">
+   Submission and reports history
+ </h2>
+
+ <ul class="govuk-tabs__list">
+   <li class="govuk-tabs__list-item">
+     <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#past-day">
+       Current submissions
+     </a>
+   </li>
+   <li class="govuk-tabs__list-item">
+     <a class="govuk-tabs__tab" href="#past-week">
+       Past submissions
+     </a>
+   </li>
+
+ </ul>
+
+ <section class="govuk-tabs__panel" id="past-day">
+   <h2 class="govuk-heading-l" id="submission">Current submissions</h2>
+
+
+
+   <div class="govuk-form-group">
+     <fieldset class="govuk-fieldset" aria-describedby="streamType">
+       <!-- <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+         <h1 class="govuk-fieldset__heading">
+           Which types of waste do you transport?
+         </h1>
+       </legend> -->
+       <span class="govuk-hint">
+         Filter your submission types
+       </span>
+       <div id="typeFilter" class="govuk-checkboxes">
+         <div class="govuk-checkboxes__item">
+           <input id="ILR" class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="ilr">
+           <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+             ILR
+           </label>
+         </div>
+         <div class="govuk-checkboxes__item">
+           <input id="EAS" class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="eas">
+           <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+             EAS
+           </label>
+         </div>
+         <div class="govuk-checkboxes__item">
+           <input id="ESF" class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="esf">
+           <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+             ESF
+           </label>
+         </div>
+       </div>
+     </fieldset>
+   </div>
+     <!-- <h3 class="govuk-heading-m">2018/19 submissions</h3> -->
+     <span class="govuk-caption-l">RO2</span>
+
+<div class="govuk-accordion" data-module="accordion" id="accordion-default">
+
+  <div class="govuk-accordion__section cards ilr">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          <span>30 Oct 2018</span><span class="align-right">1:00pm</span>
+        </span>
+      </h2>
+      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+        ILR-12345678-1819-20180806-05092018-02.XML
+      </div>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <p><strong>Job Id:</strong> 250</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Error reports</a> (CSV, 78KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Business report</a> (CSV, 56KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Submitted file</a> (XML, 78KB)</p>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <p><strong>Submitted file by:</strong> Bob Afett</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">QAR report</a> (CSV, 78KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">FRN</a> (CSV, 56KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Submitted file</a> (XML, 78KB)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="govuk-accordion__section cards esf">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+          <span>30 Oct 2018</span><span class="align-right">10.26am</span>
+        </span>
+      </h2>
+      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-2">
+        ESF-12345678-1819-20180806-05092018-02.XML
+      </div>
+    </div>
+    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <p><strong>Job Id:</strong> 200</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Error reports</a> (CSV, 78KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Business report</a> (CSV, 56KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Submitted file</a> (XML, 78KB)</p>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <p><strong>Submitted file by:</strong> Bob Afett</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">QAR report</a> (CSV, 78KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">FRN</a> (CSV, 56KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Submitted file</a> (XML, 78KB)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="govuk-accordion__section cards ilr">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+          <span>30 Oct 2018</span><span class="align-right">12:05pm</span>
+        </span>
+      </h2>
+      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-3">
+        ILR-12345678-1819-20180806-05092018-02.XML
+      </div>
+    </div>
+    <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <p><strong>Job Id:</strong> 150</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Error reports</a> (CSV, 78KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Business report</a> (CSV, 56KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Submitted file</a> (XML, 78KB)</p>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <p><strong>Submitted file by:</strong> Bob Afett</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">QAR report</a> (CSV, 78KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">FRN</a> (CSV, 56KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Submitted file</a> (XML, 78KB)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="govuk-accordion__section cards eas">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+          <span>30 Oct 2018</span><span class="align-right">3.26pm</span>
+        </span>
+      </h2>
+      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-4">
+        EAS-12345678-1819-20180806-05092018-02.XML
+      </div>
+    </div>
+    <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <p><strong>Job Id:</strong> 100</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Error reports</a> (CSV, 78KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Business report</a> (CSV, 56KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Submitted file</a> (XML, 78KB)</p>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <p><strong>Submitted file by:</strong> Bob Afett</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">QAR report</a> (CSV, 78KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">FRN</a> (CSV, 56KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Submitted file</a> (XML, 78KB)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="govuk-accordion__section cards ilr">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          <span>30 Oct 2018</span><span class="align-right">10.45am</span>
+        </span>
+      </h2>
+      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+        ILR-12345678-1819-20180806-05092018-02.XML
+      </div>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <p><strong>Job Id:</strong> 250</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Error reports</a> (CSV, 78KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Business report</a> (CSV, 56KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Submitted file</a> (XML, 78KB)</p>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <p><strong>Submitted file by:</strong> Bob Afett</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">QAR report</a> (CSV, 78KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">FRN</a> (CSV, 56KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Submitted file</a> (XML, 78KB)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="govuk-accordion__section cards esf">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+          <span>30 Oct 2018</span><span class="align-right">8.07am</span>
+        </span>
+      </h2>
+      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-2">
+        ESF-12345678-1819-20180806-05092018-02.XML
+      </div>
+    </div>
+    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <p><strong>Job Id:</strong> 200</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Error reports</a> (CSV, 78KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Business report</a> (CSV, 56KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Submitted file</a> (XML, 78KB)</p>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <p><strong>Submitted file by:</strong> Bob Afett</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">QAR report</a> (CSV, 78KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">FRN</a> (CSV, 56KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Submitted file</a> (XML, 78KB)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="govuk-accordion__section cards ilr">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+          <span>29 Oct 2018</span><span class="align-right">3:40pm</span>
+        </span>
+      </h2>
+      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-3">
+        ILR-12345678-1819-20180806-05092018-02.XML
+      </div>
+    </div>
+    <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <p><strong>Job Id:</strong> 150</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Error reports</a> (CSV, 78KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Business report</a> (CSV, 56KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Submitted file</a> (XML, 78KB)</p>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <p><strong>Submitted file by:</strong> Bob Afett</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">QAR report</a> (CSV, 78KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">FRN</a> (CSV, 56KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Submitted file</a> (XML, 78KB)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="govuk-accordion__section cards eas">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+          <span>29 Oct 2018</span><span class="align-right">8.45am</span>
+        </span>
+      </h2>
+      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-4">
+        EAS-12345678-1819-20180806-05092018-02.XML
+      </div>
+    </div>
+    <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <p><strong>Job Id:</strong> 100</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Error reports</a> (CSV, 78KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Business report</a> (CSV, 56KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Submitted file</a> (XML, 78KB)</p>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <p><strong>Submitted file by:</strong> Bob Afett</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">QAR report</a> (CSV, 78KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">FRN</a> (CSV, 56KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Submitted file</a> (XML, 78KB)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="govuk-accordion__section cards ilr">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          <span>29 Oct 2018</span><span class="align-right">9:36am</span>
+        </span>
+      </h2>
+      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+        ILR-12345678-1819-20180806-05092018-02.XML
+      </div>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <p><strong>Job Id:</strong> 250</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Error reports</a> (CSV, 78KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Business report</a> (CSV, 56KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Submitted file</a> (XML, 78KB)</p>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <p><strong>Submitted file by:</strong> Bob Afett</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">QAR report</a> (CSV, 78KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">FRN</a> (CSV, 56KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Submitted file</a> (XML, 78KB)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="govuk-accordion__section cards esf">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+          <span>29 Oct 2018</span><span class="align-right">2:19pm</span>
+        </span>
+      </h2>
+      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-2">
+        ESF-12345678-1819-20180806-05092018-02.XML
+      </div>
+    </div>
+    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <p><strong>Job Id:</strong> 200</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Error reports</a> (CSV, 78KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Business report</a> (CSV, 56KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Submitted file</a> (XML, 78KB)</p>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <p><strong>Submitted file by:</strong> Bob Afett</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">QAR report</a> (CSV, 78KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">FRN</a> (CSV, 56KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Submitted file</a> (XML, 78KB)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="govuk-accordion__section cards ilr">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+          <span>28 Oct 2018</span><span class="align-right">12:17pm</span>
+        </span>
+      </h2>
+      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-3">
+        ILR-12345678-1819-20180806-05092018-02.XML
+      </div>
+    </div>
+    <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <p><strong>Job Id:</strong> 150</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Error reports</a> (CSV, 78KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Business report</a> (CSV, 56KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Submitted file</a> (XML, 78KB)</p>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <p><strong>Submitted file by:</strong> Bob Afett</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">QAR report</a> (CSV, 78KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">FRN</a> (CSV, 56KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Submitted file</a> (XML, 78KB)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="govuk-accordion__section cards eas">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+          <span>28 Oct 2018</span><span class="align-right">12.09pm</span>
+        </span>
+      </h2>
+      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-4">
+        EAS-12345678-1819-20180806-05092018-02.XML
+      </div>
+    </div>
+    <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <p><strong>Job Id:</strong> 100</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Error reports</a> (CSV, 78KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Business report</a> (CSV, 56KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Submitted file</a> (XML, 78KB)</p>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <p><strong>Submitted file by:</strong> Bob Afett</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">QAR report</a> (CSV, 78KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">FRN</a> (CSV, 56KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Submitted file</a> (XML, 78KB)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="govuk-accordion__section cards ilr">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          <span>28 Oct 2018</span><span class="align-right">11:00am</span>
+        </span>
+      </h2>
+      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+        ILR-12345678-1819-20180806-05092018-02.XML
+      </div>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <p><strong>Job Id:</strong> 250</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Error reports</a> (CSV, 78KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Business report</a> (CSV, 56KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Submitted file</a> (XML, 78KB)</p>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <p><strong>Submitted file by:</strong> Bob Afett</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">QAR report</a> (CSV, 78KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">FRN</a> (CSV, 56KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Submitted file</a> (XML, 78KB)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="govuk-accordion__section cards esf">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+          <span>28 Oct 2018</span><span class="align-right">11.57am</span>
+        </span>
+      </h2>
+      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-2">
+        ESF-12345678-1819-20180806-05092018-02.XML
+      </div>
+    </div>
+    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <p><strong>Job Id:</strong> 200</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Error reports</a> (CSV, 78KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Business report</a> (CSV, 56KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Submitted file</a> (XML, 78KB)</p>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <p><strong>Submitted file by:</strong> Bob Afett</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">QAR report</a> (CSV, 78KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">FRN</a> (CSV, 56KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Submitted file</a> (XML, 78KB)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="govuk-accordion__section cards ilr">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+          <span>28 Oct 2018</span><span class="align-right">10:04am</span>
+        </span>
+      </h2>
+      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-3">
+        ILR-12345678-1819-20180806-05092018-02.XML
+      </div>
+    </div>
+    <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <p><strong>Job Id:</strong> 150</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Error reports</a> (CSV, 78KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Business report</a> (CSV, 56KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Submitted file</a> (XML, 78KB)</p>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <p><strong>Submitted file by:</strong> Bob Afett</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">QAR report</a> (CSV, 78KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">FRN</a> (CSV, 56KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Submitted file</a> (XML, 78KB)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="govuk-accordion__section cards eas">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+          <span>28 Oct 2018</span><span class="align-right">1:41pm</span>
+        </span>
+      </h2>
+      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-4">
+        EAS-12345678-1819-20180806-05092018-02.XML
+      </div>
+    </div>
+    <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <p><strong>Job Id:</strong> 100</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Error reports</a> (CSV, 78KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Business report</a> (CSV, 56KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Submitted file</a> (XML, 78KB)</p>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <p><strong>Submitted file by:</strong> Bob Afett</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">QAR report</a> (CSV, 78KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">FRN</a> (CSV, 56KB)</p>
+          <p><a href="#" title="Download REPORTS-0312210-091400.zip">Submitted file</a> (XML, 78KB)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+</section>
+
+
+ <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+   <h2 class="govuk-heading-l" id="reports">Past submissions</h2>
+       <p>The reports download includes the last validation report and submission files. You can <a href="#">view period end reports</a> in the Hub.</p>
+       <span id="waste-hint" class="govuk-hint">
+         Filter by year
+       </span>
+       <div id="yearFilter" class="govuk-checkboxes">
+         <div class="govuk-checkboxes__item">
+           <input id="19" class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="19">
+           <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+             2018/19
+           </label>
+         </div>
+         <div class="govuk-checkboxes__item">
+           <input id="18" class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="18">
+           <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+             2017/18
+           </label>
+         </div>
+         <div class="govuk-checkboxes__item">
+           <input id="17" class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="17">
+           <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+             2016/017
+           </label>
+         </div>
+       </div>
+       <div class="year-groups 19">
+       <h3 class="govuk-heading-m">2018/19 academic year</h3>
+
+       <table class="govuk-table">
+ <caption class="govuk-table__caption govuk-visually-hidden">Return period and download</caption>
+ <thead class="govuk-table__head">
+   <tr class="govuk-table__row">
+     <th class="govuk-table__header" scope="col">Return period</th>
+     <th class="govuk-table__header" scope="col">Final reports at period end</th>
+
+   </tr>
+ </thead>
+ <tbody class="govuk-table__body">
+   <tr class="govuk-table__row">
+     <th class="govuk-table__header" scope="row">R01</th>
+       <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download reports</a> (Zip, 1.3MB)</td>
+   </tr>
+ </tbody>
+</table>
+</div>
+
+<div class="year-groups 18">
+       <h3 class="govuk-heading-m">2017/18 academic year</h3>
+
+       <table class="govuk-table">
+ <caption class="govuk-table__caption govuk-visually-hidden">Return period and download</caption>
+ <thead class="govuk-table__head">
+   <tr class="govuk-table__row">
+     <th class="govuk-table__header" scope="col">Return period</th>
+       <th class="govuk-table__header" scope="col">Download</th>
+
+   </tr>
+ </thead>
+ <tbody class="govuk-table__body">
+   <tr class="govuk-table__row">
+     <th class="govuk-table__header" scope="row">R14</th>
+       <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a> (Zip, 1.3MB)</td>
+   </tr>
+   <tr class="govuk-table__row">
+     <th class="govuk-table__header" scope="row">R13</th>
+     <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.2MB)</td>
+   </tr>
+   <tr class="govuk-table__row">
+     <th class="govuk-table__header" scope="row">R12</th>
+     <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.8MB)</td>
+   </tr>
+      <tr class="govuk-table__row">
+     <th class="govuk-table__header" scope="row">R11</th>
+     <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.1MB)</td>
+   </tr>
+   <tr class="govuk-table__row">
+     <th class="govuk-table__header" scope="row">R10</th>
+     <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.2MB)</td>
+   </tr>
+     <tr class="govuk-table__row">
+     <th class="govuk-table__header" scope="row">R09</th>
+     <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.9MB)</td>
+   </tr>
+      <tr class="govuk-table__row">
+     <th class="govuk-table__header" scope="row">R08</th>
+     <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.7MB)</td>
+   </tr>
+   <tr class="govuk-table__row">
+     <th class="govuk-table__header" scope="row">R07</th>
+     <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.7MB)</td>
+   </tr>
+   <tr class="govuk-table__row">
+     <th class="govuk-table__header" scope="row">R06</th>
+     <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.3MB)</td>
+   </tr>
+   <tr class="govuk-table__row">
+     <th class="govuk-table__header" scope="row">R05</th>
+     <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a> (Zip, 1.3MB)</td>
+   </tr>
+   <tr class="govuk-table__row">
+     <th class="govuk-table__header" scope="row">R04</th>
+     <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.3MB)</td>
+   </tr>
+   <tr class="govuk-table__row">
+     <th class="govuk-table__header" scope="row">R03</th>
+     <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.5MB)</td>
+   </tr>
+   <tr class="govuk-table__row">
+     <th class="govuk-table__header" scope="row">R02</th>
+     <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.7MB)</td>
+   </tr>
+      <tr class="govuk-table__row">
+     <th class="govuk-table__header" scope="row">R01</th>
+     <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.7MB)</td>
+   </tr>
+ </tbody>
+</table>
+</div>
+<div class="year-groups 17">
+      <h3 class="govuk-heading-m">2016/17 academic year</h3>
+
+       <table class="govuk-table">
+ <caption class="govuk-table__caption govuk-visually-hidden">Return period and download</caption>
+ <thead class="govuk-table__head">
+   <tr class="govuk-table__row">
+     <th class="govuk-table__header" scope="col">Return period</th>
+       <th class="govuk-table__header" scope="col">Download</th>
+
+   </tr>
+ </thead>
+ <tbody class="govuk-table__body">
+   <tr class="govuk-table__row">
+     <th class="govuk-table__header" scope="row">R14</th>
+       <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.3MB)</td>
+   </tr>
+   <tr class="govuk-table__row">
+     <th class="govuk-table__header" scope="row">R13</th>
+     <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.2MB)</td>
+   </tr>
+   <tr class="govuk-table__row">
+     <th class="govuk-table__header" scope="row">R12</th>
+     <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download REPORTS-0312210-091400.zip</a>  (Zip, 1.8MB)</td>
+   </tr>
+ </tbody>
+</table>
+</div>
+
+
+ </section>
+
+</div>
+
+</div>
+<!-- <div class="govuk-grid-column-one-third">
+
+  <ul class="govuk-list">
+    <li>
+      <a class="govuk-link" href="#">Submit another file</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="#">Manage assignments</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="#">Amends Provider name</a>
+    </li>
+  </ul>
+
+ </div> -->
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}

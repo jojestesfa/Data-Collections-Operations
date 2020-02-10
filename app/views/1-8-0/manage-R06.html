@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+
+
+{% include "./includes/nav.html" %}
+
+<a href="manage-ILR" class="govuk-back-link">Back</a>
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+       <h1 class="govuk-heading-xl">Manage ILR 2018/19 R06</h1>
+
+       <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-warning-text__assistive">Warning</span>
+            The changes made on ILR standard will also apply to ILR periodic.
+          </strong>
+        </div>
+
+       <p>Opened on 27 January 2019 at 9:00</p>
+
+       <p>Closes on 10 February 2019 at 18:00</p>
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    <label class="govuk-label"><strong>Closing date</strong></label>
+    <div class="govuk-date-input" id="dob">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="width-10">
+        <strong>Closing time</strong>
+        <span id="dob-hint" class="govuk-hint">
+      For example, 18:00
+    </span>
+      </label>
+      <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+    </div>
+
+
+
+
+       <p><a href="review-ILR-changes" class="govuk-button">Continue</a> <br>
+       <a href="manage-ILR" class="govuk-link">Cancel</a></p>
+  </div>
+</div>
+
+
+{% endblock %}

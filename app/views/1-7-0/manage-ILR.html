@@ -1,0 +1,170 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a id="backlink" href="#" class="govuk-back-link">Back</a>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <br>
+      {% include "./includes/search.html" %}
+      {% include "./includes/auto-js.html" %}
+  </div>
+</div>
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Manage ILR standard</h1>
+  </div>
+
+</div>
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="border-top ">
+      <h2 class="govuk-heading-m">Current period</h2>
+      <span class="govuk-heading-l no-margin-bottom">R06</span>
+      <span class="govuk-body-s">4 days remaining</span>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <div class="border-top">
+      <h2 class="govuk-heading-m">Closing date</h2>
+      <span class="govuk-heading-l no-margin-bottom">10 February</span>
+      <span class="govuk-body-s">6:00pm</span>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <div class="border-top">
+      <h2 class="govuk-heading-m">Last submission</h2>
+      <span class="govuk-heading-l no-margin-bottom">6:07pm</span>
+      <span class="govuk-body-s">by Bob Afflett</span>
+    </div>
+  </div>
+
+
+
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+
+    <ul class="govuk-list">
+
+      <li>
+        <a href="pause-collection" class="govuk-link">Pause collection</a>
+      </li>
+
+      <li>
+        <a href="record-number-displayed" class="govuk-link">Record number displayed</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">Period</th>
+          <th class="govuk-table__header" scope="col">Dates</th>
+          <th class="govuk-table__header" scope="col">Task</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">R01</th>
+          <td class="govuk-table__cell">1 June / 17 June <strong>closed</strong></td>
+          <td class="govuk-table__cell"><a href="manage-R05" class="govuk-link">Manage</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">R02</th>
+          <td class="govuk-table__cell">17 June / 3 July <strong>closed</strong></td>
+          <td class="govuk-table__cell"><a href="manage-R05" class="govuk-link">Manage</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">R03</th>
+          <td class="govuk-table__cell">3 July / 22 July <strong>closed</strong></td>
+          <td class="govuk-table__cell"><a href="manage-R05" class="govuk-link">Manage</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">R04</th>
+          <td class="govuk-table__cell">3 July / 3 September <strong>closed</strong></td>
+          <td class="govuk-table__cell"><a href="manage-R05" class="govuk-link">Manage</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">R05</th>
+          <td class="govuk-table__cell">4 September / 19 October <strong>closed</strong></td>
+          <td class="govuk-table__cell"><a href="manage-R05" class="govuk-link">Manage</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">R06</th>
+          <td class="govuk-table__cell">7 January / 4 Feb</td>
+          <td class="govuk-table__cell"><a href="manage-R06" class="govuk-link">Manage</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">R07</th>
+          <td class="govuk-table__cell">3 July / 22 July</td>
+          <td class="govuk-table__cell"><a href="manage-R06" class="govuk-link">Manage</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">R08</th>
+          <td class="govuk-table__cell">3 July / 22 July</td>
+          <td class="govuk-table__cell"><a href="manage-R06" class="govuk-link">Manage</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">R09</th>
+          <td class="govuk-table__cell">3 July / 22 July</td>
+          <td class="govuk-table__cell"><a href="manage-R06" class="govuk-link">Manage</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">R10</th>
+          <td class="govuk-table__cell">3 July / 22 July</td>
+          <td class="govuk-table__cell"><a href="manage-R06" class="govuk-link">Manage</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">R11</th>
+          <td class="govuk-table__cell">3 July / 22 July</td>
+          <td class="govuk-table__cell"><a href="manage-R06" class="govuk-link">Manage</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">R12</th>
+          <td class="govuk-table__cell">3 July / 22 July</td>
+          <td class="govuk-table__cell"><a href="manage-R06" class="govuk-link">Manage</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">R13</th>
+          <td class="govuk-table__cell">3 July / 22 July</td>
+          <td class="govuk-table__cell"><a href="manage-R06" class="govuk-link">Manage</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">R14</th>
+          <td class="govuk-table__cell">3 July / 22 July</td>
+          <td class="govuk-table__cell"><a href="manage-R06" class="govuk-link">Manage</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

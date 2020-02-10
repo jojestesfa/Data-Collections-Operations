@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+
+
+{% include "./includes/nav.html" %}
+
+<a href="manage-ILR" class="govuk-back-link">Back</a>
+<br>
+<br>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <h1 class="govuk-fieldset__heading">
+        Pause R06 collection?
+      </h1>
+    </legend>
+
+    <div class="govuk-warning-text">
+       <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+       <strong class="govuk-warning-text__text">
+         <span class="govuk-warning-text__assistive">Warning</span>
+         Submissions made by providers when the collection is paused will queue until the collection is resumed.
+       </strong>
+     </div>
+
+     <a class="govuk-button" href="confirm-collection-pause">Yes, pause collection</a>
+
+     <p><a href="manage-ILR">No, go back</a></p>
+  </div>
+
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,397 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+
+<!-- <script src="/public/javascripts/tt.js"></script> -->
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a id="backlink" href="#" class="govuk-back-link">Back</a>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <br>
+      {% include "./includes/search.html" %}
+      {% include "./includes/auto-js.html" %}
+  </div>
+</div>
+<br>
+<br>
+
+
+<div class="govuk-grid-row">
+
+
+
+  <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Jobs processing</h1>
+
+    <div class="govuk-tabs" data-module="tabs">
+      <h2 class="govuk-tabs__title">
+        Contents
+      </h2>
+
+      <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item">
+          <a id="allTab" class="govuk-tabs__tab govuk-tabs__tab--selected" href="#all">
+            All
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a id="ilrTab" class="govuk-tabs__tab govuk-tabs__tab--selected" href="#ilr">
+            ILR
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a id="easTab" class="govuk-tabs__tab" href="#eas">
+            EAS
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a id="esfTab" class="govuk-tabs__tab" href="#esf">
+            ESF
+          </a>
+        </li>
+
+      </ul>
+
+      <section class="govuk-tabs__panel" id="all">
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__value">
+              <strong>Provider name</strong>
+            </dt>
+
+            <dd class="govuk-summary-list__value">
+              <strong>Time taken</strong>
+            </dd>
+
+            <dd class="govuk-summary-list__value">
+              <strong>Status</strong>
+            </dd>
+
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__value">
+              Manchester
+            </dt>
+            <dd class="govuk-summary-list__value">
+              12 minutes
+            </dd>
+            <dd class="govuk-summary-list__value">
+              Processing...
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__value">
+              Coventry
+            </dt>
+            <dd class="govuk-summary-list__value">
+              7 minutes
+            </dd>
+            <dd class="govuk-summary-list__value">
+              Processing...
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__value">
+              Leicester
+            </dt>
+            <dd class="govuk-summary-list__value">
+              2 minutes
+            </dd>
+            <dd class="govuk-summary-list__value">
+              Processing...
+            </dd>
+          </div>
+
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__value">
+              Birmingham
+            </dt>
+            <dd class="govuk-summary-list__value">
+              5 minutes
+            </dd>
+            <dd class="govuk-summary-list__value">
+              Processing...
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__value">
+              London
+            </dt>
+            <dd class="govuk-summary-list__value">
+              3 minutes
+            </dd>
+            <dd class="govuk-summary-list__value">
+              Processing...
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__value">
+              Sheffield
+            </dt>
+            <dd class="govuk-summary-list__value">
+              1 minutes
+            </dd>
+            <dd class="govuk-summary-list__value">
+              Processing...
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__value">
+              Bristol
+            </dt>
+            <dd class="govuk-summary-list__value">
+              9 minutes
+            </dd>
+            <dd class="govuk-summary-list__value">
+              Processing...
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__value">
+              Cornwall
+            </dt>
+            <dd class="govuk-summary-list__value">
+              8 minutes
+            </dd>
+            <dd class="govuk-summary-list__value">
+              Processing...
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__value">
+              Luton
+            </dt>
+            <dd class="govuk-summary-list__value">
+              5 minutes
+            </dd>
+            <dd class="govuk-summary-list__value">
+              Processing...
+            </dd>
+          </div>
+        </dl>
+
+
+      </section>
+
+      <section class="govuk-tabs__panel" id="ilr">
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__value">
+              <strong>Provider name</strong>
+            </dt>
+
+            <dd class="govuk-summary-list__value">
+              <strong>Time taken</strong>
+            </dd>
+
+            <dd class="govuk-summary-list__value">
+              <strong>Status</strong>
+            </dd>
+
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__value">
+              Manchester
+            </dt>
+            <dd class="govuk-summary-list__value">
+              12 minutes
+            </dd>
+            <dd class="govuk-summary-list__value">
+              Processing...
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__value">
+              Coventry
+            </dt>
+            <dd class="govuk-summary-list__value">
+              7 minutes
+            </dd>
+            <dd class="govuk-summary-list__value">
+              Processing...
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__value">
+              Leicester
+            </dt>
+            <dd class="govuk-summary-list__value">
+              2 minutes
+            </dd>
+            <dd class="govuk-summary-list__value">
+              Processing...
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="eas">
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__value">
+              <strong>Provider name</strong>
+            </dt>
+
+            <dd class="govuk-summary-list__value">
+              <strong>Time taken</strong>
+            </dd>
+
+            <dd class="govuk-summary-list__value">
+              <strong>Status</strong>
+            </dd>
+
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__value">
+              Birmingham
+            </dt>
+            <dd class="govuk-summary-list__value">
+              5 minutes
+            </dd>
+            <dd class="govuk-summary-list__value">
+              Processing...
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__value">
+              London
+            </dt>
+            <dd class="govuk-summary-list__value">
+              3 minutes
+            </dd>
+            <dd class="govuk-summary-list__value">
+              Processing...
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__value">
+              Sheffield
+            </dt>
+            <dd class="govuk-summary-list__value">
+              1 minutes
+            </dd>
+            <dd class="govuk-summary-list__value">
+              Processing...
+            </dd>
+          </div>
+        </dl>
+
+      </section>
+
+      <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="esf">
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__value">
+              <strong>Provider name</strong>
+            </dt>
+
+            <dd class="govuk-summary-list__value">
+              <strong>Time taken</strong>
+            </dd>
+
+            <dd class="govuk-summary-list__value">
+              <strong>Status</strong>
+            </dd>
+
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__value">
+              Bristol
+            </dt>
+            <dd class="govuk-summary-list__value">
+              9 minutes
+            </dd>
+            <dd class="govuk-summary-list__value">
+              Processing...
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__value">
+              Cornwall
+            </dt>
+            <dd class="govuk-summary-list__value">
+              8 minutes
+            </dd>
+            <dd class="govuk-summary-list__value">
+              Processing...
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__value">
+              Luton
+            </dt>
+            <dd class="govuk-summary-list__value">
+              5 minutes
+            </dd>
+            <dd class="govuk-summary-list__value">
+              Processing...
+            </dd>
+          </div>
+        </dl>
+
+      </section>
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <section class="margin-bottom">
+      <!-- <h2 class="govuk-heading-m centre-text"><a href="jobs-processing">Jobs processing</a></h2> -->
+      <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+        <circle class="circle-chart__background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15" />
+        <circle id="first" class="circle-chart__circle" stroke-width="3" stroke-dasharray="40,100" stroke-linecap="" fill="none" cx="16.91549431" cy="16.91549431" r="15" />
+        <g class="circle-chart__info">
+          <text id="firstDonut" class="circle-chart__percent counter" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" data-count="40">40</text>
+          <text id="jobText" class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2">All jobs</text>
+        </g>
+      </svg>
+    </section>
+  </div>
+
+</div>
+
+
+<script type="text/javascript">
+
+
+</script>
+
+
+
+
+
+
+
+
+{% endblock %}

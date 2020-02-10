@@ -1,0 +1,117 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a id="backlink" href="#" class="govuk-back-link">Back</a>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <br>
+      {% include "./includes/search.html" %}
+      {% include "./includes/auto-js.html" %}
+  </div>
+</div>
+
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Saved searches</h1>
+  </div>
+  <div class="govuk-grid-column-one-third"><p><a class="govuk-button govuk-button--secondary" href="advanced-search-v2">New advanced search</a></p></div>
+</div>
+<!-- <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <h2 class="govuk-heading-m">Saved search 1 <span class="govuk-body"><a class="margin-left" href="advanced-search-v2">Edit search</a></span></h2>
+      <p>Created by: Lynn Burdon</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Created by</li>
+        <li>Created on</li>
+        <li>Name</li>
+      </ul>
+
+      <a href="query-results" class="govuk-button ">Search</a>
+      <hr>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <h2 class="govuk-heading-m">Saved search 2 <span class="govuk-body"><a class="margin-left" href="advanced-search-v2">Edit search</a></span></h2>
+      <p>Created by: Bernie Odonnell</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Created by</li>
+        <li>Created on</li>
+        <li>Name</li>
+      </ul>
+
+      <a href="query-results" class="govuk-button ">Search</a>
+      <hr>
+  </div>
+</div> -->
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-m flex space-between">Saved search 1 <span class="govuk-body govuk-!-font-weight-bold"><a class="margin-left" href="advanced-search-v2-edit">Edit search</a></span></h2>
+      <p>Created by: Lynn Burdon</p>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Created by</li>
+            <li>Created on</li>
+            <li>Name</li>
+          </ul>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Created by</li>
+            <li>Created on</li>
+            <li>Name</li>
+          </ul>
+        </div>
+      </div>
+      <a href="query-results" class="govuk-button ">Search</a>
+      <hr>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-m flex space-between">Saved search 2 <span class="govuk-body govuk-!-font-weight-bold"><a class="margin-left" href="advanced-search-v2-edit">Edit search</a></span></h2>
+      <p>Created by: Kam Thandi</p>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Created by</li>
+            <li>Created on</li>
+            <li>Name</li>
+          </ul>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Created by</li>
+            <li>Created on</li>
+            <li>Name</li>
+          </ul>
+        </div>
+      </div>
+
+      <a href="query-results" class="govuk-button ">Search</a>
+      <hr>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

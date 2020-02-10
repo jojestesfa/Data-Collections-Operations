@@ -1,0 +1,103 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Data Collections Operations
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a id="backlink" href="#" class="govuk-back-link">Back</a>
+  </div>
+
+</div>
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+       <h1 class="govuk-heading-xl">Manage assignments <span class="govuk-caption-l">University of Wolverhampton, 10007166</span></h1>
+
+       <!-- <p class="assignment-links"><a class="govuk-link" href="#">Submit another file</a> <a class="govuk-link" href="#">Manage assignments</a> <a class="govuk-link" href="#">Amend Provider name</a></p> -->
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="manage-provider-assignments" method="post" class="form">
+<div class="govuk-form-group">
+
+  <table class="govuk-table">
+    <tbody class="govuk-table__body">
+
+      <tr class="govuk-table__row">
+        <th class="govuk-table__header" scope="row">Collection</th>
+        <th class="govuk-table__cell">Start date</th>
+        <th class="govuk-table__cell">End date</th>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">IRL1920</td>
+        <td class="govuk-table__cell">
+          <input class="govuk-input govuk-input--width-10" id="width-10" name="IRL1920-start-date" type="text" placeholder="mm/dd/yyyy" ></td>
+        <td class="govuk-table__cell"><input class="govuk-input govuk-input--width-10" id="width-10" name="IRL1920-end-date" type="text" placeholder="mm/dd/yyyy"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell" scope="row">EAS1920</td>
+        <td class="govuk-table__cell"><input class="govuk-input govuk-input--width-10" id="width-10" name="EAS1920-start-date" type="text" placeholder="mm/dd/yyyy"></td>
+        <td class="govuk-table__cell"><input class="govuk-input govuk-input--width-10" id="width-10" name="EAS1920-end-date" type="text" placeholder="mm/dd/yyyy"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">ESFR2-1920</td>
+        <td class="govuk-table__cell"><input class="govuk-input govuk-input--width-10" id="width-10" name="ESFR2-1920-start-date" type="text" placeholder="mm/dd/yyyy"></td>
+        <td class="govuk-table__cell"><input class="govuk-input govuk-input--width-10" id="width-10" name="ESFR2-1920-end-date" type="text" placeholder="mm/dd/yyyy"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">FRM-reports1920</td>
+        <td class="govuk-table__cell"><input class="govuk-input govuk-input--width-10" id="width-10" name="FRM-reports1920-start-date" type="text" placeholder="mm/dd/yyyy"></td>
+        <td class="govuk-table__cell"><input class="govuk-input govuk-input--width-10" id="width-10" name="FRM-reports1920-end-date" type="text" placeholder="mm/dd/yyyy"></td>
+      </tr>
+    </tbody>
+  </table>
+  {{ govukButton({
+  text: "Save",
+  href: ""
+  }) }}
+
+  <a href="dashboard" class="govuk-link govuk-!-padding-left-3 govuk-!-margin-top-3">Cancel</a>
+
+
+
+
+
+
+
+        <!-- <p><a href="manage-assignments-new"  class="govuk-link">Add more assignments</a></p> -->
+
+
+    </div>
+
+    </form>
+
+    </div>  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

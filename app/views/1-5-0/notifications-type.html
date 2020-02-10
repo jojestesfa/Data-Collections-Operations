@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+
+
+{% include "./includes/nav.html" %}
+
+<a href="add-new-provider" class="govuk-back-link">Back</a>
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+         <h1 class="govuk-fieldset__heading">
+           Choose notification type
+         </h1>
+        </legend>
+
+        <div class="govuk-form-group">
+
+          <select class="govuk-select" id="sort" name="sort">
+            <option value="published">Problems with submissions</option>
+            <option value="updated" selected>Planned maintenance</option>
+            
+            <option value="views">Failing reports</option>
+          </select>
+        </div>
+
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              The message I need isn't in the list
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            Notifications that affect all the collections will appear in 'Submit learner data' on the screen that asks the user 'What do you want to do?' To add a new notification type to this area contact <a href="#">name@education/gov.uk</a>. <br><br>
+            If the notification you want to add is related to a specific collection, please go back and select the correct collection type.
+          </div>
+        </details>
+
+
+    </fieldset>
+
+
+
+       <a href="notifications-details" class="govuk-button">Continue</a>
+       <p><a href="dashboard" class="govuk-link">Cancel</a></p>
+  </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<div class="main-nav">
+  <a class="govuk-heading-s" href="dashboard">Activity</a>
+  <a class="govuk-heading-s" href="manage-collections">Collections</a>
+  <!-- <a class="govuk-heading-s" href="#">Provider(s)</a> -->
+
+</div>
+<a href="provider-record" class="govuk-back-link">Back</a>
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+       <h1 class="govuk-heading-xl">Manage assignments</h1>
+
+       <!-- <p class="assignment-links"><a class="govuk-link" href="#">Submit another file</a> <a class="govuk-link" href="#">Manage assignments</a> <a class="govuk-link" href="#">Amend Provider name</a></p> -->
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+
+  <!-- <div class="govuk-grid-column-one-third">
+    <ul class="govuk-list">
+      <li>
+        <a class="govuk-link" href="#">Submit another file</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="manage-assignments">Manage assignments</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Amend Provider name</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Deactivate</a>
+      </li>
+    </ul>
+  </div> -->
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-heading-m">Provider name 1</div>
+    <table class="govuk-table">
+      <!-- <caption class="govuk-table__caption">Collection type</caption> -->
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">Collection type</th>
+          <th class="govuk-table__header" scope="col">Status</th>
+          <th class="govuk-table__header" scope="col">Add/Remove</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">ILR Standard</th>
+          <td class="govuk-table__cell">Inactive</td>
+          <td class="govuk-table__cell"><a href="#"class="govuk-link">Add</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">ILR Periodic</th>
+          <td class="govuk-table__cell">Active</td>
+          <td class="govuk-table__cell"><a href="#"class="govuk-link">Remove</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">ESF</th>
+          <td class="govuk-table__cell">Active</td>
+          <td class="govuk-table__cell"><a href="#"class="govuk-link">Remove</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">EAS</th>
+          <td class="govuk-table__cell">Inactive</td>
+          <td class="govuk-table__cell"><a href="#"class="govuk-link">Add</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+    <a href="#" class="govuk-button">Apply changes</a>
+    <a href="provider-record" class="govuk-link">Cancel</a>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}

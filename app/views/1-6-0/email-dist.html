@@ -1,0 +1,109 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+
+<!-- <script src="/public/javascripts/tt.js"></script> -->
+
+<a id="backlink" href="#" class="govuk-back-link">Back</a>
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Add or remove people from emails</h1>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Choose a list
+      </label>
+      <div class="flex space-between">
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="published" selected>DCT</option>
+        <option value="updated">Management</option>
+        <option value="views">Apprenticeships</option>
+        <option value="comments">All</option>
+      </select>
+
+      <a class="govuk-link govuk-!-font-size-19" href="manage-mailing-list">Manage lists</a>
+      </div>
+    </div>
+
+    <br>
+
+    <h2 class="govuk-heading-m">DCT mailing list</h2>
+
+
+    <p><a class="govuk-button govuk-button--secondary" href="add-recipient">Add a new recipient</a></p>
+
+
+
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+          name.surname@education.gov.uk
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="remove-recipient">
+            Remove<span class="govuk-visually-hidden"> email</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+          ian.tress@education.gov.uk
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Remove<span class="govuk-visually-hidden"> email</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+          karyn.reidy@education.gov.uk
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Remove<span class="govuk-visually-hidden"> email</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+          lynne.burdon@education.gov.uk
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Remove<span class="govuk-visually-hidden"> email</span>
+          </a>
+        </dd>
+      </div>
+
+
+    </dl>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

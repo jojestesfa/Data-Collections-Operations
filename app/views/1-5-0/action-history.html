@@ -1,0 +1,141 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+
+<!-- <script src="/public/javascripts/tt.js"></script> -->
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a id="backlink" href="#" class="govuk-back-link">Back</a>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <br>
+      {% include "./includes/search.html" %}
+      {% include "./includes/auto-js.html" %}
+  </div>
+</div>
+<br>
+<br>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <!-- <dl id="submissions" class="govuk-summary-list govuk-!-margin-bottom-9">
+
+      <div class="govuk-summary-list__row ilr eas esf">
+        <dt class="govuk-summary-list__value govuk-!-width-one-third">
+          <strong>Date</strong>
+        </dt>
+
+        <dd class="govuk-summary-list__value">
+          <strong>Time</strong>
+        </dd>
+
+        <dd class="govuk-summary-list__value">
+          <strong>Action</strong>
+        </dd>
+
+        <dd class="govuk-summary-list__value">
+          <strong>Authorised by</strong>
+        </dd>
+
+
+      </div>
+
+
+
+      <div class="govuk-summary-list__row ilr">
+        <dt class="govuk-summary-list__value ">
+          23 May 2019
+        </dt>
+        <dd class="govuk-summary-list__value">
+          11.12
+        </dd>
+        <dd class="govuk-summary-list__value">
+            <span>City of Manchester learning partnership </span><a href="#">Name changed</a><span> to Manchester College</span>
+        </dd>
+        <dd class="govuk-summary-list__value">
+          22 minutes
+        </dd>
+
+      </div>
+
+
+    </dl> -->
+    <h1 class="govuk-heading-xl">Action history</h1>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Choose date
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+
+        <option value="updated" selected>May</option>
+        <option value="views">April</option>
+        <option value="comments">March</option>
+      </select>
+    </div>
+
+    <table class="govuk-table">
+
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">Date</th>
+          <th class="govuk-table__header" scope="col">Time</th>
+          <th class="govuk-table__header govuk-!-width-one-third" scope="col">Action</th>
+          <th class="govuk-table__header" scope="col">Authorised by</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">23 May 2019</th>
+          <td class="govuk-table__cell">11.12</td>
+          <td class="govuk-table__cell">  <span>City of Manchester learning partnership </span><a href="#">Name changed</a><span> to Manchester College</span></td>
+          <td class="govuk-table__cell">Bernie O'Donnell</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">23 May 2019</th>
+          <td class="govuk-table__cell">10.43</td>
+          <td class="govuk-table__cell"><a href="#">Stop reference data schedular</a> finished part of period end</td>
+          <td class="govuk-table__cell">Kam Thandi</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">23 May 2019</th>
+          <td class="govuk-table__cell">10.36</td>
+          <td class="govuk-table__cell"><a href="#">Stop reference data schedular</a> finished part of period end</td>
+          <td class="govuk-table__cell">Kam Thandi</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">23 May 2019</th>
+          <td class="govuk-table__cell">10.34</td>
+          <td class="govuk-table__cell"><a href="#">Period end</a> started</td>
+          <td class="govuk-table__cell">Lynn Burdon</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+
+<script type="text/javascript">
+
+
+</script>
+
+
+
+
+
+
+
+
+{% endblock %}

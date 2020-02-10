@@ -1,0 +1,115 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<div class="main-nav">
+  <a class="govuk-heading-s" href="dashboard">Activity</a>
+  <a class="govuk-heading-s" href="manage-collections">Collections</a>
+  <!-- <a class="govuk-heading-s" href="#">Provider(s)</a> -->
+</div>
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Advanced search</h1>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <span class="govuk-heading-m">Search filter</span>
+    <a href="#" class="filter-box-button">
+      <span class="govuk-body"><strong>Date of submission</strong></span>
+    </a>
+    <div class="filter-box hidden">
+      <div class="govuk-radios govuk-radios--inline">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
+          <label class="govuk-label govuk-radios__label" for="changed-name-1">
+            Yesterday
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+          <label class="govuk-label govuk-radios__label" for="changed-name-2">
+            In the past
+          </label>
+        </div>
+      </div>
+    </div>
+
+<section class="filter-section">
+    <a href="#" class="filter-box-button">
+      <span class="govuk-body"><strong>Collection type</strong></span>
+    </a>
+    <div class="filter-box hidden">
+      <span class="govuk-body">checkboxes here</span>
+    </div>
+</section>
+<section>
+    <a href="#" class="filter-box-button">
+      <span class="govuk-body"><strong>Status</strong></span>
+    </a>
+    <div class="filter-box hidden">
+      <span class="govuk-body">checkboxes here</span>
+    </div>
+</section>
+<section>
+    <a href="#" class="filter-box-button">
+      <span class="govuk-body"><strong>Processing log</strong></span>
+    </a>
+    <div class="filter-box hidden">
+      <span class="govuk-body">checkboxes here</span>
+    </div>
+</section>
+</div>
+  <div class="govuk-grid-column-two-thirds">
+    <div>
+              <!-- <input class="govuk-input govuk-!-width-two-thirds" id="provider-search" name="search-provider"
+              type="search" value="Manchester" aria-describedby="provider-search">
+              <a href="search-results.html" type="submit" class="govuk-button">Search</a> -->
+              <!-- <p>We found 3 results for "Manchester"</p> -->
+              <!-- <p>3 results found.</p> -->
+              <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+              <h3 class="govuk-heading-m"><a href="provider-record.html">Provider name 1</a></h3>
+              <ul class="govuk-list">
+                <li><span class="govuk-!-font-weight-bold">UKPRN:</span> 12345</li>
+                <li><span class="govuk-!-font-weight-bold">Last submission:</span> Monday 14 January by Bob Franks</li>
+              </ul>
+
+              <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+              <h3 class="govuk-heading-m"><a href="provider-record.html">Provider name 2</a></h3>
+              <ul class="govuk-list">
+                <li><span class="govuk-!-font-weight-bold">UKPRN:</span> 12345</li>
+                <li><span class="govuk-!-font-weight-bold">Last submission:</span> Monday 7 January by Ann Franks</li>
+              </ul>
+
+              <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+              <h3 class="govuk-heading-m"><a href="provider-record.html">Provider name 3</a></h3>
+              <ul class="govuk-list">
+                <li><span class="govuk-!-font-weight-bold">UKPRN:</span> 12345</li>
+                <li><span class="govuk-!-font-weight-bold">Last submission:</span> Wednesday 9 January by Ian Franks</li>
+              </ul>
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

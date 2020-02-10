@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+
+
+{% include "./includes/nav.html" %}
+
+<a href="add-new-provider" class="govuk-back-link">Back</a>
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+       <h1 class="govuk-heading-xl">Upload a CSV file</h1>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    {% include "./includes/search.html" %}
+    {% include "./includes/auto-js.html" %}
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+       <p><a href="#">Download CSV template</a></p>
+       <br>
+       <div class="govuk-form-group">
+  <label class="govuk-label" for="file-upload-1">
+    <strong>Upload a file</strong>
+  </label>
+  <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+</div>
+
+
+
+       <a href="providers-list-created" class="govuk-button">Upload file</a>
+       <a href="dashboard" class="govuk-link">Cancel</a>
+  </div>
+</div>
+
+
+{% endblock %}

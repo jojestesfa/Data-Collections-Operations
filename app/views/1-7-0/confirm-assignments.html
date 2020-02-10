@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  DC Operations - Confirm assignments
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+
+<a id="backlink" href="#" class="govuk-back-link">Back</a>
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+        <div class="govuk-panel govuk-panel--confirmation">
+          <h1 class="govuk-panel__title">
+            You've added these assignments to {{ data['input-autocomplete'] }}
+          </h1>
+          <!-- <div class="govuk-panel__body"> -->
+            <span class="govuk-!-font-size-36">ILR standard 19/18</span><br>
+            <span class="govuk-!-font-size-19">Start date: 11/01/2019</span><br><br>
+            <span class="govuk-!-font-size-36">FIS access</span><br>
+            <span class="govuk-!-font-size-19">Start date: 11/01/2019</span>
+
+            <!-- <br><strong>HDJ2123F</strong> -->
+          <!-- </div> -->
+        </div>
+
+        <p class="govuk-body">We have sent you a confirmation email.</p>
+
+        <p><a href="manage-assignments">View {{ data['input-autocomplete'] }}'s assignments</a></p>
+
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+      {% include "./includes/search.html" %}
+      {% include "./includes/auto-js.html" %}
+  </div>
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}

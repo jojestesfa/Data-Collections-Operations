@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+
+
+{% include "./includes/nav.html" %}
+
+<a href="add-new-provider" class="govuk-back-link">Back</a>
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Where do you want to <br> display your message?
+    </h1>
+
+
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl"></legend>
+        <div class="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="first-radio" name="where-do-you-live" type="radio" value="england">
+            <label class="govuk-label govuk-radios__label govuk-label--s" for="first-radio">
+              Announcements
+            </label> <span id="sign-in-1-item-hint" class="govuk-hint govuk-radios__hint">
+          General ILR notices, e.g. the period closing date has changed.
+        </span> </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="second-radio" name="where-do-you-live" type="radio" value="scotland">
+            <label class="govuk-label govuk-radios__label govuk-label--s" for="second-radio">
+              Data watch
+            </label> <span id="sign-in-1-item-hint" class="govuk-hint govuk-radios__hint">
+          Things that affect the data the provider must submit. <br>
+          E.g. Validation rule – EPAOrgIS_01. <br>
+This rule is now working properly. You may see new errors which you must address for the learner to be valid.
+        </span> </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="third-radio" name="where-do-you-live" type="radio" value="wales">
+            <label class="govuk-label govuk-radios__label govuk-label--s" for="third-radio">
+              New service issues
+            </label> <span id="sign-in-1-item-hint" class="govuk-hint govuk-radios__hint">
+          Active bugs identified during this period or the previous period.
+        </span> </div>
+
+          <!-- <div class="govuk-radios__divider">or</div> -->
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="forth-radio" name="where-do-you-live" type="radio" value="abroad">
+            <label class="govuk-label govuk-radios__label govuk-label--s" for="forth-radio">
+              Fixed service issues
+            </label> <span id="sign-in-1-item-hint" class="govuk-hint govuk-radios__hint">
+          Bugs that have been fixed this period or the previous period.
+        </span> </div>
+          </div>
+      </fieldset>
+    </div>
+
+
+
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <span class="right-side-image"><img src="/public/images/00-zero.png" alt=""></span>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a href="notifications-content" class="govuk-button">Next</a>
+    <p><a href="dashboard" class="govuk-link">Cancel</a></p>
+  </div>
+</div>
+
+{% endblock %}

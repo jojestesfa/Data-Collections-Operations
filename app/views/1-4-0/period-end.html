@@ -1,0 +1,178 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+
+<!-- <script src="/public/javascripts/tt.js"></script> -->
+
+<a id="backlink" href="#" class="govuk-back-link">Back</a>
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Period end
+    <span class="govuk-caption-xl">RO6 closed 22 April 2019 at 18.05</span>
+    </h1>
+
+
+
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-one-third">
+    <ul class="govuk-list">
+
+      <li>
+        <a href="app-version" class="govuk-link">Application versions</a>
+      </li>
+      <li>
+        <a href="email-dist" class="govuk-link">Email distribution</a>
+      </li>
+      <li>
+        <a href="period-end-history" class="govuk-link">History</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <section class="margin-bottom">
+      <h2 class="govuk-heading-m centre-text"><a href="">Jobs processing</a></h2>
+      <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+        <circle class="circle-chart__background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15" />
+        <circle id="first" class="circle-chart__circle" stroke-width="3" stroke-dasharray="10,100" stroke-linecap="" fill="none" cx="16.91549431" cy="16.91549431" r="15" />
+        <g class="circle-chart__info">
+          <text class="circle-chart__percent counter" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" id="firstDonut" data-count="">1</text>
+          <text class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2">Nearly ready</text>
+        </g>
+      </svg>
+    </section>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <section class="margin-bottom">
+      <h2 class="govuk-heading-m centre-text"><a href="#">Taking longer than usual</a></h2>
+      <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+        <circle class="circle-chart__background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15" />
+        <circle id="second" class="danger circle-chart__circle" stroke-width="3" stroke-dasharray="90,100" stroke-linecap="" fill="none" cx="16.91549431" cy="16.91549431" r="15" />
+        <g class="circle-chart__info">
+          <text class="circle-chart__percent counter" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" id="secondDonut" data-count="">1</text>
+          <text class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2">Needs attention</text>
+        </g>
+      </svg>
+    </section>
+  </div>
+
+
+
+</div>
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-one-third">&nbsp</div>
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <h2 class="govuk-heading-m">Failed submissions</h2>
+
+    <p >Where no successful submission for this period exists</p>
+    <table class="govuk-table">
+
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+
+          <th class="govuk-table__header" scope="col">Date and time</th>
+          <th class="govuk-table__header" scope="col">Provider</th>
+          <th class="govuk-table__header" scope="col">Status</th>
+          <th class="govuk-table__header" scope="col">Action</th>
+
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">22 April 2019 at 14.31</td>
+          <td class="govuk-table__cell"><a href="#">Manchester College</a></td>
+          <td class="govuk-table__cell">Processing...</td>
+          <td class="govuk-table__cell" scope="col"><a href="#">Cancel</a> </td>
+
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">22 April 2019 at 10.19</td>
+          <td class="govuk-table__cell"><a href="#">Leicester College</a></td>
+          <td class="govuk-table__cell" scope="col">Failed</td>
+
+          <td class="govuk-table__cell"><a href="#">Submit again</a></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">22 April 2019 at 11.20</td>
+          <td class="govuk-table__cell"><a href="#">Coventry College</a></td>
+          <td class="govuk-table__cell">Not started</td>
+          <th class="govuk-table__header" scope="col"> </th>
+
+        </tr>
+      </tbody>
+    </table>
+
+
+    <h2 class="govuk-heading-m">Period end preparation</h2>
+
+    <table class="govuk-table">
+
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+
+          <th class="govuk-table__header" scope="col">Job ID</th>
+          <th class="govuk-table__header" scope="col">Status</th>
+
+
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Name of job 1</td>
+          <td class="govuk-table__cell">Complete</td>
+
+
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Name of job 2</td>
+          <td class="govuk-table__cell">Complete</td>
+
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Name of job 3</td>
+          <td class="govuk-table__cell">Processing...</td>
+
+
+        </tr>
+      </tbody>
+    </table>
+
+
+
+    <a href="period-end-part-2" class="govuk-button">
+      Start period end process
+    </a>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}

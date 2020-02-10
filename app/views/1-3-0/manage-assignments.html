@@ -1,0 +1,280 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a id="backlink" href="#" class="govuk-back-link">Back</a>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <br>
+      {% include "./includes/search.html" %}
+      {% include "./includes/auto-js.html" %}
+  </div>
+</div>
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+       <h1 class="govuk-heading-xl">Manage assignments</h1>
+       <h2 class="govuk-heading-m">{{ data['input-autocomplete'] }}</h2>
+       <!-- <p class="assignment-links"><a class="govuk-link" href="#">Submit another file</a> <a class="govuk-link" href="#">Manage assignments</a> <a class="govuk-link" href="#">Amend Provider name</a></p> -->
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+
+
+
+
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+    <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
+    <span id="citizenship-conditional-hint" class="govuk-hint">
+      Select assignments to add.
+    </span>
+    <div class="govuk-checkboxes" data-module="checkboxes">
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="citizenship-conditional-0" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-citizenship-conditional-0">
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-0">
+          ILR 18/19
+        </label>
+      </div>
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-0">
+
+
+      <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input assignment" id="how-contacted-conditional-1" name="how-contacted" type="radio" value="ILR Standard" data-aria-controls="conditional-how-contacted-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+          ILR Standard 18/19
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-1">
+        <div class="govuk-form-group">
+          <span class="govuk-error-message error1 hidden">
+            Please add a valid date
+          </span>
+          <label class="govuk-label " for="contact-by-email" value="ilrs">
+            Start date
+          </label>
+          <input class="govuk-input govuk-!-width-one-third assignment-value" type="date" id="date" name="date" value="2019-01-11" disabled="disabled">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-email" value="ilrs">
+            End date
+          </label>
+          <span id="national-insurance-number-hint" class="govuk-hint">
+            Optional
+          </span>
+          <input class="govuk-input govuk-!-width-one-third assignment-end" type="date" id="date" name="date" value="" placeholder="DD/MM/YYYY">
+        </div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input assignment2" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="ILR Periodic" data-aria-controls="conditional-how-contacted-conditional-2">
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+          ILR Periodic 18/19
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
+        <div class="govuk-form-group">
+          <span class="govuk-error-message error2 hidden">
+            Please add a valid date
+          </span>
+          <label class="govuk-label " for="contact-by-phone" value="ilrp">
+            Start date
+          </label>
+          <input class="govuk-input govuk-!-width-one-third assignment-value2" type="date" id="date" name="date" value="" placeholder="DD/MM/YYYY">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-email" value="ilrp">
+            End date
+          </label>
+          <span id="national-insurance-number-hint" class="govuk-hint">
+            Optional
+          </span>
+          <input class="govuk-input govuk-!-width-one-third assignment-end2" type="date" id="date" name="date" value="" placeholder="DD/MM/YYYY">
+        </div>
+      </div>
+</div>
+</div>
+
+
+
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input assignment3" id="citizenship-conditional-1" name="citizen" type="checkbox" value="EAS" data-aria-controls="conditional-citizenship-conditional-1">
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
+          EAS 18/19
+        </label>
+      </div>
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-1">
+        <div class="govuk-form-group">
+          <span class="govuk-error-message error3 hidden">
+            Please add a valid date
+          </span>
+          <label class="govuk-label" for="contact-by-email" value="eas">
+            Start date
+          </label>
+          <input class="govuk-input govuk-!-width-one-third assignment-value3" type="date" id="date" name="date" value="2019-01-21" placeholder="DD/MM/YYYY">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-email" value="eas">
+            End date
+          </label>
+          <span id="national-insurance-number-hint" class="govuk-hint">
+            Optional
+          </span>
+          <input class="govuk-input govuk-!-width-one-third assignment-end3" type="date" id="date" name="date" value="" placeholder="DD/MM/YYYY">
+        </div>
+
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input assignment4" id="citizenship-conditional-2" name="citizen" type="checkbox" value="ESF" data-aria-controls="conditional-citizenship-conditional-2">
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
+          ESF 18/19
+        </label>
+      </div>
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-2">
+        <div class="govuk-form-group">
+          <span class="govuk-error-message error4 hidden">
+            Please add a valid date
+          </span>
+          <label class="govuk-label" for="contact-by-phone" value="esf">
+            Start date
+          </label>
+          <input class="govuk-input govuk-!-width-one-third assignment-value4" type="date" id="date" name="date" value="" placeholder="DD/MM/YYYY">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-email" value="esf">
+            End date
+          </label>
+          <span id="national-insurance-number-hint" class="govuk-hint">
+            Optional
+          </span>
+          <input class="govuk-input govuk-!-width-one-third assignment-end4" type="date" id="date" name="date" value="" placeholder="DD/MM/YYYY">
+        </div>
+
+      </div>
+
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input assignment5" id="waste-1" name="waste" type="checkbox" value="carcasses">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+          FIS Access
+        </label>
+      </div>
+      <!-- <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-2">
+
+
+      </div> -->
+
+      <!-- <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="citizenship-conditional-3" name="citizen" type="checkbox" value="text message" data-aria-controls="conditional-citizenship-conditional-3">
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-3">
+          Text message
+        </label>
+      </div>
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-3">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-text">
+            Mobile phone number
+          </label>
+          <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel">
+        </div>
+
+      </div> -->
+    </div>
+  </fieldset>
+
+
+</div>
+<p><a href="#1" id="addAssignment" class="govuk-link">Update assignments</a></p>
+
+<p><a href="provider-record" class="govuk-link">Cancel</a></p>
+
+</div>
+
+  <div class="govuk-grid-column-one-third sticky">
+    <div id="1" class="active-assignments">
+      <p class="govuk-heading-s">Assignments</p>
+
+
+      <span id="noActive" class="govuk-body hidden">No active assignments</span>
+
+
+      <section class="assigned">
+        <p class="govuk-body">ILR Standard 18/19 <span class="remove-link"><a class="remove" href="#">Remove</a></span><br>
+          <span class="start-date">Start date: 11-01-2019</span><br>
+          <span class="end-date">End date: N/A</span>
+        </p>
+        <hr>
+      </section>
+
+      <section class="assigned2 hidden">
+        <p class="govuk-body">ILR Periodic 18/19 <span class="remove-link"><a class="remove2" href="#">Remove</a></span><br>
+          <span class="start-date2"></span><br>
+          <span class="end-date2">End date: N/A</span>
+        </p>
+        <hr>
+      </section>
+
+      <section class="assigned3 ">
+        <p class="govuk-body">EAS 18/19 <span class="remove-link"><a class="remove3" href="#">Remove</a></span><br>
+          <span class="start-date3">Start date: 21-01-2019</span><br>
+          <span class="end-date3">End date: N/A</span>
+        </p>
+        <hr>
+      </section>
+
+      <section class="assigned4 hidden">
+        <p class="govuk-body">ESF 18/19 <span class="remove-link"><a class="remove4" href="#">Remove</a></span><br>
+          <span class="start-date4"></span><br>
+          <span class="end-date4">End date: N/A</span>
+        </p>
+        <hr>
+      </section>
+
+      <section class="assigned5 hidden">
+        <p class="govuk-body">FIS Access <span class="remove-link"><a class="remove5" href="#">Remove</a></span><br>
+          <!-- <span class="start-date5"></span><br>
+          <span class="end-date4">N/A</span> -->
+        </p>
+      </section>
+
+
+
+      <div id="buttonGroup">
+        <a href="confirm-assignments"  class="govuk-button">Save</a>
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}

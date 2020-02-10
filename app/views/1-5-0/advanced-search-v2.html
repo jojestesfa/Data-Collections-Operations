@@ -1,0 +1,200 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a id="backlink" href="#" class="govuk-back-link">Back</a>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <br>
+      {% include "./includes/search.html" %}
+      {% include "./includes/auto-js.html" %}
+  </div>
+</div>
+
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Advanced search</h1>
+  </div>
+  <div class="govuk-grid-column-one-third"><p><a class="govuk-button govuk-button--secondary" href="saved-searches">View saved searches</a></p></div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Look for
+      </label>
+      <select class="govuk-select" id="firstStep" name="sort">
+        <option value="empty" selected> </option>
+        <option >Recently published</option>
+        <option >Collection types</option>
+        <option >Age</option>
+        <option value="collection-assignments" >Collection assignments</option>
+      </select>
+    </div>
+
+  <br>
+    <div id="grey1" class="grey-container">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Look for
+                  </label>
+                  <select class="govuk-select" id="secondStep" name="sort">
+                    <option value="empty" selected> </option>
+                    <option >Collection assignment</option>
+                    <option >Created by</option>
+                    <option >Created on</option>
+                    <option >Name</option>
+                  </select>
+                </div>
+          </div>
+          <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Select one
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="published" selected> </option>
+                    <option value="published" >contains</option>
+                    <option value="updated" >does not contain</option>
+                    <option value="views">contains data</option>
+                    <option value="comments">does not contain data</option>
+                  </select>
+                </div>
+          </div>
+          <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Value
+                  </label>
+                  <!-- <select class="govuk-select" id="sort" name="sort">
+                    <option value="published">Recently published</option>
+                    <option value="updated" selected>Recently updated</option>
+                    <option value="views">Most views</option>
+                    <option value="comments">Most comments</option>
+                  </select> -->
+                  <input class="govuk-input govuk-input--width-10" id="event-name" name="event-name" type="text">
+                  <span class="govuk-heading-m inline"><a id="closeBox" href="#">x</a></span>
+                </div>
+
+          </div>
+
+        </div>
+    </div>
+
+    <div id="andOr" class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+
+
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="changed-name-1">
+                  And
+                </label> </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                  Or
+                </label> </div>
+            </div>
+          </fieldset>
+
+      </div>
+    </div>
+
+    <br>
+    <div id="grey2" class="grey-container">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Look for
+                  </label>
+                  <select class="govuk-select" id="secondStep" name="sort">
+                    <option value="empty" selected> </option>
+                    <option >Collection assignment</option>
+                    <option >Created by</option>
+                    <option >Created on</option>
+                    <option >Name</option>
+                  </select>
+                </div>
+          </div>
+          <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Select one
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="published" selected> </option>
+                    <option value="published" >contains</option>
+                    <option value="updated" >does not contain</option>
+                    <option value="views">contains data</option>
+                    <option value="comments">does not contain data</option>
+                  </select>
+                </div>
+          </div>
+          <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Value
+                  </label>
+                  <!-- <select class="govuk-select" id="sort" name="sort">
+                    <option value="published">Recently published</option>
+                    <option value="updated" selected>Recently updated</option>
+                    <option value="views">Most views</option>
+                    <option value="comments">Most comments</option>
+                  </select> -->
+                  <input class="govuk-input govuk-input--width-10" id="event-name" name="event-name" type="text">
+                  <span class="govuk-heading-m inline"><a id="closeBox2" href="#">x</a></span>
+                </div>
+
+          </div>
+
+        </div>
+    </div>
+    <br>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+          <div class="button-container">
+            <br>
+            <p><a id="addMore" href="#">Add more</a></p>
+            <br>
+            <a class="govuk-button" href="query-results">Search</a>
+            <a class="govuk-button govuk-button--secondary margin-left" href="saved-searches">Save search</a>
+          </div>
+        </div>
+        <div class="govuk-grid-column-one-third">
+
+        </div>
+      </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

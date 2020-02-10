@@ -1,0 +1,258 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+
+<a id="backlink" href="#" class="govuk-back-link">Back</a>
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+       <h1 class="govuk-heading-xl">Manage assignments</h1>
+       <h2 class="govuk-heading-m">{{ data['input-autocomplete'] }}</h2>
+       <!-- <p class="assignment-links"><a class="govuk-link" href="#">Submit another file</a> <a class="govuk-link" href="#">Manage assignments</a> <a class="govuk-link" href="#">Amend Provider name</a></p> -->
+  </div>
+  <div class="govuk-grid-column-one-third">
+    {% include "./includes/search.html" %}
+    {% include "./includes/auto-js.html" %}
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-one-third">
+    <div class="active-assignments">
+      <p class="govuk-heading-s">Active assignments</p>
+
+
+      <span id="noActive" class="govuk-body">No active assignments</span>
+    <!-- <table class="govuk-table">
+
+
+      <tbody id="activeAssignments" class="govuk-table__body">
+        <tr id="1b" class="govuk-table__row">
+          <td class="govuk-table__cell" scope="row">ILR Standard 18/19</td>
+          <td class="govuk-table__cell">10/02/19</td>
+          <td class="govuk-table__cell"><a href="#"class="govuk-link">Remove</a></td>
+        </tr>
+        <tr class="govuk-table__row" >
+          <td class="govuk-table__cell" scope="row">ILR Periodic 18/19</td>
+          <td class="govuk-table__cell">10/02/19</td>
+          <td class="govuk-table__cell"><a href="#"class="govuk-link">Remove</a></td>
+        </tr>
+
+        <tr class="govuk-table__row" >
+          <td class="govuk-table__cell" scope="row">EAS 18/19</td>
+          <td class="govuk-table__cell">10/02/19</td>
+          <td class="govuk-table__cell"><a href="#"class="govuk-link">Remove</a></td>
+        </tr>
+
+        <tr class="govuk-table__row" >
+          <td class="govuk-table__cell" scope="row">FIS access</td>
+          <td class="govuk-table__cell">10/02/19</td>
+          <td class="govuk-table__cell"><a href="#"class="govuk-link">Remove</a></td>
+        </tr>
+
+        <tr class="govuk-table__row" >
+          <td class="govuk-table__cell" scope="row">ILR Standard 19/20</td>
+          <td class="govuk-table__cell">10/02/19</td>
+          <td class="govuk-table__cell"><a href="#"class="govuk-link">Remove</a></td>
+        </tr>
+        <tr class="govuk-table__row" >
+          <td class="govuk-table__cell" scope="row">ILR Periodic 19/20</td>
+          <td class="govuk-table__cell">10/02/19</td>
+          <td class="govuk-table__cell"><a href="#"class="govuk-link">Remove</a></td>
+        </tr>
+
+        <tr class="govuk-table__row" >
+          <td class="govuk-table__cell" scope="row">EAS 19/20</td>
+          <td class="govuk-table__cell">10/02/19</td>
+          <td class="govuk-table__cell"><a href="#"class="govuk-link">Remove</a></td>
+        </tr>
+
+      </tbody>
+    </table> -->
+
+    <section>
+      <p class="govuk-body">ILR Standard 18/19<br>
+        <span>10/02/19</span><span class="remove-link"><a href="#">Remove</a></span>
+      </p>
+    </section>
+    <hr>
+    <section>
+      <p class="govuk-body">ILR Periodic 18/19<br>
+        <span>10/02/19</span><span class="remove-link"><a href="#">Remove</a></span>
+      </p>
+    </section>
+    <hr>
+    <section>
+      <p class="govuk-body">EAS 18/19<br>
+        <span>10/02/19</span><span class="remove-link"><a href="#">Remove</a></span>
+      </p>
+    </section>
+    <hr>
+    <section>
+      <p class="govuk-body">ESF 18/19<br>
+        <span>10/02/19</span><span class="remove-link"><a href="#">Remove</a></span>
+      </p>
+    </section>
+    <hr>
+    <section>
+      <p class="govuk-body">ILR Standard 19/20<br>
+        <span>10/02/19</span><span class="remove-link"><a href="#">Remove</a></span>
+      </p>
+    </section>
+    <hr>
+    <section>
+      <p class="govuk-body">ILR Periodic 19/20<br>
+        <span>10/02/19</span><span class="remove-link"><a href="#">Remove</a></span>
+      </p>
+    </section>
+    <hr>
+    <section>
+      <p class="govuk-body">EAS 19/20<br>
+        <span>10/02/19</span><span class="remove-link"><a href="#">Remove</a></span>
+      </p>
+    </section>
+    <hr>
+    <section>
+      <p class="govuk-body">ESF 19/20<br>
+        <span>10/02/19</span><span class="remove-link"><a href="#">Remove</a></span>
+      </p>
+    </section>
+
+
+
+
+    <div id="buttonGroup">
+        <a href="confirm-assignments" class="govuk-button">Confirm changes</a>
+
+        <a href="provider-record" class="govuk-link">Cancel</a>
+      </div>
+</div>
+
+
+
+  </div>
+
+
+  <div class="govuk-grid-column-two-thirds">
+    <h3 class="govuk-heading-m">Inactive assignments 18/19</h3>
+    <table class="govuk-table">
+      <!-- <caption class="govuk-table__caption govuk-!-font-size-27">Inactive assignments 18/19</caption> -->
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">Collection type</th>
+          <th class="govuk-table__header" scope="col">Start date</th>
+          <th class="govuk-table__header" scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody id="inactiveAssignments" class="govuk-table__body">
+        <tr id="1a" class="govuk-table__row">
+          <td class="govuk-table__cell" scope="row">ILR Standard</td>
+          <td class="govuk-table__cell">
+            <input class="govuk-input govuk-input--width-10" type="date" id="date" name="date" value="" placeholder="DD/MM/YYYY">
+          </td>
+          <td class="govuk-table__cell"><a href="#"class="govuk-link">Add</a></td>
+        </tr>
+        <tr id="2a" class="govuk-table__row">
+          <td class="govuk-table__cell" scope="row">ILR Periodic</td>
+          <td class="govuk-table__cell">
+            <input class="govuk-input govuk-input--width-10" type="date" id="date" name="date" value="" placeholder="DD/MM/YYYY">
+          </td>
+          <td class="govuk-table__cell"><a href="#"class="govuk-link">Add</a></td>
+        </tr>
+
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" scope="row">EAS</td>
+          <td class="govuk-table__cell">
+            <input class="govuk-input govuk-input--width-10" type="date" id="date" name="date" value="" placeholder="DD/MM/YYYY">
+          </td>
+          <td class="govuk-table__cell"><a href="#"class="govuk-link">Add</a></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" scope="row">FIS access</td>
+          <td class="govuk-table__cell">
+            <input class="govuk-input govuk-input--width-10" type="date" id="date" name="date" value="" placeholder="DD/MM/YYYY">
+          </td>
+          <td class="govuk-table__cell"><a href="#"class="govuk-link">Add</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+
+    <h3 class="govuk-heading-m">Inactive assignments 19/20</h3>
+    <table class="govuk-table">
+
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">Collection type</th>
+          <th class="govuk-table__header" scope="col">Start date</th>
+          <th class="govuk-table__header" scope="col">Add/Remove</th>
+        </tr>
+      </thead>
+      <tbody id="inactiveAssignments" class="govuk-table__body">
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" scope="row">ILR Standard</td>
+          <td class="govuk-table__cell">
+            <input class="govuk-input govuk-input--width-10" type="date" id="date" name="date" value="" placeholder="DD/MM/YYYY">
+          </td>
+          <td class="govuk-table__cell"><a href="#"class="govuk-link">Add</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" scope="row">ILR Periodic</td>
+          <td class="govuk-table__cell">
+            <input class="govuk-input govuk-input--width-10" type="date" id="date" name="date" value="" placeholder="DD/MM/YYYY">
+          </td>
+          <td class="govuk-table__cell"><a href="#"class="govuk-link">Add</a></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" scope="row">EAS</td>
+          <td class="govuk-table__cell">
+            <input class="govuk-input govuk-input--width-10" type="date" id="date" name="date" value="" placeholder="DD/MM/YYYY">
+          </td>
+          <td class="govuk-table__cell"><a href="#"class="govuk-link">Add</a></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" scope="row">FIS access</td>
+          <td class="govuk-table__cell">
+            <input class="govuk-input govuk-input--width-10" type="date" id="date" name="date" value="" placeholder="DD/MM/YYYY">
+          </td>
+          <td class="govuk-table__cell"><a href="#"class="govuk-link">Add</a></td>
+        </tr>
+
+
+      </tbody>
+    </table>
+
+
+
+  </div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}

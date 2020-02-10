@@ -1,0 +1,481 @@
+// bar chart CSS V! /////////////
+
+
+// @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500);
+
+//User Defined
+$dataNum:20; 
+$name:"9" " " "8" " " "7" " " "6" " " "5" " " "4" " " "3" " " "2" " " "1" " " "0" " ";
+$data:83% 77% 82% 75% 12% 17% 82% 91% 95% 98% 83% 47% 80% 76% 16% 11% 89% 94% 93% 97%;
+
+//General Settings
+$width:100%;
+$height:300px;
+
+
+
+.igFrameBar{
+  width:$width;
+  height:$height;
+  position:relative;
+  background:#f2f2f2;
+  // margin:15% 0 0px 0;
+  margin:0 0 32px 0;
+  // transform:translate(0,-50%);
+
+
+}
+.igFrameBar:before{
+  content:"";
+  width:100%;
+  height:1px;
+  background:#fff;
+  position:absolute;
+  top:50%;
+}
+.igFrameBar:after{
+  content:"";
+  width:100%;
+  height:50%;
+  background:transparent;
+  position:absolute;
+  top:25%;
+  border-top:1px solid #fff;
+  border-bottom:1px solid #fff;
+}
+.igData{
+  width:30px;
+  position:absolute;
+  bottom:1px;
+  margin:0px 0px 0px 0px;
+  z-index:99;
+  float:left;
+}
+@for $i from 1 through $dataNum {
+    .igData#{$i} {
+      //  background:nth($color,$i);
+      background: govuk-colour("light-purple");
+      height:0px;
+      left:$width/($dataNum+1) * $i - 0; // 10 was replaced by 0 here//
+      -webkit-animation: showBar#{$i} 1.2s $i*.1s forwards;
+      -moz-animation: showBar#{$i} 1.2s $i*.1s forwards;
+      animation: showBar#{$i} 1.2s $i*.1s forwards;
+    }
+
+    .igData:nth-of-type(even) {
+      background: govuk-colour("purple");
+    }
+}
+.igData:before{
+  position:absolute;
+  top:-20px;
+  font-size:16px;
+  color:#333;
+  // font-family:"roboto";
+  // font-weight:300;
+  //************ new css added below ***********//
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  max-width: 18px;
+  padding-left: 10px;
+}
+@for $i from 1 through $dataNum {
+    .igData#{$i}:before {
+        content:nth($data,$i)+"";
+    }
+}
+.igData:after {
+  position:absolute;
+  bottom:-35px;
+  // transform:rotate(30deg);
+  color:#666;
+  font-size:16px;
+  text-align:left;
+  // font-family:"roboto";
+  // font-weight:300;
+  width:150px;
+  margin-left: 30px;
+}
+@for $i from 1 through $dataNum {
+    .igData#{$i}:after{
+        content:nth($name,$i)+"";
+    }
+}
+
+@for $i from 1 through $dataNum {
+      @-webkit-keyframes showBar#{$i} {
+    0%   {height: 0px;}
+    100%  {height: nth($data,$i);}
+  }
+}
+@for $i from 1 through $dataNum {
+      @-moz-keyframes showBar#{$i} {
+    0%   {height: 0px;}
+    100%  {height: nth($data,$i);}
+  }
+}
+@for $i from 1 through $dataNum {
+      @keyframes showBar#{$i} {
+    0%   {height: 0px;}
+    100%  {height: nth($data,$i);}
+  }
+}
+
+.number-of-providers {
+  margin-top: 200px;
+}
+
+.period-close-label {
+  text-align: center;
+}
+
+.period-key {
+  span {
+    display: inline-flex;
+  }
+}
+
+.period-key {
+  line-height: 25px;
+
+  .key-one:before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    display: block;
+    background-color: govuk-colour("light-purple");
+    margin-right: 8px;
+  }
+
+  .key-two:before {
+    @extend .key-one:before;
+    background-color: govuk-colour("purple");
+    margin-left: 20px;
+  }
+}
+
+// bar chart CSS version 2 ////
+
+.relative {
+  display: flex;
+  height: 250px;
+  width: 100%;
+  align-items: baseline;
+  overflow: hidden;
+  justify-content: space-between;
+  padding-top: 20px;
+  margin-bottom: 4px;
+}
+
+.provider-figures-line {
+  height: 268px;
+  width: 2px;
+  display: block;
+  background-color: govuk-colour("grey-1");
+  margin-right: 8px;
+}
+
+.provider-figures {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 270px;
+
+  span {
+    display: flex;
+    line-height: 4px;
+  }
+
+  span:after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 2px;
+    background-color: govuk-colour("grey-1");
+    margin-left: 5px;
+  }
+}
+
+.numbers-before-close {
+  justify-content: space-around;
+  height: auto;
+  padding-top: 10px;
+  margin-left: -8px;
+  // border-top: 1px solid govuk-colour("grey-2");
+  // border-top: 2px solid grey;
+  // margin-top: -4px;
+  // z-index: 1;
+
+  span {
+    // text-align: center;
+    margin-top: 5px;
+  }
+
+  // span:before {
+  //   content: "";
+  //   display: block;
+  //   height: 7px;
+  //   width: 1px;
+  //   background-color: govuk-colour("grey-2");
+  //   margin-left: 4px;
+  //   margin-bottom: 4px;
+  // }
+}
+
+// @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+// @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes slideUp { from { 
+  transform: translateY(110%); } 
+  to { 
+    transform: translateY(0%); } 
+}
+
+.fade-in {
+  transform: translateY(110%); 
+  -webkit-animation:slideUp ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:slideUp ease-in 1;
+  animation:slideUp ease-in 1;
+  // animation-direction: reverse;
+  animation-fill-mode: forwards;
+  width: 26px;
+  
+  // -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  // -moz-animation-fill-mode:forwards;
+  // animation-fill-mode:forwards;
+  background-color: govuk-colour("light-purple");
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:.5s;
+  margin-right: 3px;
+
+  &:before {
+    position: absolute;
+    content: "168";
+    top: -20px;
+    text-align: center;
+    font-family: "nta", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    margin-left: 2px;
+  }
+
+}
+
+.fade-in.one {
+  height: 89%;
+}
+
+.fade-in-reverse {
+  animation-direction: alternate-reverse;
+  animation-fill-mode: backwards;
+  
+}
+
+.fade-in-b {
+  @extend .fade-in;
+  background-color: govuk-colour("purple");
+  margin-right: 12px;
+
+  &:before {
+    content: "155"
+  }
+}
+
+.fade-in-b.one {
+  height: 83%;
+}
+
+.fade-in.two { 
+  @extend .fade-in;
+  height: 77%;
+  animation-delay: .1s;
+
+  &:before {
+    content: "145"
+  }
+
+}
+
+.fade-in-b.two { 
+  @extend .fade-in-b;
+  height: 82%;
+  animation-delay: .2s;
+
+  &:before {
+    content: "152"
+  }
+
+}
+
+.fade-in.three { 
+  @extend .fade-in;
+  height: 75%;
+  animation-delay: .2s;
+
+  &:before {
+    content: "142"
+  }
+
+}
+
+.fade-in-b.three { 
+  @extend .fade-in-b;
+  height: 12%;
+  animation-delay: .3s;
+
+  &:before {
+    content: "23"
+  }
+
+}
+
+.fade-in.four { 
+  @extend .fade-in;
+  height: 70%;
+  animation-delay: .3s;
+
+  &:before {
+    content: "132"
+  }
+
+}
+
+.fade-in-b.four { 
+  @extend .fade-in-b;
+  height: 9%;
+  animation-delay: .4s;
+
+  &:before {
+    content: "20"
+  }
+
+}
+
+.fade-in.five { 
+  @extend .fade-in;
+  height: 81%;
+  animation-delay: .4s;
+
+  &:before {
+    content: "155"
+  }
+
+}
+
+.fade-in-b.five { 
+  @extend .fade-in-b;
+  height: 55%;
+  animation-delay: .5s;
+}
+
+.fade-in.six { 
+  @extend .fade-in;
+  height: 7%;
+  animation-delay: .5s;
+
+  &:before {
+    content: "17"
+  }
+
+}
+
+.fade-in-b.six { 
+  @extend .fade-in-b;
+  height: 66%;
+  animation-delay: .6s;
+
+  &:before {
+    content: "130"
+  }
+}
+
+.fade-in.seven { 
+  @extend .fade-in;
+  height: 8%;
+  animation-delay: .6s;
+
+  &:before {
+    content: "19"
+  }
+
+}
+
+.fade-in-b.seven { 
+  @extend .fade-in-b;
+  height: 69%;
+  animation-delay: .7s;
+
+  &:before {
+    content: "137"
+  }
+
+}
+
+.fade-in.eight { 
+  @extend .fade-in;
+  height: 73%;
+  animation-delay: .7s;
+
+  &:before {
+    content: "142"
+  }
+
+}
+
+.fade-in-b.eight { 
+  @extend .fade-in-b;
+  height: 77%;
+  animation-delay: .8s;
+
+  &:before {
+    content: "147"
+  }
+
+}
+
+.fade-in.nine { 
+  @extend .fade-in;
+  height: 88%;
+  animation-delay: .8s;
+
+  &:before {
+    content: "170"
+  }
+
+}
+
+.fade-in-b.nine { 
+  @extend .fade-in-b;
+  height: 89%;
+  animation-delay: .9s;
+
+  &:before {
+    content: "171"
+  }
+}
+
+.fade-in.ten { 
+  @extend .fade-in;
+  height: 92%;
+  animation-delay: .9s;
+
+  &:before {
+    content: "174"
+  }
+
+}
+
+.fade-in-b.ten { 
+  @extend .fade-in-b;
+  height: 99%;
+  animation-delay: .9s;
+
+  &:before {
+    content: "180"
+  }
+
+}
+

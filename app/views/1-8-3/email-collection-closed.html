@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+
+<!-- <script src="/public/javascripts/tt.js"></script> -->
+
+<a id="backlink" href="#" class="govuk-back-link">Back</a>
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Collection closed</h1>
+
+    <!-- <p><a class="govuk-button govuk-button--secondary" href="new-mailing-list">Add a new mailing list</a></p> -->
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Select mailing list
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="published" selected>DCT</option>
+        <option value="updated">Management</option>
+        <option value="views">Apprenticeships</option>
+        <option value="all">All</option>
+        
+      </select>
+    </div>
+    
+    
+    
+
+    
+
+    <a href="email-dist" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </a>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Sign in
+    </h1>
+    <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <h1 class="govuk-fieldset__heading govuk-visually-hidden">
+        Sign in
+      </h1>
+    </legend>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="email-address">
+      User ID or email address
+    </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="email-address" name="email-address" type="text">
+    </div>
+
+    <div class="govuk-form-group">
+    <label class="govuk-label" for="password">
+      Password
+    </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="password" name="password" type="password">
+    </div>
+      <a href="dashboard" type="submit" class="govuk-button">Sign in</a>
+
+      </fieldset>
+      <h2 class="govuk-heading-m">Problems signing in?</h2>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="#">I forgot my password</a></li>
+        <li><a href="#">I don't have an account</a></li>
+      </ul>
+  </div>
+</div>
+{% endblock %}

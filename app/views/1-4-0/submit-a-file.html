@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+
+
+{% include "./includes/nav.html" %}
+
+<a id="backlink" href="#" class="govuk-back-link">Back</a>
+<br>
+<br>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-form-group">
+<fieldset class="govuk-fieldset">
+ <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+   <h1 class="govuk-fieldset__heading">
+     Choose a file to submit
+   </h1>
+ </legend>
+ <span id="how-contacted-conditional-hint" class="govuk-hint">
+      Latest submissions
+    </span>
+ <div class="govuk-radios">
+   <div class="govuk-radios__item">
+     <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+     <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
+       ILR 30 Oct 2018 at 1:00pm
+     </label>
+   </div>
+   <div class="govuk-radios__item">
+     <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+     <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+       ILR 30 Oct 2018 at 10.26am
+     </label>
+   </div>
+   <div class="govuk-radios__item">
+     <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+     <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+       EAS 30 Oct 2018 at 3:26pm
+     </label>
+   </div>
+   <div class="govuk-radios__item">
+     <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+     <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+       ESF 29 Oct 2018 at 4:40pm
+     </label>
+   </div>
+   <div class="govuk-radios__item">
+     <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+     <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+       EAS 28 Oct 2018 at 11.12am
+     </label>
+   </div>
+ </div>
+</fieldset>
+</div>
+
+<h2 class="govuk-heading-m">or</h2>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="file-upload-1">
+    Upload a file
+  </label>
+  <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+</div>
+
+
+     <a href="confirm-file-submission" class="govuk-button">Submit file</a>
+     <a href="provider-record" class="govuk-link">Cancel</a>
+  </div>
+</div>
+
+
+{% endblock %}

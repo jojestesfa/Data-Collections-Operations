@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+
+
+{% include "./includes/nav.html" %}
+
+<a href="upload-provider-list" class="govuk-back-link">Back</a>
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">You’ve created 119 new providers</h1>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    {% include "./includes/search.html" %}
+    {% include "./includes/auto-js.html" %}
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <table class="govuk-table">
+         <caption class="govuk-table__caption">Here are the providers we couldn’t add:</caption>
+         <thead class="govuk-table__head">
+           <tr class="govuk-table__row">
+             <th class="govuk-table__header" scope="col">Provider name</th>
+             <th class="govuk-table__header " scope="col">UKPRN</th>
+             <th class="govuk-table__header " scope="col">Reason</th>
+           </tr>
+         </thead>
+         <tbody class="govuk-table__body">
+           <tr class="govuk-table__row">
+             <th class="govuk-table__header" scope="row">Coventry University</th>
+             <td class="govuk-table__cell ">12345678</td>
+             <td class="govuk-table__cell ">Provider already exists </td>
+           </tr>
+           <tr class="govuk-table__row">
+             <th class="govuk-table__header" scope="row">Manchester University</th>
+             <td class="govuk-table__cell ">00004545</td>
+             <td class="govuk-table__cell ">Provider already exists </td>
+           </tr>
+           <tr class="govuk-table__row">
+             <th class="govuk-table__header" scope="row">Coventry College</th>
+             <td class="govuk-table__cell ">00001234</td>
+             <td class="govuk-table__cell ">UKPRN not recognised</td>
+           </tr>
+         </tbody>
+       </table>
+
+
+
+
+       <a href="#" class="govuk-button">Print list</a>
+
+  </div>
+</div>
+
+
+{% endblock %}

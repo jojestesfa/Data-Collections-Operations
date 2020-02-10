@@ -1,0 +1,156 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+
+<!-- <script src="/public/javascripts/tt.js"></script> -->
+
+<a id="backlink" href="#" class="govuk-back-link">Back</a>
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Period end
+    <span class="govuk-caption-xl">RO6 closed 22 April 2019 at 18.05</span>
+    </h1>
+
+    <ol class="app-task-list">
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">1. </span> Phase 1 jobs (R06) <a class="govuk-button customised" id="startRound3" href="#">Start</a>
+          </h2>
+
+
+          <ul class="app-task-list__items">
+
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name govuk-!-width-one-half" href="#" aria-describedby="company-information-completed">
+                Stop reference data scheduler
+              </a>
+              <span class="awaiting awaiting-1">Not started</span>
+              <strong class="govuk-tag app-task-list__task-completed hide-complete-1" id="contact-details-completed">Completed</strong><br>
+              <span class="govuk-body govuk-!-font-size-16 time-started">Started: 15.40 </span><br class="hide-complete-1">
+              <div class="flex space-between">
+                <span class="govuk-body govuk-!-font-size-16 hide-complete-1">Finished: 16.01</span>
+                <span class="hide-complete-1"><a href="#">Rerun job</a></span>
+              </div>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name govuk-!-width-one-half" href="#" aria-describedby="contact-details-completed">
+                Generate data quality reports
+              </a>
+              <span class="awaiting awaiting-2">Not started</span>
+              <strong class="govuk-tag app-task-list__task-completed hide-complete-2" id="contact-details-completed">Completed</strong><br>
+              <span class="govuk-body govuk-!-font-size-16 hide-complete-1">Started: 16.01 </span><br class="hide-complete-2">
+              <div class="flex space-between">
+                <span class="govuk-body govuk-!-font-size-16 hide-complete-2"> Finished: 16.07</span>
+                <span class="hide-complete-2"><a href="#">Rerun job</a></span>
+              </div>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name govuk-!-width-one-half" href="#">
+                DAS period end preparation
+              </a>
+              <span class="awaiting awaiting-3">Not started</span>
+              <strong class="govuk-tag app-task-list__task-completed hide-complete-3" id="contact-details-completed">Completed</strong><br>
+              <span class="govuk-body govuk-!-font-size-16 hide-complete-2">Started: 16.07 </span><br class="hide-complete-3">
+              <div class="flex space-between">
+                <span class="govuk-body govuk-!-font-size-16 hide-complete-3"> Finished: 16.31</span>
+                <span class="hide-complete-3"><a href="#">Rerun job</a></span>
+              </div>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name govuk-!-width-one-half" href="#">
+                Reference data update
+              </a>
+              <span class="awaiting awaiting-4">Not started</span>
+              <strong class="govuk-tag app-task-list__task-completed hide-complete-4" id="contact-details-completed">Completed</strong><br>
+              <span class="govuk-body govuk-!-font-size-16 hide-complete-3">Started: 16.31 </span><br class="hide-complete-4">
+              <div class="flex space-between">
+                <span class="govuk-body govuk-!-font-size-16 hide-complete-4"> Finished: 17.14</span>
+                <span class="hide-complete-4"><a href="#">Rerun job</a></span>
+              </div>
+            </li>
+          </ul>
+
+
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">2. </span> R06 second stage &nbsp <a class="govuk-button period-end-complete" href="#">Start</a>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="#" aria-describedby="company-information-completed">
+                Summarisation
+              </a>
+              <!-- <strong class="govuk-tag app-task-list__task-completed" id="company-information-completed">Completed</strong> -->
+              <span>Not started</span>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="#" aria-describedby="contact-details-completed">
+                DAS period end
+              </a>
+              <!-- <strong class="govuk-tag app-task-list__task-completed" id="contact-details-completed">Completed</strong> -->
+              <span>Not started</span>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="#">
+                Apps summerisation
+              </a>
+              <span>Not started</span>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">3. </span> <span>R06 third stage </span>
+          </h2>
+          <ul class="app-task-list__items">
+
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="#" aria-describedby="company-information-completed">
+                Invoke FCS
+              </a>
+              <span>Not started</span>
+            </li>
+
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="#" aria-describedby="contact-details-completed">
+                Produce reports
+              </a>
+              <span>Not started</span>
+            </li>
+
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="#">
+                Produce reports
+              </a>
+              <span>Not started</span>
+            </li>
+          </ul>
+        </li>
+
+      </ol>
+
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock %}

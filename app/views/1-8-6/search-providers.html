@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  DC Operations - Home
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+
+<script src="/public/javascripts/tt.js"></script>
+
+<a href="#" id="backlink" class="govuk-back-link">Back</a>
+<div class="app-masthead">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-heading-s govuk-!-font-size-27 white-text">Search for a provider</span>
+      <form class="govuk-form-group" action="providers">
+        <!-- <input class="govuk-input" id="name" name="name" type="text" placeholder="e.g. Manchester or 123456"> -->
+        <div id="tt-overlay" class="autocomplete-wrapper"></div>
+        <button id="searchProviders" type="search" class="govuk-button" >
+          <img src="https://assets.publishing.service.gov.uk/frontend/govuk_publishing_components/search-button-ca89b2a79f944909ceb7370d3f0b78811d32b96e883348fcd8886f63dd619585.png"></img></button>
+      </form>
+    </div>
+
+  </div>
+</div>
+<div class="govuk-grid-row">
+
+
+        </div>
+
+
+
+
+
+
+
+
+  </div>
+</div>
+<!-- <label for="autocomplete-overlay">Select your country</label> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="govuk-grid-row">
+
+
+
+</div>
+
+
+  <!-- <div class="govuk-grid-column-one-third">
+    <div class="grey-button">
+      <h3 class="govuk-heading-s"><a class="" href="#">16 Servers in use</a></h3>
+      <span class="govuk-heading-xl no-margin-bottom"></span>
+      <span class="govuk-body-s">9:24am</span>
+    </div>
+
+    <div class="grey-button">
+      <h3 class="govuk-heading-s"><a class="" href="#">2 Unsubmitted at deadline</a></h3>
+      <span class="govuk-heading-xl no-margin-bottom"></span>
+      <span class="govuk-body-s">Wednesday 16 January 2019</span>
+    </div>
+  </div> -->
+
+
+
+
+
+
+ {% include "./includes/auto-js.html" %}
+
+{% endblock %}
