@@ -10,8 +10,6 @@
 {% include "./includes/nav.html" %}
 
 <script src="/public/javascripts/tt.js"></script>
-
-
 <div class="app-masthead">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
@@ -28,10 +26,6 @@
     </div>
   </div>
 </div>
-
-<!-- <label for="autocomplete-overlay">Select your country</label> -->
-
-
 
 
 <div class="govuk-grid-row">
@@ -101,13 +95,13 @@
     </section>
   </div>
 
+
+
   <div class="govuk-grid-column-one-third">
     <section class="margin-bottom">
       <h2 class="govuk-heading-m centre-text"><a href="jobs-processing">Queues</a></h2>
       <div class="bar-chart-container">
-        <p><span class="green"></span># of Messages</p>
-        <p><span class="red"></span># of Dead Letters</p>
-        <div id="chart-queues"></div>
+        <canvas id="canvas-queue" style="width:100%; height:300px"></canvas>
       </div>
     </section>
   </div>
@@ -116,9 +110,7 @@
     <section class="margin-bottom">
       <h2 class="govuk-heading-m centre-text"><a href="jobs-processing">Topics</a></h2>
       <div class="bar-chart-container">
-        <p><span class="green"></span># of Messages</p>
-        <p><span class="red"></span># of Dead Letters</p>
-        <div id="chart-topics"></div>
+        <canvas id="canvas-topics" style="width:100%; height:335px"></canvas>
       </div>
     </section>
   </div>
@@ -127,9 +119,7 @@
     <section class="margin-bottom">
       <h2 class="govuk-heading-m centre-text"><a href="jobs-processing">ILR</a></h2>
       <div class="bar-chart-container">
-        <p><span class="green"></span># of Messages</p>
-        <p><span class="red"></span># of Dead Letters</p>
-        <div id="chart-ILR"></div>
+        <canvas id="canvas-ILR" style="width:100%; height:330px"></canvas>
       </div>
     </section>
   </div>

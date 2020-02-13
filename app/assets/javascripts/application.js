@@ -309,7 +309,7 @@ $(document).ready(function () {
 
    /************************************************************
    *                      BARCHART One - Queues                       *
-   ************************************************************/
+   ***********************************************************
 
    const chart1 = document.getElementById('chart-queues');
    const data1 = [
@@ -335,11 +335,11 @@ $(document).ready(function () {
      width:300
    };
 
- createBarChart(data1, chart1, options1);
+ createBarChart(data1, chart1, options1);*/
 
  /************************************************************
  *                      BARCHART Two - Topics                       *
- ************************************************************/
+ ***********************************************************
 
  const chart2 = document.getElementById('chart-topics');
  const data2 = [
@@ -371,11 +371,11 @@ $(document).ready(function () {
    width:290
  };
 
- createBarChart(data2, chart2, options2);
+ createBarChart(data2, chart2, options2);*/
 
  /************************************************************
  *                      BARCHART three - ILR                       *
- ************************************************************/
+ ***********************************************************
 
  const chart3 = document.getElementById('chart-ILR');
  const data3 = [
@@ -405,7 +405,192 @@ $(document).ready(function () {
    width:290
  };
 
- createBarChart(data3, chart3, options3);
+ createBarChart(data3, chart3, options3);*/
+
+
+
+     var TASKS = ['auditing', 'failedjob', 'fundingclaim', 'jobstatus'];
+     var color = Chart.helpers.color;
+     var barChartData = {
+       labels: ['auditing', 'failedjob', 'fundingclaim', 'jobstatus'],
+       datasets: [{
+         label: '# of Messages',
+         backgroundColor: color(window.chartColors.red).alpha(1).rgbString(),
+         borderColor: window.chartColors.red,
+         borderWidth: 1,
+         data: [
+           45, 12, 34, 50
+         ]
+       }, {
+         label: '# of Dead Letters',
+         backgroundColor: color(window.chartColors.lawngreen).alpha(1).rgbString(),
+         borderColor: window.chartColors.lawngreen,
+         borderWidth: 1,
+         data: [
+           60, 45, 65, 70
+         ]
+       }]
+
+     };
+
+     var topicData = {
+       labels: ['datamatch', 'eas1819', 'eas1920', 'est', 'ilr1819', 'ilr1920', 'ncs', 'periodend', 'referencedata', 'summarisation'],
+       datasets: [{
+         label: '# of Messages',
+         backgroundColor: color(window.chartColors.red).alpha(1).rgbString(),
+         borderColor: window.chartColors.red,
+         borderWidth: 1,
+         data: [
+           45, 12, 34, 50
+         ]
+       }, {
+         label: '# of Dead Letters',
+         backgroundColor: color(window.chartColors.lawngreen).alpha(1).rgbString(),
+         borderColor: window.chartColors.lawngreen,
+         borderWidth: 1,
+         data: [
+           60, 45, 65, 70
+         ]
+       }]
+
+     };
+
+     var ilrData = {
+       labels: ['Deds', 'ESFV1', 'ESFV2', 'FileValidation', 'Funding', 'Payments', 'Ref Data', 'Reports', 'Validation'],
+       datasets: [{
+         label: '# of Messages',
+         backgroundColor: color(window.chartColors.red).alpha(1).rgbString(),
+         borderColor: window.chartColors.red,
+         borderWidth: 1,
+         data: [
+           45, 12, 34, 50
+         ]
+       }, {
+         label: '# of Dead Letters',
+         backgroundColor: color(window.chartColors.lawngreen).alpha(1).rgbString(),
+         borderColor: window.chartColors.lawngreen,
+         borderWidth: 1,
+         data: [
+           60, 45, 65, 70
+         ]
+       }]
+
+     };
+
+     window.onload = function() {
+       var ctx = document.getElementById('canvas-queue').getContext('2d');
+       window.myBar = new Chart(ctx, {
+         type: 'bar',
+         data: barChartData,
+         options: {
+           responsive: true,
+           legend: {
+             position: 'top',
+           },
+           title: {
+             display: false,
+             text: 'Chart.js Bar Chart'
+           }
+         }
+       });
+
+
+       var ctx = document.getElementById('canvas-topics').getContext('2d');
+       window.myBar = new Chart(ctx, {
+         type: 'bar',
+         data: topicData,
+         options: {
+           responsive: true,
+           legend: {
+             position: 'top',
+           },
+           title: {
+             display: false,
+             text: 'Chart.js Bar Chart'
+           }
+         }
+       });
+
+
+       var ctx = document.getElementById('canvas-ILR').getContext('2d');
+       window.myBar = new Chart(ctx, {
+         type: 'bar',
+         data: ilrData,
+         options: {
+           responsive: true,
+           legend: {
+             position: 'top',
+           },
+           title: {
+             display: false,
+             text: 'Chart.js Bar Chart'
+           }
+         }
+       });
+
+     };
+
+     document.getElementById('randomizeData').addEventListener('click', function() {
+       var zero = Math.random() < 0.2 ? true : false;
+       barChartData.datasets.forEach(function(dataset) {
+         dataset.data = dataset.data.map(function() {
+           return zero ? 0.0 : randomScalingFactor();
+         });
+
+       });
+       window.myBar.update();
+     });
+
+     var colorNames = Object.keys(window.chartColors);
+     document.getElementById('addDataset').addEventListener('click', function() {
+       var colorName = colorNames[barChartData.datasets.length % colorNames.length];
+       var dsColor = window.chartColors[colorName];
+       var newDataset = {
+         label: 'Dataset ' + (barChartData.datasets.length + 1),
+         backgroundColor: color(dsColor).alpha(1).rgbString(),
+         borderColor: dsColor,
+         borderWidth: 0,
+         data: []
+       };
+
+       for (var index = 0; index < barChartData.labels.length; ++index) {
+         newDataset.data.push(randomScalingFactor());
+       }
+
+       barChartData.datasets.push(newDataset);
+       window.myBar.update();
+     });
+
+     document.getElementById('addData').addEventListener('click', function() {
+       if (barChartData.datasets.length > 0) {
+         var month = TASKS[barChartData.labels.length % TASKS.length];
+         barChartData.labels.push(month);
+
+         for (var index = 0; index < barChartData.datasets.length; ++index) {
+           // window.myBar.addData(randomScalingFactor(), index);
+           barChartData.datasets[index].data.push(randomScalingFactor());
+         }
+
+         window.myBar.update();
+       }
+     });
+
+     document.getElementById('removeDataset').addEventListener('click', function() {
+       barChartData.datasets.pop();
+       window.myBar.update();
+     });
+
+     document.getElementById('removeData').addEventListener('click', function() {
+       barChartData.labels.splice(-1, 1); // remove the label first
+
+       barChartData.datasets.forEach(function(dataset) {
+         dataset.data.pop();
+       });
+
+       window.myBar.update();
+     });
+
+
 });
 
 $('#startRound3').click(function(e){
