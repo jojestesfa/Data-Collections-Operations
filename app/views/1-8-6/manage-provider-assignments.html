@@ -48,7 +48,7 @@
           </tr>
           <tr class="govuk-table__row">
             <th class="govuk-table__header" scope="row">Is MCA</th>
-            <td class="govuk-table__cell"><input type="checkbox" checked="checked" /></td>
+            <td class="govuk-table__cell"><input type="checkbox" onclick="return false" checked="checked" /></td>
           </tr>
         </tbody>
       </table>
@@ -58,28 +58,46 @@
       <a href="provider-manage-assignments" class="govuk-link">Edit assignments</a>
     </div>
     <h4 class="govuk-heading-x4">Active</h4>
-    <p>EAS1920<br/>
-      Start Date: {{ data['EAS1920-start-date'] }}<br/>
-      End Date: {{ data['EAS1920-end-date'] }}</p>
 
-    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
     <p>ILR1920<br/>
       Start Date: {{ data['IRL1920-start-date'] }}<br/>
       End Date: {{ data['IRL1920-end-date'] }}</p>
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
+    <p>EAS1920<br/>
+      Start Date: {{ data['EAS1920-start-date'] }}<br/>
+      End Date: {{ data['EAS1920-end-date'] }}</p>
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
     <p>ESFR2-1920<br/>
     Start Date: {{ data['ESFR2-1920-start-date'] }}<br/>
     End Date: {{ data['ESFR2-1920-end-date'] }}</p>
 
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
+    <p>1920-MidYear<br/>
+    Start Date: {{ data['1920-MidYear-start-date'] }}<br/>
+    End Date: {{ data['1920-MidYear-end-date'] }}</p>
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <p>NCS1920<br/>
+    Start Date: {{ data['NCS1920-start-date'] }}<br/>
+    End Date: {{ data['NCS1920-end-date'] }}</p>
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
     <p class="govuk-body govuk-!-font-size-19">FRM-Reports1920<br/>
       Start Date: {{ data['FRM-reports1920-start-date'] }}
       <br/>End Date: {{ data['FRM-reports1920-end-date'] }}</p>
-
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <p>OP-Validation-Report<br/>
+    Start Date: {{ data['OP-Validation-Report-start-date'] }}<br/>
+    End Date: {{ data['OP-Validation-Report-end-date'] }}</p>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
   </div>
 </div>
 
