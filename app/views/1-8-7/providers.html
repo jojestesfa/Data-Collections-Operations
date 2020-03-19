@@ -1,0 +1,145 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  DC Operations - Home
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+
+<script src="/public/javascripts/tt.js"></script>
+
+<a href="#" id="backlink" class="govuk-back-link">Back</a>
+<div class="app-masthead">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-heading-s govuk-!-font-size-27 white-text">Search for a provider</span>
+      <form class="govuk-form-group" action="manage-provider">
+        <!-- <input class="govuk-input" id="name" name="name" type="text" placeholder="e.g. Manchester or 123456"> -->
+        <div id="tt-overlay" class="autocomplete-wrapper"></div>
+        <button id="searchProviders" type="search" class="govuk-button" ><img src="https://assets.publishing.service.gov.uk/frontend/govuk_publishing_components/search-button-ca89b2a79f944909ceb7370d3f0b78811d32b96e883348fcd8886f63dd619585.png"></img></button>
+      </form>
+    </div>
+
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-x2">Provider's details</h1>
+
+    <table class="govuk-table">
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">Name</th>
+          <td class="govuk-table__cell">TTE TECHNICAL INSTITUTE</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">UKPRN</th>
+          <td class="govuk-table__cell">10007070</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">UKPIN</th>
+          <td class="govuk-table__cell">107086</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+    <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+            <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="govuk-checkboxes">
+
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="mca" name="mca"
+                type="checkbox" value="mca"
+                {{ checked("['mca']", "mca") }} data-aria-controls="mca">
+
+                <label class="govuk-label govuk-checkboxes__label" for="mca">
+                  MCA
+                </label>
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="govuk-!-padding-top-5"></div>
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+<div class="form-group">
+    <a href="manage-provider" class="govuk-button">Save and continue</a>
+    <a href="dashboard" class="govuk-link govuk-!-padding-left-3 govuk-!-margin-top-3">Cancel</a>
+  </div>
+</div>
+<!-- <label for="autocomplete-overlay">Select your country</label> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="govuk-grid-row">
+
+
+
+</div>
+
+
+  <!-- <div class="govuk-grid-column-one-third">
+    <div class="grey-button">
+      <h3 class="govuk-heading-s"><a class="" href="#">16 Servers in use</a></h3>
+      <span class="govuk-heading-xl no-margin-bottom"></span>
+      <span class="govuk-body-s">9:24am</span>
+    </div>
+
+    <div class="grey-button">
+      <h3 class="govuk-heading-s"><a class="" href="#">2 Unsubmitted at deadline</a></h3>
+      <span class="govuk-heading-xl no-margin-bottom"></span>
+      <span class="govuk-body-s">Wednesday 16 January 2019</span>
+    </div>
+  </div> -->
+
+
+
+
+
+
+ {% include "./includes/auto-js.html" %}
+
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  DC Operations - Add recipient
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+
+<!-- <script src="/public/javascripts/tt.js"></script> -->
+
+<a id="backlink" href="#" class="govuk-back-link">Back</a>
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Bulk upload recipient email addresses</h1>
+
+   <p> <a href="#">Download CSV template</a> </p>
+
+    <br>
+
+   <div class="govuk-form-group">
+      <label class="govuk-label" for="file-upload-1">
+        Upload a file
+      </label>
+      <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+    </div>
+
+  <a href="email-list-created" class="govuk-button">
+    Continue
+  </a>
+
+  </div>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

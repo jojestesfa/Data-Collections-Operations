@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Submit learner data support interface
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "prototype"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+
+
+{% endblock %}
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+{% include "./includes/provider-name-and-search.html" %}
+<!-- <script src="/public/javascripts/tt.js"></script> -->
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row flex">
+        <div id="left-nav-wrapper" class="govuk-grid-column-one-quarter flex-grow-1">
+          {% include "./includes/left-nav.html" %}
+        </div>
+       <div class="govuk-grid-column-three-quarters flex-grow-1">
+         <!-- ------------------tab 2 history -------------------- -->
+
+        <section class="">
+            <h2 class="govuk-heading-l" id="reports">Campus identifiers
+            <p>View submissions made for each touchpoint in last 3 return periods</p>
+          </h2>
+
+
+            
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}

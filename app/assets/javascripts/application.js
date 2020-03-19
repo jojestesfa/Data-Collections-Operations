@@ -279,7 +279,33 @@ $('#1 section p a').click(function(e){
 
 
 $(document).ready(function () {
-    if(window.location.href.indexOf("dashboard") > -1) {
+  $('#frm-continue').click(function() {
+     $('#unpublish-confirmation').removeClass('govuk-visually-hidden');
+  });
+
+  $("#upload-csv").click(function() {
+      location.href="campus-identifiers-upload#reference-data-report";
+      $('#new-csv-upload-row').hide();
+  });
+
+  $('#new-csv-upload-row').hide();
+  //$('#new-csv-upload-spinner').fadeOut(3000);
+
+  $('#new-csv-upload-spinner').fadeOut(2000, function(){$('#new-csv-upload-row').fadeIn(0)});
+  $("#frm-button").click(function() {
+    if ($('#unpublish').is(':checked')) {
+                    window.location.replace("frm-report-choice-sel-unpublish");
+                }
+                else if ($('#publish').is(':checked')) {
+                    window.location.replace("frm-report-choice-sel-publish");
+                }
+
+  });
+
+
+
+    if(window.location.href.indexOf
+      ("dashboard") > -1) {
        $('.main-nav #1').addClass('active');
     }
 
@@ -299,13 +325,16 @@ $(document).ready(function () {
        $('.main-nav #5').addClass('active');
     }
 
-    if(window.location.href.indexOf("upload-reports") > -1) {
+    if( window.location.href.indexOf("frm") > -1) {
        $('.main-nav #6').addClass('active');
     }
 
     if(window.location.href.indexOf("rule-validation") > -1) {
       $('.main-nav #7').addClass('active');
    }
+   if(window.location.href.indexOf("report") > -1) {
+     $('.main-nav #7').addClass('active');
+  }
 
    /************************************************************
    *                      BARCHART One - Queues                       *
@@ -459,8 +488,8 @@ $(document).ready(function () {
        labels: ['Deds', 'ESFV1', 'ESFV2', 'FileValidation', 'Funding', 'Payments', 'Ref Data', 'Reports', 'Validation'],
        datasets: [{
          label: '# of Messages',
-         backgroundColor: color(window.chartColors.red).alpha(1).rgbString(),
-         borderColor: window.chartColors.red,
+         backgroundColor: color(window.chartColors.lawngreen).alpha(1).rgbString(),
+         borderColor: window.chartColors.lawngreen,
          borderWidth: 1,
          data: [
            45, 12, 34, 50
@@ -589,6 +618,8 @@ $(document).ready(function () {
 
        window.myBar.update();
      });
+
+
 
 
 });

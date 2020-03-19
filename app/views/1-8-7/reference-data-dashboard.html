@@ -1,0 +1,125 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  DC Operations - Home
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+<!-- <label for="autocomplete-overlay">Select your country</label> -->
+
+
+
+
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="dashboard">Home</a>
+    </li>
+
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">Reference data</li>
+  </ol>
+</div>
+
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row govuk-!-margin-top-6">
+      <div class="govuk-grid-column-one-third">
+        <ul class="govuk-list">
+            <!-- <li>
+              <h3 class="home-services__heading">
+                <a href="ALLF" class="govuk-link">ALLF</a>
+              </h3>
+              <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Last update</p>
+              <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">1 January 2020 at 12:04pm</p>
+              <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-7">by Kam THANDI</p></li> -->
+              <li>
+                <h3 class="home-services__heading"><a href="campus-identifiers" class="govuk-link">Campus identifiers</a></h3>
+                <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Last update</p>
+                <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">1 January 2020 at 12:04pm</p>
+                <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-7">by Lynne BURDON</p>
+              </li>
+              <li>
+                <h3 class="home-services__heading"><a href="funding-claims-dates" class="govuk-link">Funding claims dates</a></h3>
+                <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Last update</p>
+                <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">1 January 2020 at 12:04pm</p>
+                <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-7">by Bernie ODONNELL</p>
+              </li>
+              <li>
+                <h3 class="home-services__heading"><a href="postcode-factors" class="govuk-link">Postcode factors</a></h3>
+                <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Last update</p>
+                <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">1 January 2020 at 12:04pm</p>
+                <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-7">by Kam THANDI</p>
+              </li>
+              <li>
+                <h3 class="home-services__heading"><a href="validation-messages-20-21" class="govuk-link">Validation messages 20-21</a></h3>
+                <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Last update</p>
+                <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">1 January 2020 at 12:04pm</p>
+                <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-7">by Lynne BURDON</p>
+              </li>
+          </ul>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <ul class="govuk-list">
+          <li>
+            <h3 class="home-services__heading">
+              <a href="/browse/benefits" class="govuk-link">Condition of funding removal</a>
+            </h3>
+            <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Last update</p>
+            <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">1 January 2020 at 12:04pm</p>
+            <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-7">by Bernie ODONNELL</p>
+          </li>
+          <li>
+            <h3 class="home-services__heading"><a href="/browse/births-deaths-marriages" class="govuk-link">Funding claims provider data</a></h3>
+            <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Last update</p>
+            <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">1 January 2020 at 12:04pm</p>
+            <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-7">by Kam THANDI</p>
+          </li>
+          <li>
+            <h3 class="home-services__heading"><a href="/browse/business" class="govuk-link">Specialist resources</a></h3>
+            <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Last update</p>
+            <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">1 January 2020 at 12:04pm</p>
+            <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-7">by Lynne BURDON</p>
+          </li>
+          </ul>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <ul class="govuk-list">
+          <li>
+            <h3 class="home-services__heading"><a href="devolved-postcodes" class="govuk-link">Devolved postcodes</a></h3>
+            <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Last update</p>
+            <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">1 January 2020 at 12:04pm</p>
+            <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-7">by Lynne BURDON</p>
+          </li>
+          <li>
+            <h3 class="home-services__heading"><a href="ONS-postcodes" class="govuk-link">ONS postcodes</a></h3>
+            <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Last update</p>
+            <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">1 January 2020 at 12:04pm</p>
+            <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-7">by Bernie ODONNELL</p>
+          </li>
+          <li>
+            <h3 class="home-services__heading"><a href="validation-messages" class="govuk-link">Validation messages 19-20</a></h3>
+            <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Last update</p>
+            <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">1 January 2020 at 12:04pm</p>
+            <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-7">by Kam THANDI</p>
+          </li>
+          </ul>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+
+
+
+
+
+
+
+{% include "./includes/auto-js.html" %}
+
+{% endblock %}

@@ -318,6 +318,24 @@ hr{
   margin-top: 20px;
 }
 
+
+// width
+.govuk-width-5 {
+  width: 5% !important;
+}
+.govuk-width-10 {
+  width: 10% !important;
+}
+.govuk-width-15 {
+  width: 15% !important;
+}
+.govuk-width-17 {
+  width: 17% !important;
+}
+.govuk-width-20 {
+  width: 20% !important;
+}
+
 // .white-text {
 //   govuk-colour("white")
 // }
@@ -719,6 +737,9 @@ html {
 
 .red-font {
   color: $govuk-error-colour;
+}
+.green-font {
+  color: #00703c;
 }
 
 .awaiting {
@@ -1249,7 +1270,7 @@ html {
 
   }
 
-  #left-nav-wrapper { 
+  #left-nav-wrapper {
 
 	ul {
 
@@ -1382,4 +1403,151 @@ html {
 	  top: 30px;
 	  margin-bottom: 30px;
 	}
+}
+
+.home-services {
+    padding-top: 25px
+}
+
+.home-services__heading {
+    font-family: "nta", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25;
+    margin: 0 0 5px 0
+}
+
+@media print {
+    .home-services__heading {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .home-services__heading {
+        font-size:19px;
+        line-height: 1.3157894737
+    }
+}
+
+@media print {
+    .home-services__heading {
+        font-size: 14pt;
+        line-height: 1.15
+    }
+}
+
+.home-services__para {
+    font-family: "nta", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.1428571429;
+    margin: 0 0 15px 0;
+    min-height: 40px
+}
+
+@media print {
+    .home-services__para {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .home-services__para {
+        font-size:16px;
+        line-height: 1.25
+    }
+}
+
+@media print {
+    .home-services__para {
+        font-size: 14pt;
+        line-height: 1.2
+    }
+}
+
+/* ==========================================================================
+   #TAG
+   ========================================================================== */
+   .govuk-tag {
+
+       display: inline;
+
+       // When a user customises their colours often the background is removed,
+       // by adding a outline we ensure that the tag component still keeps it's meaning.
+       // https://accessibility.blog.gov.uk/2017/03/27/how-users-change-colours-on-websites/
+       outline: 2px solid transparent;
+       outline-offset: -2px;
+
+       color: govuk-colour("white");
+       background-color: govuk-colour("blue");
+       letter-spacing: 1px;
+
+       text-decoration: none;
+       text-transform: uppercase;
+     }
+
+
+
+.govuk-tag {
+  border: 2px solid govuk-colour("blue");
+  background-color: govuk-colour("blue");
+  color: govuk-colour("white");
+}
+.govuk-tag--purple {
+  border: 2px solid govuk-colour("purple");
+  background-color: govuk-colour("purple");
+  color: govuk-colour("white");
+}
+
+.govuk-tag--bright-purple {
+  border: 2px solid govuk-colour("bright-purple");
+  background-color: govuk-colour("bright-purple");
+  color: govuk-colour("white");
+}
+
+.govuk-tag--red,
+.govuk-tag--error {
+  border: 2px solid govuk-colour("red");
+  background-color: govuk-colour("red");
+  color: govuk-colour("white");
+}
+
+.govuk-tag--green,
+.govuk-tag--success {
+  border: 2px solid govuk-colour("green");
+  background-color: govuk-colour("green");
+  color: govuk-colour("white");
+}
+
+.govuk-tag--blue,
+.govuk-tag--information {
+  border: 2px solid govuk-colour("blue");
+  background-color: govuk-colour("blue");
+  color: govuk-colour("white");
+}
+
+.govuk-tag--black {
+  border: 2px solid govuk-colour("black");
+  background-color: govuk-colour("black");
+  color: govuk-colour("white");
+}
+
+.govuk-tag--grey {
+  border: 2px solid govuk-colour("grey-1");
+  background-color: govuk-colour("grey-1");
+  color: govuk-colour("white");
+}
+.extra-padding {
+  margin-top: govuk-spacing(2);
+}
+#heading-section h3.govuk-heading-xl {
+  display: inline !important;
+}
+.inline-display {
+  display: inline !important; float: left;
 }

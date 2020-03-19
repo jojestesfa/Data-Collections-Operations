@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  DC Operations - Home
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+
+<script src="/public/javascripts/tt.js"></script>
+
+<a href="#" id="backlink" class="govuk-back-link">Back</a>
+<div class="app-masthead">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-heading-s govuk-!-font-size-27 white-text">Search for a provider</span>
+      <form class="govuk-form-group" action="providers">
+        <!-- <input class="govuk-input" id="name" name="name" type="text" placeholder="e.g. Manchester or 123456"> -->
+        <div id="tt-overlay" class="autocomplete-wrapper"></div>
+        <button id="searchProviders" type="search" class="govuk-button" >
+          <img src="https://assets.publishing.service.gov.uk/frontend/govuk_publishing_components/search-button-ca89b2a79f944909ceb7370d3f0b78811d32b96e883348fcd8886f63dd619585.png"></img></button>
+      </form>
+    </div>
+
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-x2">Manage Provider</h1>
+    <div class="govuk-form-group">
+      <div class="govuk-!-padding-top-5 govuk-!-padding-bottom-5"><a href="providers" class="govuk-link">Edit provider details</a></div>
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Name</th>
+            <td class="govuk-table__cell">TTE TECHNICAL INSTITUTE</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">UKPRN</th>
+            <td class="govuk-table__cell">10007070</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">UKPIN</th>
+            <td class="govuk-table__cell">107086</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Is MCA</th>
+            <td class="govuk-table__cell"><input type="checkbox" checked="checked" /></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h1 class="govuk-heading-x2">Assignments</h1>
+    <div class="govuk-!-padding-top-5">
+      <a href="provider-manage-assignments" class="govuk-link">Edit assignments</a>
+    </div>
+    <h4 class="govuk-heading-x4">Active</h4>
+    <p>EAS1920<br/>
+      Start Date: {{ data['EAS1920-start-date'] }}<br/>
+      End Date: {{ data['EAS1920-end-date'] }}</p>
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <p>ILR1920<br/>
+      Start Date: {{ data['IRL1920-start-date'] }}<br/>
+      End Date: {{ data['IRL1920-end-date'] }}</p>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <p>ESFR2-1920<br/>
+    Start Date: {{ data['ESFR2-1920-start-date'] }}<br/>
+    End Date: {{ data['ESFR2-1920-end-date'] }}</p>
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <p class="govuk-body govuk-!-font-size-19">FRM-Reports1920<br/>
+      Start Date: {{ data['FRM-reports1920-start-date'] }}
+      <br/>End Date: {{ data['FRM-reports1920-end-date'] }}</p>
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+  </div>
+</div>
+
+ {% include "./includes/auto-js.html" %}
+
+{% endblock %}

@@ -1,0 +1,190 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  DC Operations - Home
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+<!-- <label for="autocomplete-overlay">Select your country</label> -->
+
+
+
+
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="dashboard">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item" aria-current="page">
+        <a class="govuk-breadcrumbs__link" href="reference-data-dashboard">Reference data</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item" aria-current="page">
+        Funding claim dates
+      </li>
+    </ol>
+  </div>
+  <main class="govuk-main-wrapper app-main-class" id="main-content"  role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds govuk-!-margin-top-6">
+        <h1 class="govuk-heading-xl">Funding claim dates</h1>
+      </div>
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-width-15">Data Collection period</th>
+              <th scope="col" class="govuk-table__header">Submission Open Date</th>
+              <th scope="col" class="govuk-table__header">Submission close  date</th>
+              <th scope="col" class="govuk-table__header govuk-width-17">Helpdesk open date</th>
+              <th scope="col" class="govuk-table__header">Helpdesk close date</th>
+              <th scope="col" class="govuk-table__header">Signature required?</th>
+              <th scope="col" class="govuk-table__header">Signature close date</th>
+              <th scope="col" class="govuk-table__header"></th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td scope="row" class="govuk-table__cell">1920-MidYear</td>
+              <td class="govuk-table__cell">10 February 2020 at 07:00</td>
+              <td class="govuk-table__cell">13 February 2020 at 18:00</td>
+              <td class="govuk-table__cell">10 February 2020 at 07:00</td>
+              <td class="govuk-table__cell">13 February 2020 at 18:00</td>
+              <td class="govuk-table__cell">N</td>
+              <td class="govuk-table__cell">13 February 2020 at 18:00</td>
+              <td class="govuk-table__cell"><button class="govuk-button" data-module="govuk-button" id="upload-csv">Modify</button></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td scope="row" class="govuk-table__cell">1819-Final</td>
+              <td class="govuk-table__cell">22 October 2019 at 07:00</td>
+              <td class="govuk-table__cell">13 February 2020 at 18:00</td>
+              <td class="govuk-table__cell">10 February 2020 at 07:00</td>
+              <td class="govuk-table__cell">13 February 2020 at 18:00</td>
+              <td class="govuk-table__cell">Y</td>
+              <td class="govuk-table__cell">13 February 2020 at 18:00</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td scope="row" class="govuk-table__cell">1819-YearEnd</td>
+              <td class="govuk-table__cell">10 February 2020 at 07:00</td>
+              <td class="govuk-table__cell">13 February 2020 at 18:00</td>
+              <td class="govuk-table__cell">10 February 2020 at 07:00</td>
+              <td class="govuk-table__cell">13 February 2020 at 18:00</td>
+              <td class="govuk-table__cell">N</td>
+              <td class="govuk-table__cell"></td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td scope="row" class="govuk-table__cell">1819-MidYear</td>
+              <td class="govuk-table__cell">10 February 2020 at 07:00</td>
+              <td class="govuk-table__cell">13 February 2020 at 18:00</td>
+              <td class="govuk-table__cell">10 February 2020 at 07:00</td>
+              <td class="govuk-table__cell">13 February 2020 at 18:00</td>
+              <td class="govuk-table__cell">N</td>
+              <td class="govuk-table__cell"></td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td scope="row" class="govuk-table__cell">1718-Final</td>
+              <td class="govuk-table__cell">10 February 2020 at 07:00</td>
+              <td class="govuk-table__cell">13 February 2020 at 18:00</td>
+              <td class="govuk-table__cell">10 February 2020 at 07:00</td>
+              <td class="govuk-table__cell">13 February 2020 at 18:00</td>
+              <td class="govuk-table__cell">Y</td>
+              <td class="govuk-table__cell"></td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td scope="row" class="govuk-table__cell">1718-YearEnd</td>
+              <td class="govuk-table__cell">10 February 2020 at 07:00</td>
+              <td class="govuk-table__cell">13 February 2020 at 18:00</td>
+              <td class="govuk-table__cell">10 February 2020 at 07:00</td>
+              <td class="govuk-table__cell">13 February 2020 at 18:00</td>
+              <td class="govuk-table__cell">N</td>
+              <td class="govuk-table__cell"></td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td scope="row" class="govuk-table__cell">1718-MidYear</td>
+              <td class="govuk-table__cell">10 February 2020 at 07:00</td>
+              <td class="govuk-table__cell">13 February 2020 at 18:00</td>
+              <td class="govuk-table__cell">10 February 2020 at 07:00</td>
+              <td class="govuk-table__cell">13 February 2020 at 18:00</td>
+              <td class="govuk-table__cell">N</td>
+              <td class="govuk-table__cell"></td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td scope="row" class="govuk-table__cell">1617-Final</td>
+              <td class="govuk-table__cell">10 February 2020 at 07:00</td>
+              <td class="govuk-table__cell">13 February 2020 at 18:00</td>
+              <td class="govuk-table__cell">10 February 2020 at 07:00</td>
+              <td class="govuk-table__cell">13 February 2020 at 18:00</td>
+              <td class="govuk-table__cell">N</td>
+              <td class="govuk-table__cell"></td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td scope="row" class="govuk-table__cell">1617-YearEnd</td>
+              <td class="govuk-table__cell">10 February 2020 at 07:00</td>
+              <td class="govuk-table__cell">13 February 2020 at 18:00</td>
+              <td class="govuk-table__cell">10 February 2020 at 07:00</td>
+              <td class="govuk-table__cell">13 February 2020 at 18:00</td>
+              <td class="govuk-table__cell">Y</td>
+              <td class="govuk-table__cell">/td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td scope="row" class="govuk-table__cell">1617-MidYear</td>
+              <td class="govuk-table__cell">10 February 2020 at 07:00</td>
+              <td class="govuk-table__cell">13 February 2020 at 18:00</td>
+              <td class="govuk-table__cell">10 February 2020 at 07:00</td>
+              <td class="govuk-table__cell">13 February 2020 at 18:00</td>
+              <td class="govuk-table__cell">N</td>
+              <td class="govuk-table__cell"></td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td scope="row" class="govuk-table__cell">1516-Final</td>
+              <td class="govuk-table__cell">10 February 2020 at 07:00</td>
+              <td class="govuk-table__cell">13 February 2020 at 18:00</td>
+              <td class="govuk-table__cell">10 February 2020 at 07:00</td>
+              <td class="govuk-table__cell">13 February 2020 at 18:00</td>
+              <td class="govuk-table__cell">Y</td>
+              <td class="govuk-table__cell"></td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td scope="row" class="govuk-table__cell">1516-YearEnd</td>
+              <td class="govuk-table__cell">10 February 2020 at 07:00</td>
+              <td class="govuk-table__cell">13 February 2020 at 18:00</td>
+              <td class="govuk-table__cell">10 February 2020 at 07:00</td>
+              <td class="govuk-table__cell">13 February 2020 at 18:00</td>
+              <td class="govuk-table__cell">N</td>
+              <td class="govuk-table__cell"></td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+
+
+
+
+
+
+
+{% include "./includes/auto-js.html" %}
+
+{% endblock %}

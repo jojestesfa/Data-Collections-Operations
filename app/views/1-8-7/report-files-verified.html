@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+
+
+{% include "./includes/nav.html" %}
+
+
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a id="backlink" href="#" class="govuk-back-link">Back</a><br><br>
+    <div class="govuk-error-summary blue" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="error-summary">
+      <h2 class="govuk-error-summary__title" id="error-summary-title">
+        Latest files extracted
+      </h2>
+      <ul class="govuk-list">
+        <li><strong><a href="#">FRM report zip</a></strong> extracted from blob location ...</li>
+      </ul>
+      <div class="flex column"><a class="govuk-body" href="upload-reports">Change location</a></div>
+    </div>
+  
+
+
+    
+
+    
+
+    <a class="govuk-button" href="report-files-uploaded">Publish reports</a> &nbsp &nbsp
+    <a class="govuk-button govuk-button--secondary" href="dashboard">Cancel</a>
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+      {% include "./includes/search.html" %}
+      {% include "./includes/auto-js.html" %}
+  </div>
+</div>
+
+
+{% endblock %}

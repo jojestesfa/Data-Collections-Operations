@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a id="backlink" href="#" class="govuk-back-link">Back</a>
+    
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <br>
+      {% include "./includes/search.html" %}
+      {% include "./includes/auto-js.html" %}
+  </div>
+</div>
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+    <h1 class="govuk-heading-xl">Enter the FRM details
+    </h1>
+
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Select a period
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="R13">Return period 13</option>
+        <option value="R02" selected>Return period 2</option>
+      </select>
+    </div>
+    
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="width-20">
+        File location
+      </label>
+      <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text">
+    </div>
+
+<a href="uploading-reports" type="submit" class="govuk-button">
+  Verify
+</a>
+
+
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

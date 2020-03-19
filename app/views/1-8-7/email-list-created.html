@@ -1,0 +1,115 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+
+
+{% include "./includes/nav.html" %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a id="backlink" href="#" class="govuk-back-link">Back</a>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <br>
+      {% include "./includes/search.html" %}
+      {% include "./includes/auto-js.html" %}
+  </div>
+</div>
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">You’ve added 51 email addresses</h1>
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+
+    <a class="govuk-link see-all-providers" href="advanced-search">See all providers</a>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h2 class="govuk-heading-m">Here are the email address's which weren't valid</h2>
+     <table class="govuk-table">
+
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" scope="col">Email address</th>
+              <th class="govuk-table__header " scope="col">Reason</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" scope="row">patel.vickesh@education.gov.uk</th>
+              <td class="govuk-table__cell ">Invalid email address</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" scope="row">sal.theman@baig.com</th>
+              <td class="govuk-table__cell ">Invalid email address</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" scope="row">bfg@education.gov.uk</th>
+              <td class="govuk-table__cell ">Invalid email address</td>
+            </tr>
+          </tbody>
+        </table>
+
+
+        <h2 class="govuk-heading-m">Here are the email address's we've added</h2>
+
+    <table class="govuk-table">
+         <!-- <caption class="govuk-table__caption">Here are the providers to add:</caption> -->
+         <thead class="govuk-table__head">
+           <tr class="govuk-table__row">
+             <th class="govuk-table__header" scope="col">Email address</th>
+             <th class="govuk-table__header " scope="col">List assignment</th>
+           </tr>
+         </thead>
+         <tbody class="govuk-table__body">
+           <tr class="govuk-table__row">
+             <th class="govuk-table__header" scope="row">jim.riaz@education.gov.uk</th>
+             <td class="govuk-table__cell ">All</td>
+           </tr>
+           <tr class="govuk-table__row">
+             <th class="govuk-table__header" scope="row">sam.johnson@education.gov.uk</th>
+             <td class="govuk-table__cell ">DCT, Management</td>
+           </tr>
+           <tr class="govuk-table__row">
+             <th class="govuk-table__header" scope="row">heihachi.mishima@education.gov.uk</th>
+             <td class="govuk-table__cell ">DCT</td>
+           </tr>
+           <tr class="govuk-table__row">
+             <th class="govuk-table__header" scope="row">john.smith@education.gov.uk</th>
+             <td class="govuk-table__cell ">DCT, Management</td>
+           </tr>
+           <tr class="govuk-table__row">
+             <th class="govuk-table__header" scope="row">johnny.cage@education.gov.uk</th>
+             <td class="govuk-table__cell ">Apprenticeships</td>
+           </tr>
+           <tr class="govuk-table__row">
+             <th class="govuk-table__header" scope="row">ryu.ken@education.gov.uk</th>
+             <td class="govuk-table__cell ">Management</td>
+           </tr>
+         </tbody>
+       </table>
+
+
+
+
+
+
+
+       <p><a href="email-dist" class="govuk-link">Back to email distribution</a></p>
+
+  </div>
+</div>
+
+
+{% endblock %}

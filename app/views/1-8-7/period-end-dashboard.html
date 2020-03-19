@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  DC Operations - Home
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+<!-- <label for="autocomplete-overlay">Select your country</label> -->
+
+
+
+
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="dashboard">Home</a>
+    </li>
+
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">Period end</li>
+  </ol>
+</div>
+
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row govuk-!-margin-top-6">
+      <div class="govuk-grid-column-one-third">
+        <ul class="govuk-list">
+            <!-- <li>
+              <h3 class="home-services__heading">
+                <a href="ALLF" class="govuk-link">ALLF</a>
+              </h3>
+              <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Last update</p>
+              <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">1 January 2020 at 12:04pm</p>
+              <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-7">by Kam THANDI</p></li> -->
+              <li>
+                <h3 class="home-services__heading"><a href="ALLF" class="govuk-link">ALLF</a></h3>
+                <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1"><span class="govuk-!-font-weight-bold">A55</span> open until</p>
+                <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-7">07 July 2020 18:05pm</p>
+              </li>
+              <li>
+                <h3 class="home-services__heading">
+                  <a href="application-version" class="govuk-link">Application version</a>
+                </h3>
+                <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Last update</p>
+                <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">1 January 2020 at 12:04pm</p>
+                <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-7">by Bernie ODONNELL</p>
+              </li>
+          </ul>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <ul class="govuk-list">
+          <li>
+            <h3 class="home-services__heading"><a href="ILR" class="govuk-link">ILR</a></h3>
+            <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1"><span class="govuk-!-font-weight-bold">R06</span> open until</p>
+            <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-7">22 July 2020 18:05pm</p>
+          </li>
+
+
+          <li>
+            <h3 class="home-services__heading"><a href="email-distribution" class="govuk-link">Email distribution</a></h3>
+            <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Last update</p>
+            <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">1 January 2020 at 12:04pm</p>
+            <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-7">by Lynne BURDON</p>
+          </li>
+
+          </ul>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <ul class="govuk-list">
+          <li>
+            <h3 class="home-services__heading"><a href="NCS" class="govuk-link">NCS</a></h3>
+            <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1"><span class="govuk-!-font-weight-bold">N12</span> open until</p>
+            <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-7">22 March 2020 18:05</p>
+          </li>
+
+
+          </ul>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+
+
+
+
+
+
+
+{% include "./includes/auto-js.html" %}
+
+{% endblock %}
