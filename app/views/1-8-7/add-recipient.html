@@ -11,15 +11,30 @@
 
 <!-- <script src="/public/javascripts/tt.js"></script> -->
 
-<a id="backlink" href="#" class="govuk-back-link">Back</a>
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="dashboard">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="period-end-dashboard">Period end</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="email-dist">Email distribution</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">Add a new recipient</li>
+  </ol>
+</div>
 <br>
 <br>
 <div class="govuk-grid-row">
+  <form action="email-dist-new-recipient" method="post" class="form" id="add-new-recipient">
+
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">Enter the recipient's email address</h1>
 
     <div class="govuk-form-group">
-      <input class="govuk-input govuk-!-width-two-thirds" id="one-half" name="one-half" type="text">
+      <input class="govuk-input govuk-!-width-two-thirds" id="one-half" name="one-half" type="text" value="{{ data['one-half'] }}">
     </div>
 
 
@@ -30,42 +45,68 @@
         </span>
         <div class="govuk-checkboxes">
           <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses" >
+            <input class="govuk-checkboxes__input" id="waste-1" name="waste-1" type="checkbox" value="PETest01" >
             <label class="govuk-label govuk-checkboxes__label" for="waste-1">
-              DCT
+              PETest01
             </label>
           </div>
           <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+            <input class="govuk-checkboxes__input" id="waste-2" name="waste-2" type="checkbox" value="PETest02">
             <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-              Management
+              PETest02
             </label>
           </div>
           <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+            <input class="govuk-checkboxes__input" id="waste-3" name="waste-3" type="checkbox" value="PETest03">
             <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-              Apprenticeships
+              PETest03
             </label>
           </div>
           <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="waste-4" name="waste" type="checkbox" value="farm">
+            <input class="govuk-checkboxes__input" id="waste-4" name="waste-4" type="checkbox" value="PETest04">
             <label class="govuk-label govuk-checkboxes__label" for="waste-4">
+              PETest04
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste-5" name="waste-5" type="checkbox" value="PETest05">
+            <label class="govuk-label govuk-checkboxes__label" for="waste-5">
+              PETest05
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste-6" name="waste-6" type="checkbox" value="FCS">
+            <label class="govuk-label govuk-checkboxes__label" for="waste-6">
+              FCS
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste-7" name="waste-7" type="checkbox" value="MI Team">
+            <label class="govuk-label govuk-checkboxes__label" for="waste-7">
+              MI Team
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste-8" name="waste-8" type="checkbox" value="PE Comms All">
+            <label class="govuk-label govuk-checkboxes__label" for="waste-8">
+              PE Comms All
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste-9" name="waste-9" type="checkbox" value="All">
+            <label class="govuk-label govuk-checkboxes__label" for="waste-9">
               All
             </label>
           </div>
         </div>
       </fieldset>
     </div>
-
-  <a href="recipient-added" class="govuk-button">
-    Add recipient
-  </a>
-
+    <button class="govuk-button" data-module="govuk-button">Add recipient</button>
   </div>
-
-  <div class="govuk-column-two-thirds">
+</form>
+  <!-- <div class="govuk-column-two-thirds">
     <a class="govuk-button govuk-button--secondary" href="bulk-upload-recipients">Bulk upload recipients</a>
-  </div>
+  </div> -->
 </div>
 
 

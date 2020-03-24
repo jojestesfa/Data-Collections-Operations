@@ -22,22 +22,24 @@
     <li class="govuk-breadcrumbs__list-item">
       <a class="govuk-breadcrumbs__link" href="email-dist">Email distribution</a>
     </li>
-    <li class="govuk-breadcrumbs__list-item" aria-current="page">Add new mailing list</li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">
+      <a class="govuk-breadcrumbs__link" href="manage-emails">Manage emails</a></li>
+      <li class="govuk-breadcrumbs__list-item" aria-current="page">Remove</li>
+
   </ol>
 </div>
 <br>
 <br>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">Name your new mailing list</h1>
-    <form action="email-dist-new-list" method="post" class="form" id="mailingList">
-    <div class="govuk-form-group">
+    <h1 class="govuk-heading-xl">Remove template</h1>
 
-      <input class="govuk-input govuk-input--width-20" type="text"
-      id="mailing-list" name="mailing-list" spellcheck="false" value="{{ data['mailing-list'] }}">
-    </div>
-    <button class="govuk-button" type="submit">Add</button>
-    </form>
+    <p>Are you sure you want to remove template <strong> Period end started email?</strong></p>
+
+  <a href="manage-emails-removed" class="govuk-button">
+    Remove
+  </a>
+  <p><a href="DCT-mail-list">Cancel</a></p>
   </div>
 </div>
 

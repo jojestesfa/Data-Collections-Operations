@@ -11,13 +11,24 @@
 
 <!-- <script src="/public/javascripts/tt.js"></script> -->
 
-<a id="backlink" href="#" class="govuk-back-link">Back</a>
+<!-- <a id="backlink" href="#" class="govuk-back-link">Back</a> -->
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="dashboard">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="period-end-dashboard">Period end</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">Application version</li>
+  </ol>
+</div>
 <br>
 <br>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">Application versions
-    <span class="govuk-caption-xl">RO6 closed 22 April 2019 at 18.05</span>
+    <h1 class="govuk-heading-xl">Application version
+    <!-- <span class="govuk-caption-xl">RO6 closed 22 April 2019 at 18.05</span> -->
     </h1>
 
 
@@ -30,23 +41,177 @@
 <div class="govuk-grid-row">
 
   <div class="govuk-grid-column-two-thirds">
-
+    <h3 class="govuk-heading-m">ServiceFabric Applications</h3>
     <table class="govuk-table">
-
-
+      <caption class="govuk-table__caption"></caption>
+      <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Name</th>
+            <th scope="col" class="govuk-table__header">Version</th>
+            <th scope="col" class="govuk-table__header">Health state</th>
+            <th scope="col" class="govuk-table__header">Status</th>
+          </tr>
+        </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
-          <th class="govuk-table__header" scope="row">File validation service</th>
-          <td class="govuk-table__cell">R2091223.03</td>
+          <td class="govuk-table__cell" scope="row">ESFA.DC.DAtaMatch.ReportServiceType</td>
+          <td class="govuk-table__cell">.0.0.0155</td>
+          <th class="govuk-table__cell">OK</th>
+          <td class="govuk-table__cell">Ready</td>
         </tr>
         <tr class="govuk-table__row">
-          <th class="govuk-table__header" scope="row">Validation service</th>
-          <td class="govuk-table__cell">R2091223.02</td>
+          <td class="govuk-table__cell" scope="row">ESFA.DC.EAS1819Type</td>
+          <td class="govuk-table__cell">.0.1.0025</td>
+          <th class="govuk-table__cell">OK</th>
+          <td class="govuk-table__cell">Ready</td>
         </tr>
-
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" scope="row">ESFA.DC.EAS1920Type</td>
+          <td class="govuk-table__cell">.0.0.0117</td>
+          <th class="govuk-table__cell">OK</th>
+          <td class="govuk-table__cell">Ready</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" scope="row">ESFA.DC.ESF.R2Type</td>
+          <td class="govuk-table__cell">.0.2.0665</td>
+          <th class="govuk-table__cell">OK</th>
+          <td class="govuk-table__cell">Ready</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" scope="row">ESFA.DC.ESF.ServerlessType</td>
+          <td class="govuk-table__cell">.0.0.0423</td>
+          <th class="govuk-table__cell">OK</th>
+          <td class="govuk-table__cell">Ready</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" scope="row">ESFA.DC.ILR1819.FundingServiceType</td>
+          <td class="govuk-table__cell">.0.1.0499</td>
+          <th class="govuk-table__cell">OK</th>
+          <td class="govuk-table__cell">Ready</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" scope="row">ESFA.DC.ILR1819.DataStoreType</td>
+          <td class="govuk-table__cell">.0.2.0037</td>
+          <th class="govuk-table__cell">OK</th>
+          <td class="govuk-table__cell">Ready</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" scope="row">ESFA.DC.ILR1819.FileValidationServiceType</td>
+          <td class="govuk-table__cell">.0.0.0105</td>
+          <th class="govuk-table__cell">OK</th>
+          <td class="govuk-table__cell">Ready</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" scope="row">ESFA.DC.ILR1819.ReferenceDataServiceType</td>
+          <td class="govuk-table__cell">.0.1.0102</td>
+          <th class="govuk-table__cell">OK</th>
+          <td class="govuk-table__cell">Ready</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" scope="row">ESFA.DC.ILR1819.ReportServiceType</td>
+          <td class="govuk-table__cell">.0.2.0091</td>
+          <th class="govuk-table__cell">OK</th>
+          <td class="govuk-table__cell">Ready</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" scope="row">ESFA.DC.ILR1819.ValidationServiceType</td>
+          <td class="govuk-table__cell">.0.1.3396</td>
+          <th class="govuk-table__cell">OK</th>
+          <td class="govuk-table__cell">Ready</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" scope="row">ESFA.DC.ILR1920.DataStoreType</td>
+          <td class="govuk-table__cell">.0.0.0561</td>
+          <th class="govuk-table__cell">OK</th>
+          <td class="govuk-table__cell">Ready</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" scope="row">ESFA.DC.ILR1920.FileValidationServiceType</td>
+          <td class="govuk-table__cell">.0.1.0124</td>
+          <th class="govuk-table__cell">OK</th>
+          <td class="govuk-table__cell">Ready</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" scope="row">ESFA.DC.ILR1920.FundingServiceType</td>
+          <td class="govuk-table__cell">.0.0.0292</td>
+          <th class="govuk-table__cell">OK</th>
+          <td class="govuk-table__cell">Ready</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" scope="row">ESFA.DC.ILR1920.ReferenceDataServiceType</td>
+          <td class="govuk-table__cell">.0.1.0035</td>
+          <th class="govuk-table__cell">OK</th>
+          <td class="govuk-table__cell">Ready</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" scope="row">ESFA.DC.ILR1920.ReportServiceType</td>
+          <td class="govuk-table__cell">.0.0.1133</td>
+          <th class="govuk-table__cell">OK</th>
+          <td class="govuk-table__cell">Ready</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" scope="row">ESFA.DC.ILR1920.ReportService.MCAGLAType</td>
+          <td class="govuk-table__cell">.0.0.0245</td>
+          <th class="govuk-table__cell">OK</th>
+          <td class="govuk-table__cell">Ready</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" scope="row">ESFA.DC.ILR1920.ValidationServiceType</td>
+          <td class="govuk-table__cell">.0.0.1398</td>
+          <th class="govuk-table__cell">OK</th>
+          <td class="govuk-table__cell">Ready</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" scope="row">ESFA.DC.NCSType</td>
+          <td class="govuk-table__cell">.0.0.0085</td>
+          <th class="govuk-table__cell">OK</th>
+          <td class="govuk-table__cell">Ready</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" scope="row">ESFA.DC.PeriodEnd1920.ReportServiceType</td>
+          <td class="govuk-table__cell">.0.0.0971</td>
+          <th class="govuk-table__cell">OK</th>
+          <td class="govuk-table__cell">Ready</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" scope="row">ESFA.DC.ReferenceDataType</td>
+          <td class="govuk-table__cell">.0.2.0600</td>
+          <th class="govuk-table__cell">OK</th>
+          <td class="govuk-table__cell">Ready</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" scope="row">ESFA.DC.SummarisationType</td>
+          <td class="govuk-table__cell">.0.0.0916</td>
+          <th class="govuk-table__cell">OK</th>
+          <td class="govuk-table__cell">Ready</td>
+        </tr>
       </tbody>
     </table>
-
+    <h3 class="govuk-heading-m">ServiceFabric Nodes</h3>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Node type</th>
+            <th scope="col" class="govuk-table__header">Count</th>
+            <th scope="col" class="govuk-table__header">Healthy</th>
+            <th scope="col" class="govuk-table__header">Bad</th>
+          </tr>
+        </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" scope="row">Processor</td>
+          <td class="govuk-table__cell">34</td>
+          <th class="govuk-table__cell">34</th>
+          <td class="govuk-table__cell">0</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" scope="row">Data</td>
+          <td class="govuk-table__cell">5</td>
+          <th class="govuk-table__cell">5</th>
+          <td class="govuk-table__cell">0</td>
+        </tr>
+      </tbody>
+    </table>
 
 
   </div>

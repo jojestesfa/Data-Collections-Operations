@@ -11,15 +11,36 @@
 
 <!-- <script src="/public/javascripts/tt.js"></script> -->
 
-<a id="backlink" href="#" class="govuk-back-link">Back</a>
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="dashboard">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="period-end-dashboard">Period end</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="email-dist">Email distribution</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="manage-emails">Manage emails</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">Edit emails</li>
+  </ol>
+</div>
 <br>
 <br>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">Collection closed email</h1>
-    
+    <h1 class="govuk-heading-xl">Edit - Period end started email</h1>
     <!-- <p><a class="govuk-button govuk-button--secondary" href="new-mailing-list">Add a new mailing list</a></p> -->
-
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <a class="govuk-button govuk-button--warning" href="remove-email-template">Delete template</a>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
     <div class="govuk-form-group">
         <label class="govuk-label" for="event-name">
           Template ID
@@ -36,7 +57,7 @@
         <option value="updated">Summarisation</option>
         <option value="views">DAS period end</option>
         <option value="all">Apps summarisation</option>
-        
+
       </select>
     </div>
 
@@ -49,16 +70,16 @@
           <option value="updated">Management</option>
           <option value="views">Apprenticeships</option>
           <option value="all">All</option>
-          
+
         </select>
       </div>
-    
-    
-    
 
-    
 
-    <a href="manage-emails" class="govuk-button" data-module="govuk-button">
+
+
+
+
+    <a href="manage-emails-edited" class="govuk-button" data-module="govuk-button">
       Save and continue
     </a>
 

@@ -8,6 +8,7 @@
 
 
 {% include "./includes/nav.html" %}
+{% include "includes/scripts.html" %}
 
 <!-- <script src="/public/javascripts/tt.js"></script> -->
 
@@ -24,10 +25,36 @@
   </ol>
 </div>
 <br>
+<form action="" method="post"  id="emailDistributionList">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+      <div class="govuk-banner govuk-banner--success">
+        <svg class="govuk-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+        <path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
+        <input type="hidden" value="{{ data['waste-1'] }}" id="email-list-1">
+        <input type="hidden" value="{{ data['waste-2'] }}" id="email-list-2">
+        <input type="hidden" value="{{ data['waste-3'] }}" id="email-list-3">
+        <input type="hidden" value="{{ data['waste-4'] }}" id="email-list-4">
+        <input type="hidden" value="{{ data['waste-5'] }}" id="email-list-5">
+        <input type="hidden" value="{{ data['waste-6'] }}" id="email-list-6">
+        <input type="hidden" value="{{ data['waste-7'] }}" id="email-list-7">
+        <input type="hidden" value="{{ data['waste-8'] }}" id="email-list-8">
+        <input type="hidden" value="{{ data['waste-9'] }}" id="email-list-9">
 
+        <div class="govuk-banner__message">
+          <span class="govuk-banner__assistive">Success</span>
+          You have successfully added <strong>{{ data['one-half'] }}</strong> to
+          <strong>
+            <span id="email-list-data-1">{{ data['waste-1'] }}</span><span id="email-list-data-2">, {{ data['waste-2'] }}</span><span id="email-list-data-3">, {{ data['waste-3'] }}</span>
+            <span id="email-list-data-4">, {{ data['waste-4'] }}</span><span id="email-list-data-5">, {{ data['waste-5'] }}</span><span id="email-list-data-6">, {{ data['waste-6'] }}</span><span id="email-list-data-7">, {{ data['waste-7'] }}</span><span id="email-list-data-8">, {{ data['waste-8'] }}</span><span id="email-list-data-9">, {{ data['waste-9'] }}</span>
+          </strong>
+        </div>
+    </div>
+  </div>
+</div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">Manage distribution list</h1>
+    <h1 class="govuk-heading-xl">Manage email distribution list</h1>
 
 
     <div class="flex space-between">
@@ -124,13 +151,20 @@
         </a>
       </dd>
     </div>
-
+    <div class="govuk-summary-list__row">
+      <dd class="govuk-summary-list__value">
+        {{ data['mailing-list'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="">
+          Manage list<span class="govuk-visually-hidden"> Manage apprenticeship list</span>
+        </a>
+      </dd>
+    </div>
 
 
   </dl>
-
-
-
+</form>
 
 
 

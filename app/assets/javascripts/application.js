@@ -231,6 +231,40 @@ $('#addAssignment').click(function(){
 
 });
 
+$("#MLselectAll").bind('click', function () {
+    $('input:checkbox').not(this).prop('checked', this.checked);
+});
+
+
+$('#deleteSelected').on('click', function(e) {
+var allVals = [];
+		$(".mailing-list .govuk-checkboxes__input:checked").each(function() {
+			allVals.push($(this).attr('data-id'));
+		});
+		//alert(allVals.length); return false;
+		if(allVals.length <=0)
+		{
+      $('.govuk-banner--success').addClass('govuk-visually-hidden');
+			$('.govuk-banner--warning').removeClass('govuk-visually-hidden');
+		}
+		else {
+			//$("#loading").show();
+			//WRN_PROFILE_DELETE = "Are you sure you want to delete selected emails?";
+			//var check = confirm(WRN_PROFILE_DELETE);
+			//if(check == true){
+              //for client side
+			  $.each(allVals, function( index, value ) {
+				  $('table.mailing-list tr').filter("[data-row-id='" + value + "']").remove();
+			  });
+        $('.govuk-banner--warning').addClass('govuk-visually-hidden');
+        $('.govuk-banner--success').removeClass('govuk-visually-hidden');
+			//}
+		}
+	});
+
+
+
+
 
 
 $('.remove').click(function(){
@@ -302,6 +336,25 @@ $(document).ready(function () {
 
   });
 
+      var l1 = $('#email-list-1').val();
+      var l2 = $('#email-list-2').val();
+      var l3 = $('#email-list-3').val();
+      var l4 = $('#email-list-4').val();
+      var l5 = $('#email-list-5').val();
+      var l6 = $('#email-list-6').val();
+      var l7 = $('#email-list-7').val();
+      var l8 = $('#email-list-8').val();
+      var l9 = $('#email-list-9').val();
+
+      if(!l1) {$('#email-list-data-1').hide()}
+      if(!l2) {$('#email-list-data-2').hide()}
+      if(!l3) {$('#email-list-data-3').hide()}
+      if(!l4) {$('#email-list-data-4').hide()}
+      if(!l5) {$('#email-list-data-5').hide()}
+      if(!l6) {$('#email-list-data-6').hide()}
+      if(!l7) {$('#email-list-data-7').hide()}
+      if(!l8) {$('#email-list-data-8').hide()}
+      if(!l9) {$('#email-list-data-9').hide()}
 
 
     if(window.location.href.indexOf
@@ -618,7 +671,6 @@ $(document).ready(function () {
 
        window.myBar.update();
      });
-
 
 
 
