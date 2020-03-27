@@ -10,7 +10,17 @@
 {% include "./includes/nav.html" %}
 
 <!-- <script src="/public/javascripts/tt.js"></script> -->
-<a id="backlink" href="#" class="govuk-back-link">Back</a>
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="dashboard">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="period-end-dashboard">Period end</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">ILR</li>
+  </ol>
+</div>
 <br>
 <br>
 <div class="govuk-grid-row">
@@ -37,7 +47,7 @@
     </ul>
   </div>
 
-  <div class="govuk-grid-column-one-third">
+  <!-- <div class="govuk-grid-column-one-third">
     <section class="margin-bottom">
       <h2 class="govuk-heading-m centre-text"><a href="jobs-processing">Jobs processing</a></h2>
       <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
@@ -63,15 +73,11 @@
         </g>
       </svg>
     </section>
-  </div>
+  </div> -->
 
 
 
-</div>
 
-<div class="govuk-grid-row">
-
-  <div class="govuk-grid-column-one-third">&nbsp</div>
 
   <div class="govuk-grid-column-two-thirds">
 
@@ -81,7 +87,7 @@
 
 
 
-    <div class="govuk-form-group filter-wrapper">
+    <!-- <div class="govuk-form-group filter-wrapper">
       <fieldset class="govuk-fieldset" aria-describedby="streamType">
 
         <span class="govuk-hint">
@@ -119,7 +125,7 @@
         </div>
 
       </fieldset>
-    </div>
+    </div> -->
 
     <div id="govukPanel" class="govuk-panel govuk-panel--confirmation hidden">
       <h1 class="govuk-panel__title govuk-!-font-size-27">
@@ -131,156 +137,91 @@
     </div>
 
     <div class="main-card ilr eas">
-
       <div class="flex govuk-!-margin-bottom-2">
-        <strong class="govuk-link govuk-!-font-size-19 provider-title "><a href="#">Manchester College</a></strong>
+        <strong class="govuk-link govuk-!-font-size-19 provider-title ">10000536 - BARNSLEY COLLEGE</strong>
       </div>
-      <div class="govuk-body card-wrapper ilr">
+      <div class="govuk-body">
         <div class="flex space-between govuk-!-margin-bottom-2">
-          <div class="govuk-checkboxes govuk-checkboxes--small filter-wrapper wrong-file-check">
-            <div class="govuk-checkboxes__item custom">
-              <input  class="govuk-checkboxes__input" id="ilr-1" name="collections" type="checkbox" value="ilr">
-              <label class="govuk-label govuk-checkboxes__label" for="ilr-1">
-                ILR - Wrong file name (submitted 2 times)
-              </label>
-            </div>
-          </div>
           <!-- <a href="#">Hide from list</a> -->
           <span class="hidden-tag">Hidden file</span>
         </div>
-
         <div class="flex space-between">
-          <span class="govuk-!-font-size-16">EAS-12345678-1819-20180806-05092018-02.XML </span>  <span class="govuk-!-font-size-16">22 April 2019 at 11.19</span>
+          <span>ILR1920</span>  <span class="govuk-!-font-size-16"><a id="submitAgain" href="#" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-2">Submit again</a></span>
+        </div>
+        <div class="flex space-between">
+          <span class="govuk-!-font-size-16">EAS-12345678-1819-20180806-05092018-02.XML </span>  <span class="govuk-!-font-size-16">5 Mar 2020, 13:25</span>
         </div>
         <hr class="secondary-divider">
       </div>
-
-      <div class="govuk-body card-wrapper eas">
-        <div class="flex space-between govuk-!-margin-bottom-2">
-          <div class="govuk-checkboxes govuk-checkboxes--small filter-wrapper wrong-file-check">
-            <div class="govuk-checkboxes__item custom">
-              <input  class="govuk-checkboxes__input" id="eas-1" name="collections" type="checkbox" value="eas">
-              <label class="govuk-label govuk-checkboxes__label" for="eas-1">
-                EAS - Wrong file name
-              </label>
-            </div>
-          </div>
-          <!-- <a href="#">Hide from list</a> -->
-          <span class="hidden-tag">Hidden file</span>
-
-        </div>
-        <div class="flex space-between">
-          <span class="govuk-!-font-size-16">ILR-12345678-1819-20180806-05092018-02.XML </span>  <span class="govuk-!-font-size-16">22 April 2019 at 11.19</span>
-        </div>
-      </div>
-      <hr class="main-divider">
     </div>
-
-
-    <div class="main-card eas esf">
-
+    <div class="main-card ilr eas">
       <div class="flex govuk-!-margin-bottom-2">
-        <strong class="govuk-link govuk-!-font-size-19 provider-title "><a href="#">Coventry College</a></strong>
+        <strong class="govuk-link govuk-!-font-size-19 provider-title ">10001115 - CAMBRIDGE PROFESSIONAL ACADEMY LIMITED</strong>
       </div>
-      <div class="govuk-body card-wrapper eas">
+      <div class="govuk-body">
         <div class="flex space-between govuk-!-margin-bottom-2">
-
-          <div class="govuk-checkboxes govuk-checkboxes--small filter-wrapper wrong-file-check">
-            <div class="govuk-checkboxes__item custom">
-              <input  class="govuk-checkboxes__input" id="eas-2" name="collections" type="checkbox" value="eas">
-              <label class="govuk-label govuk-checkboxes__label" for="eas-2">
-                EAS - Wrong file name (submitted 4 times)
-              </label>
-            </div>
-          </div>
           <!-- <a href="#">Hide from list</a> -->
           <span class="hidden-tag">Hidden file</span>
-
         </div>
         <div class="flex space-between">
-          <span class="govuk-!-font-size-16">ESF-12345678-1819-20180806-05092018-02.XML </span>  <span class="govuk-!-font-size-16">22 April 2019 at 11.19</span>
+          <span>ILR1920</span>  <span class="govuk-!-font-size-16"><a id="submitAgain" href="#" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-2">Submit again</a></span>
+        </div>
+        <div class="flex space-between">
+          <span class="govuk-!-font-size-16">ILR-10001115-1920-20200305-130113-01.XML </span>  <span class="govuk-!-font-size-16">22 April 2019 at 11.19</span>
         </div>
         <hr class="secondary-divider">
       </div>
-      <div class="govuk-body card-wrapper esf">
-        <div class="flex space-between govuk-!-margin-bottom-2">
-
-        <div class="govuk-checkboxes govuk-checkboxes--small filter-wrapper wrong-file-check">
-          <div class="govuk-checkboxes__item custom">
-            <input  class="govuk-checkboxes__input" id="esf-1" name="collections" type="checkbox" value="esf">
-            <label class="govuk-label govuk-checkboxes__label" for="esf-1">
-              ESF - Duplicate file name (submitted 2 times)
-            </label>
-          </div>
-        </div>
-        <!-- <a href="#">Hide from list</a> -->
-        <span class="hidden-tag">Hidden file</span>
-
-        </div>
-        <div class="flex space-between">
-          <span class="govuk-!-font-size-16">ESF-12345678-1819-20180806-05092018-02.XML </span>  <span class="govuk-!-font-size-16">22 April 2019 at 11.19</span>
-        </div>
-      </div>
-      <hr class="main-divider">
     </div>
-
-
-    <div class="main-card esf ilr">
-
+    <div class="main-card ilr eas">
       <div class="flex govuk-!-margin-bottom-2">
-        <strong class="govuk-link govuk-!-font-size-19 provider-title"><a href="#">Leicester College</a></strong>
+        <strong class="govuk-link govuk-!-font-size-19 provider-title ">10001174 - CT SKILLS LIMITED</strong>
       </div>
-      <div class="govuk-body card-wrapper esf card-1">
+      <div class="govuk-body">
         <div class="flex space-between govuk-!-margin-bottom-2">
-
-          <div class="govuk-checkboxes govuk-checkboxes--small filter-wrapper wrong-file-check">
-            <div class="govuk-checkboxes__item custom">
-              <input  class="govuk-checkboxes__input" id="esf-2" name="collections" type="checkbox" value="esf">
-              <label class="govuk-label govuk-checkboxes__label" for="esf-2">
-                ESF - Wrong file name (submitted once)
-              </label>
-            </div>
-          </div>
           <!-- <a href="#">Hide from list</a> -->
           <span class="hidden-tag">Hidden file</span>
-
         </div>
         <div class="flex space-between">
-          <span class="govuk-!-font-size-16">ILR-12345678-1819-20180806-05092018-02.XML </span>  <span class="govuk-!-font-size-16">22 April 2019 at 11.19</span>
+          <span>ILR1920</span>  <span class="govuk-!-font-size-16"><a id="submitAgain" href="#" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-2">Submit again</a></span>
+        </div>
+        <div class="flex space-between">
+          <span class="govuk-!-font-size-16">ILR-10001174-1920-20200305-125516-01.XML </span>  <span class="govuk-!-font-size-16">22 April 2019 at 11.19</span>
         </div>
         <hr class="secondary-divider">
       </div>
-      <!-- <section class="new-wrapper"> -->
-      <div class="govuk-body card-wrapper ilr">
+    </div>
+    <div class="main-card ilr eas">
+      <div class="flex govuk-!-margin-bottom-2">
+        <strong class="govuk-link govuk-!-font-size-19 provider-title ">10002979 - HEATHERCROFT TRAINING SERVICES LIMITED</strong>
+      </div>
+      <div class="govuk-body">
         <div class="flex space-between govuk-!-margin-bottom-2">
-
-          <div class="govuk-checkboxes govuk-checkboxes--small filter-wrapper wrong-file-check">
-            <div class="govuk-checkboxes__item custom">
-              <input  class="govuk-checkboxes__input" id="ilr-2" name="collections" type="checkbox" value="ilr">
-              <label class="govuk-label govuk-checkboxes__label" for="ilr-2">
-                ILR - Wrong file name
-              </label>
-            </div>
-          </div>
           <!-- <a href="#">Hide from list</a> -->
           <span class="hidden-tag">Hidden file</span>
-
         </div>
         <div class="flex space-between">
-          <span class="govuk-!-font-size-16">EAS-12345678-1819-20180806-05092018-02.XML </span>  <span class="govuk-!-font-size-16">22 April 2019 at 11.19</span>
+          <span>ILR1920</span>  <span class="govuk-!-font-size-16"><a id="submitAgain" href="#" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-2">Submit again</a></span>
         </div>
+        <div class="flex space-between">
+          <span class="govuk-!-font-size-16">ILR-10002979-1920-20200305-130349-01.ZIP </span>  <span class="govuk-!-font-size-16">22 April 2019 at 11.19</span>
+        </div>
+        <hr class="secondary-divider">
       </div>
-      <!-- </section> -->
-      <hr class="main-divider">
     </div>
 
 
-    <br>
+
+
+
+
+
+
+    <!-- <br>
     <div >
       <a id="submitAgain" href="#" class="govuk-button govuk-button--secondary">Submit again</a>&nbsp &nbsp
       <a id="hideFiles" href="#" class="govuk-button govuk-button--secondary">Hide</a>
       <a id="showFiles" href="#" class="govuk-button govuk-button--secondary">Show</a>
-    </div>
+    </div> -->
 
     <!-- <div class="card-1">
       <div class="flex space-between">
@@ -367,12 +308,14 @@
 
       </tbody>
     </table>
-
-    <p>send email button required</p>
-
-    <a href="period-end-part-2" class="govuk-button show-continue">
-      Continue
+<div>
+    <a class="govuk-button enable-continue" id="sendCollectionClosedEmail">
+      Send collection closed email
     </a>
+</div>
+    <a class="govuk-button govuk-button--disabled show-continue" id="periodEndContinue" data-module="govuk-button">
+      Continue
+    </a
 
 
 

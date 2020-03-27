@@ -11,58 +11,99 @@
 
 <!-- <script src="/public/javascripts/tt.js"></script> -->
 
-<a id="backlink" href="#" class="govuk-back-link">Back</a>
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="dashboard">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="period-end-dashboard">Period end</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="period-end">ILR</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">Period end history</li>
+  </ol>
+</div>
 <br>
 <br>
 <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <ul class="govuk-list">
+      <li>
+        <div class="flex"><a href="period-end-reports" class="govuk-link ">Reports </a></div>
+      </li>
+      <li>
+        <a href="period-end-history" class="govuk-link govuk-!-font-weight-bold">History</a>
+      </li>
+    </ul>
+  </div>
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">Period end history</h1>
-
+    <h1 class="govuk-heading-xl">Period end history
+    <span class="govuk-caption-l">Collection year 1920 </span></h1>
     <div class="govuk-form-group">
       <label class="govuk-label" for="sort">
-        Select a time period
+        Select a collection year
       </label>
       <select class="govuk-select" id="sort" name="sort">
-        <option value="published" selected>2018 to 2019</option>
-        <option value="updated" >2017 to 2018</option>
-        <option value="views">2016 to 2017</option>
-        <option value="comments">2015 to 2016</option>
+        <option value="published" selected>1920</option>
       </select>
     </div>
 
     <div>
+      <h2 class="govuk-heading-m">R07</h2>
+      <p><strong>Started: </strong>10 April 2019 at 6.10pm</p>
+      <p><strong>Finished: </strong>10 April 2019 at 10.58pm</p>
+      <p class="flex space-between"><span><strong>Duration: </strong>5 hours 58 minutes</span></p>
+      <p class="flex space-between"><span><strong>Duration: </strong>4 hours 48 minutes</span> <span><a href="period-end-reports">Reports</a><br><a href="period-end-part-2">Job breakdown</a></span></p>
+      <hr>
+    </div>
+    <div>
+      <h2 class="govuk-heading-m">R06</h2>
+      <p><strong>Started: </strong>10 April 2019 at 6.10pm</p>
+      <p><strong>Finished: </strong>10 April 2019 at 10.58pm</p>
+      <p class="flex space-between"><span><strong>Duration: </strong>5 hours 58 minutes</span> </p>
+      <p class="flex space-between"><span><strong>Duration: </strong>4 hours 48 minutes</span> <span><a href="period-end-reports">Reports</a><br><a href="period-end-part-2">Job breakdown</a></span></p>
+      <hr>
+    </div>
+    <div>
       <h2 class="govuk-heading-m">R05</h2>
       <p><strong>Started: </strong>10 April 2019 at 6.10pm</p>
       <p><strong>Finished: </strong>10 April 2019 at 10.58pm</p>
-      <p class="flex space-between"><span><strong>Duration: </strong>4 hours 48 minutes</span> <span><a href="job-breakdown">Job breakdown</a></span></p>
+      <p class="flex space-between"><span><strong>Duration: </strong>5 hours 58 minutes</span></p>
+      <p class="flex space-between"><span><strong>Duration: </strong>4 hours 48 minutes</span> <span><a href="period-end-reports">Reports</a><br><a href="period-end-part-2">Job breakdown</a></span></p>
       <hr>
     </div>
     <div>
       <h2 class="govuk-heading-m">R04</h2>
       <p><strong>Started: </strong>10 March 2019 at 6.10pm</p>
       <p><strong>Finished: </strong>10 March 2019 at 10.58pm</p>
-      <p class="flex space-between"><span><strong>Duration: </strong>5 hours 58 minutes</span> <span><a href="job-breakdown">Job breakdown</a></span></p>
+      <p class="flex space-between"><span><strong>Duration: </strong>5 hours 58 minutes</span></p>
+      <p class="flex space-between"><span><strong>Duration (Business days): </strong>5 hours 58 minutes</span> <span><a href="period-end-reports">Reports</a><br><a href="period-end-part-2">Job breakdown</a></span></p>
       <hr>
     </div>
     <div>
       <h2 class="govuk-heading-m">R03</h2>
       <p><strong>Started: </strong>10 February 2019 at 6.10pm</p>
       <p><strong>Finished: </strong>10 February 2019 at 10.58pm</p>
-      <p class="flex space-between"><span><strong>Duration: </strong>7 hours 17 minutes</span> <span><a href="job-breakdown">Job breakdown</a></span></p>
+      <p class="flex space-between"><span><strong>Duration: </strong>5 hours 58 minutes</span> </p>
+      <p class="flex space-between"><span><strong>Duration: </strong>7 hours 17 minutes</span> <span><a href="period-end-reports">Reports</a><br><a href="job-breakdown">Job breakdown</a></span></p>
       <hr>
     </div>
     <div>
       <h2 class="govuk-heading-m">R02</h2>
       <p><strong>Started: </strong>10 January 2019 at 6.10pm</p>
       <p><strong>Finished: </strong>10 January 2019 at 10.58pm</p>
-      <p class="flex space-between"><span><strong>Duration: </strong>3 hours 4 minutes</span> <span><a href="job-breakdown">Job breakdown</a></span></p>
+      <p class="flex space-between"><span><strong>Duration: </strong>5 hours 58 minutes</span></p>
+      <p class="flex space-between"><span><strong>Duration: </strong>3 hours 4 minutes</span> <span><a href="period-end-reports">Reports</a><br><a href="job-breakdown">Job breakdown</a></span></p>
       <hr>
     </div>
     <div>
       <h2 class="govuk-heading-m">R01</h2>
       <p><strong>Started: </strong>10 December 2018 at 6.10pm</p>
       <p><strong>Finished: </strong>10 December 2018 at 10.58pm</p>
-      <p class="flex space-between"><span><strong>Duration: </strong>6 hours 5 minutes</span> <span><a href="job-breakdown">Job breakdown</a></span></p>
+      <p class="flex space-between"><span><strong>Duration: </strong>5 hours 58 minutes</span></p>
+      <p class="flex space-between"><span><strong>Duration: </strong>6 hours 5 minutes</span> <span><a href="period-end-reports">Reports</a><br><a href="job-breakdown">Job breakdown</a></span></p>
       <hr>
     </div>
 

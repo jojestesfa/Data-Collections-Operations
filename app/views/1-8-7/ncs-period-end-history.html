@@ -1,0 +1,168 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+
+<!-- <script src="/public/javascripts/tt.js"></script> -->
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="dashboard">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="period-end-dashboard">Period end</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="NCS">NCS</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">Period end history</li>
+  </ol>
+</div>
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Period end history
+    <span class="govuk-caption-l">Collection year 1920
+    </span>
+    </h1>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <ul class="govuk-list">
+      <li>
+        <div class="flex"><a href="ncs-period-end-reports" class="govuk-link ">Reports </a></div>
+      </li>
+      <li>
+        <a href="ncs-period-end-history" class="govuk-link govuk-!-font-weight-bold">History</a>
+      </li>
+    </ul>
+  </div>
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Select a collection year
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="published" selected>1920</option>
+      </select>
+    </div>
+    <div>
+      <h2 class="govuk-heading-m">N12</h2>
+      <p><strong>Started: </strong>3/5/2020 8:24:59 PM</p>
+      <p><strong>Finished: </strong></p>
+      <hr>
+    </div>
+    <div>
+      <h2 class="govuk-heading-m">N11</h2>
+      <p><strong>Started: </strong>2/7/2020 4:57:16 PM</p>
+      <p><strong>Finished: </strong>2/11/2020 10:54:44 AM</p>
+      <p class="flex space-between"><span><strong>Duration: </strong>3 days 17 hours 57 minutes</span></p>
+      <p class="flex space-between"><span><strong>Duration: </strong>3 days 17 hours 57 minutes</span> <span><a href="ncs-period-end-reports">Reports</a><br><a href="ncs-period-end-part-2">Job breakdown</a></span></p>
+      <hr>
+    </div>
+    <div>
+      <h2 class="govuk-heading-m">N10</h2>
+      <p><strong>Started: </strong>1/7/2020 7:23:55 PM</p>
+      <p><strong>Finished: </strong>1/10/2020 4:45:09 PM</p>
+      <p class="flex space-between"><span><strong>Duration: </strong>2 days 21 hours 21 minutes</span></p>
+      <p class="flex space-between"><span><strong>Duration: </strong>2 days 21 hours 21 minutes</span> <span><a href="ncs-period-end-reports">Reports</a><br><a href="ncs-period-end-part-2">Job breakdown</a></span></p>
+      <hr>
+    </div>
+    <div>
+      <h2 class="govuk-heading-m">N09</h2>
+      <p><strong>Started: </strong>12/5/2019 8:59:32 PM</p>
+      <p><strong>Finished: </strong>12/11/2019 4:42:28 PM </p>
+      <p class="flex space-between"><span><strong>Duration: </strong>5 days 19 hours 42 minutes</span></p>
+      <p class="flex space-between"><span><strong>Duration: </strong>5 days 19 hours 42 minutes</span> <span><a href="ncs-period-end-reports">Reports</a><br><a href="ncs-period-end-part-2">Job breakdown</a></span></p>
+      <hr>
+    </div>
+    <div>
+      <h2 class="govuk-heading-m">N08</h2>
+      <p><strong>Started: </strong>11/5/2019 8:59:32 PM</p>
+      <p><strong>Finished: </strong>11/11/2019 4:42:28 PM </p>
+      <p class="flex space-between"><span><strong>Duration: </strong>5 days 19 hours 42 minutes</span></p>
+      <p class="flex space-between"><span><strong>Duration: </strong> 5 days 19 hours 42 minutes</span> <span><a href="ncs-period-end-reports">Reports</a><br><a href="ncs-period-end-part-2">Job breakdown</a></span></p>
+      <hr>
+    </div>
+    <div>
+      <h2 class="govuk-heading-m">N07</h2>
+      <p><strong>Started: </strong>10/5/2019 8:59:32 PM</p>
+      <p><strong>Finished: </strong>10/11/2019 4:42:28 PM</p>
+      <p class="flex space-between"><span><strong>Duration: </strong>5 days 19 hours 42 minutes</span></p>
+      <p class="flex space-between"><span><strong>Duration: </strong>5 days 19 hours 42 minutes</span> <span><a href="ncs-period-end-reports">Reports</a><br><a href="ncs-period-end-part-2">Job breakdown</a></span></p>
+      <hr>
+    </div>
+    <div>
+      <h2 class="govuk-heading-m">N06</h2>
+      <p><strong>Started: </strong>09/5/2019 8:59:32 PM</p>
+      <p><strong>Finished: </strong>09/11/2019 4:42:28 PM </p>
+      <p class="flex space-between"><span><strong>Duration: </strong>5 days 19 hours 42 minutes</span> </p>
+      <p class="flex space-between"><span><strong>Duration: </strong>5 days 19 hours 42 minutes</span> <span><a href="ncs-period-end-reports">Reports</a><br><a href="ncs-period-end-part-2">Job breakdown</a></span></p>
+      <hr>
+    </div>
+    <div>
+      <h2 class="govuk-heading-m">N05</h2>
+      <p><strong>Started: </strong> 08/5/2019 8:59:32 PM</p>
+      <p><strong>Finished: </strong>08/11/2019 4:42:28 PM</p>
+      <p class="flex space-between"><span><strong>Duration: </strong>5 days 19 hours 42 minutes</span></p>
+      <p class="flex space-between"><span><strong>Duration: </strong>5 days 19 hours 42 minutes</span> <span><a href="ncs-period-end-reports">Reports</a><br><a href="ncs-period-end-part-2">Job breakdown</a></span></p>
+      <hr>
+    </div>
+    <div>
+      <h2 class="govuk-heading-m">N04</h2>
+      <p><strong>Started: </strong>07/5/2019 8:59:32 PM</p>
+      <p><strong>Finished: </strong>07/11/2019 4:42:28 PM </p>
+      <p class="flex space-between"><span><strong>Duration: </strong>5 days 19 hours 42 minutes</span></p>
+      <p class="flex space-between"><span><strong>Duration (Business days): </strong>5 days 19 hours 42 minutes</span> <span><a href="ncs-period-end-reports">Reports</a><br><a href="ncs-period-end-part-2">Job breakdown</a></span></p>
+      <hr>
+    </div>
+    <div>
+      <h2 class="govuk-heading-m">N03</h2>
+      <p><strong>Started: </strong>06/5/2019 8:59:32 PM</p>
+      <p><strong>Finished: </strong>06/11/2019 4:42:28 PM </p>
+      <p class="flex space-between"><span><strong>Duration: </strong>5 days 19 hours 42 minutes</span> </p>
+      <p class="flex space-between"><span><strong>Duration: </strong>5 days 19 hours 42 minutes</span> <span><a href="ncs-ncs-period-end-reports">Reports</a><br><a href="ncs-period-end-part-2">Job breakdown</a></span></p>
+      <hr>
+    </div>
+    <div>
+      <h2 class="govuk-heading-m">N02</h2>
+      <p><strong>Started: </strong>05/05/2019 8:59:32 PM</p>
+      <p><strong>Finished: </strong>05/11/2019 4:42:28 PM </p>
+      <p class="flex space-between"><span><strong>Duration: </strong>5 days 19 hours 42 minutes</span></p>
+      <p class="flex space-between"><span><strong>Duration: </strong>5 days 19 hours 42 minutes</span> <span><a href="ncs-ncs-period-end-reports">Reports</a><br><a href="ncs-period-end-part-2">Job breakdown</a></span></p>
+      <hr>
+    </div>
+    <div>
+      <h2 class="govuk-heading-m">N01</h2>
+      <p><strong>Started: </strong>04/5/2019 8:59:32 PM</p>
+      <p><strong>Finished: </strong>04/11/2019 4:42:28 PM </p>
+      <p class="flex space-between"><span><strong>Duration: </strong>5 days 19 hours 42 minutes</span></p>
+      <p class="flex space-between"><span><strong>Duration: </strong>5 days 19 hours 42 minutes</span> <span><a href="ncs-ncs-period-end-reports">Reports</a><br><a href="ncs-period-end-part-2">Job breakdown</a></span></p>
+      <hr>
+    </div>
+
+
+
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock %}

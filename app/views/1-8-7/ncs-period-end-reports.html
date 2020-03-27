@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  DC Operations
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+
+<!-- <script src="/public/javascripts/tt.js"></script> -->
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="dashboard">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="period-end-dashboard">Period end</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="ncs">NCS</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">Period end reports</li>
+  </ol>
+</div>
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Period end reports
+    <span class="govuk-caption-l">Period N12 of year 1920
+      <!-- <a href="manage-R06">Close collection</a> -->
+    </span>
+    </h1>
+  </div>
+</div>
+
+
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-one-third">
+    <ul class="govuk-list">
+
+      <li>
+        <div class="flex"><a href="ncs-period-end-reports" class="govuk-link govuk-!-font-weight-bold">Reports </a></div>
+      </li>
+      <li>
+        <a href="ncs-period-end-history" class="govuk-link">History</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    <div class="flex space-between">
+      <h2 class="govuk-heading-m">Internal reports</h2>
+    </div>
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">Report name</th>
+          <th class="govuk-table__header" scope="col">Download</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Period End Data Extract Report</td>
+          <td class="govuk-table__cell"><a href="#">Data Extract Report N12 20200305-202459.xlsx</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{% endblock %}

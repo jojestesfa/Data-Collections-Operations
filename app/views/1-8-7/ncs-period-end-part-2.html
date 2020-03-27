@@ -1,0 +1,130 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+
+<!-- <script src="/public/javascripts/tt.js"></script> -->
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="dashboard">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="period-end-dashboard">Period end</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="ncs">NCS</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">Period end</li>
+  </ol>
+</div>
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <ul class="govuk-list">
+      <li>
+        <div class="flex"><a href="ncs-period-end-reports" class="govuk-link ">Reports </a></div>
+      </li>
+      <li>
+        <a href="ncs-period-end-history" class="govuk-link">History</a>
+      </li>
+    </ul>
+    <span class="govuk-heading-s">Critical path</span>
+    <span id="nav">
+      <ul class="govuk-list">
+        <li>
+          <a href="#reference-data-jobs" class="govuk-link">Period End NCS Summarisation</a><span class="green-dot hidden"></span><span class="govuk-warning-text__icon custom" aria-hidden="true">!</span>
+        </li>
+        <li>
+          <a href="#summarisation" class="govuk-link">Start FCS Handover Email</a>
+        </li>
+        <li>
+          <a href="#das-period-end" class="govuk-link">NCS DEDS Data Extract</a>
+        </li>
+      </ul>
+    </span>
+  </div>
+<div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Period end
+      <span class="govuk-caption-l">Period N12 (March) of year 1920</span>
+    </h1>
+      <a class="govuk-button govuk-button--disabled govuk-!-margin-bottom-2 govuk-!-margin-left-0" id="" href="#">Start period end</a>
+      <h2 class="app-task-list__section">
+        Critical path
+      </h2>
+      <ul class="app-task-list__items govuk-!-padding-left-0">
+        <li class="app-task-list__item">
+          Period End NCS Summarisation
+          <span class="govuk-body govuk-!-font-size-16 time-started">Started: 15.40 </span>
+          <div class="flex space-between">
+            <span class="govuk-body govuk-!-font-size-16 hide-complete-1">Finished: 16.01</span>
+            <span class="hide-complete-1"></span>
+          </div>
+          <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2">
+            <li>Job Id : 182876, Status : Completed</li>
+          </ul>
+        </li>
+        <li class="app-task-list__item">
+          <span class="govuk-!-font-weight-bold">Start FCS Handover Email</span>
+          <!-- <span class="govuk-body govuk-!-font-size-16 time-started">Started: 15.40 </span>
+          <div class="flex space-between">
+            <span class="govuk-body govuk-!-font-size-16 hide-complete-1">Finished: 16.01</span>
+            <span class="hide-complete-1"></span>
+          </div> -->
+          <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2">
+            <li>Job Id : 182876, Status : Completed</li>
+          </ul>
+          <div><a id="startRound3" href="#" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-2 govuk-!-margin-left-5">Proceed</a></div>
+        </li>
+        <li class="app-task-list__item">NCS DEDS Data Extract
+          <!-- <div class="flex flex-end"><span class="awaiting awaiting-2">Not started</span><img class="spinner spinner2" src="/public/images/spinner-gif-13.gif" alt=""></div>
+          <strong class="govuk-tag app-task-list__task-completed hide-complete-2" id="contact-details-completed">Completed</strong><br class="hide-complete-2"> -->
+
+            <img class="spinner spinner2" style="width:5%" src="/public/images/spinner-gif-13.gif" alt="">
+            <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2">
+              <li class="govuk-body govuk-!-font-size-19 hide-complete-1">Job Id : 182876, Status : Completed</li>
+              <li class="govuk-body govuk-!-font-size-19 hide-complete-2">Job Id : 182876, Status : Completed</li>
+              <li class="govuk-body govuk-!-font-size-19 hide-complete-3">Job Id : 182876, Status : Completed</li>
+            </ul>
+          <!-- <div class="flex space-between">
+            <span class="govuk-body govuk-!-font-size-16 hide-complete-2"> Finished: 16.07</span>
+            <span class="hide-complete-2"></span>
+          </div> -->
+        </li>
+        <!-- <li class="app-task-list__item">
+          <a class="app-task-list__task-name govuk-!-width-one-half" href="#">
+            EPA Reference Data Sync
+          </a>
+          <div class="flex flex-end"><span class="awaiting awaiting-3">Not started</span><img class="spinner spinner3" src="/public/images/spinner-gif-13.gif" alt=""></div>
+          <strong class="govuk-tag app-task-list__task-completed hide-complete-3" id="contact-details-completed">Completed</strong><br class="hide-complete-3">
+          <span class="govuk-body govuk-!-font-size-16 hide-complete-2">Started: 16.07 </span>
+          <div class="flex space-between">
+            <span class="govuk-body govuk-!-font-size-16 hide-complete-3"> Finished: 16.31</span>
+            <span class="hide-complete-3"></span>
+          </div>
+        </li>
+        <li class="app-task-list__item">
+          <a class="app-task-list__task-name govuk-!-width-one-half" href="#">
+            Daily jobs have completed
+          </a>
+          <div class="flex flex-end"><span class="awaiting awaiting-4">Not started</span><img class="spinner spinner4" src="/public/images/spinner-gif-13.gif" alt=""></div>
+          <strong class="govuk-tag red app-task-list__task-completed hide-complete-4" id="contact-details-completed">Failed</strong><br class="hide-complete-4">
+          <span class="govuk-body govuk-!-font-size-16 hide-complete-3">Started: 16.31 </span>
+          <div class="flex space-between">
+            <span class="govuk-body govuk-!-font-size-16 hide-complete-4"> Finished: 17.14</span>
+            <span class="hide-complete-4"><a class="rerun-job" href="#">Rerun job</a></span>
+          </div>
+        </li> -->
+      </ul>
+      <a class="govuk-button govuk-button--disabled govuk-!-margin-bottom-2 govuk-!-margin-left-0" id="" href="#">Close period end</a>
+  </div>
+</div>
+{% endblock %}

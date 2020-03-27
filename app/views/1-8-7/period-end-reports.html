@@ -10,13 +10,26 @@
 {% include "./includes/nav.html" %}
 
 <!-- <script src="/public/javascripts/tt.js"></script> -->
-<a id="backlink" href="#" class="govuk-back-link">Back</a>
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="dashboard">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="period-end-dashboard">Period end</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="period-end">ILR</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">Period end reports</li>
+  </ol>
+</div>
 <br>
 <br>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">Period end reports
-    <span class="govuk-caption-l">R06 closed on 22-07-19 at 18:05
+    <span class="govuk-caption-l">Period R07 of year 1920
       <!-- <a href="manage-R06">Close collection</a> -->
     </span>
     </h1>
@@ -27,64 +40,202 @@
 
 <div class="govuk-grid-row">
 
+  <div class="govuk-grid-column-one-third">
+    <ul class="govuk-list">
 
+      <li>
+        <div class="flex"><a href="period-end-reports" class="govuk-link govuk-!-font-weight-bold">Reports </a></div>
+      </li>
+      <li>
+        <a href="period-end-history" class="govuk-link">History</a>
+      </li>
+    </ul>
+  </div>
 
   <div class="govuk-grid-column-two-thirds">
+    <div class="flex space-between">
+      <h2 class="govuk-heading-m">Collection stats</h2>
+    </div>
     <table class="govuk-table">
-
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
-
-          <th class="govuk-table__header" scope="col">Report name</th>
-          <th class="govuk-table__header" scope="col">Download</th>
-
-
-
+          <th class="govuk-table__header" scope="col">Collection</th>
+          <th class="govuk-table__header govuk-table__cell--numeric" scope="col">Successful</th>
+          <th class="govuk-table__header govuk-table__cell--numeric" scope="col">Failed</th>
+          <th class="govuk-table__header govuk-table__cell--numeric" scope="col">Total</th>
+          <th class="govuk-table__header govuk-table__cell--numeric" scope="col">Successful %</th>
         </tr>
       </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Report number 1</td>
-          <td class="govuk-table__cell"><a href="#">File name.zip</a></td>
+          <td class="govuk-table__cell">ILR1920</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">4366</td>
+          <td class="govuk-table__cell">141</td>
+          <td class="govuk-table__cell">4507</td>
+          <td class="govuk-table__cell">96.87</td>
         </tr>
-
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Report number 2</td>
-          <td class="govuk-table__cell"><a href="#">File name.zip</a></td>
+          <td class="govuk-table__cell">EAS1920</td>
+          <td class="govuk-table__cell">199</td>
+          <td class="govuk-table__cell">141</td>
+          <td class="govuk-table__cell">4507</td>
+          <td class="govuk-table__cell">96.87</td>
         </tr>
-
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Report number 3</td>
-          <td class="govuk-table__cell"><a href="#">File name.zip</a></td>
+          <td class="govuk-table__cell">ESFR2-1920</td>
+          <td class="govuk-table__cell">168</td>
+          <td class="govuk-table__cell">0</td>
+          <td class="govuk-table__cell">168</td>
+          <td class="govuk-table__cell">100.0</td>
         </tr>
-
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Report number 4</td>
-          <td class="govuk-table__cell"><a href="#">File name.zip</a></td>
+          <th class="govuk-table__cell">Total</th>
+          <th class="govuk-table__cell">4733</th>
+          <th class="govuk-table__cell">141</th>
+          <th class="govuk-table__cell">4507</th>
+          <th class="govuk-table__cell">96.87</th>
         </tr>
-
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Report number 6</td>
-          <td class="govuk-table__cell"><a href="#">File name.zip</a></td>
-        </tr>
-
       </tbody>
     </table>
 
 
+    <div class="flex space-between">
+      <h2 class="govuk-heading-m">Summarisation check</h2>
+    </div>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">Type</th>
+          <th class="govuk-table__header govuk-table__cell--numeric" scope="col">Previous  period</th>
+          <th class="govuk-table__header govuk-table__cell--numeric" scope="col">Current period</th>
+          <th class="govuk-table__header govuk-table__cell--numeric" scope="col">Difference</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__cell">ESF</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell"></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__cell">DC</th>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell"></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__cell">Apps</th>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="flex space-between">
+      <h2 class="govuk-heading-m">Internal reports</h2>
+    </div>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">Report name</th>
+          <th class="govuk-table__header" scope="col">Download</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Period End Data Quality Report</td>
+          <td class="govuk-table__cell"><a href="#">Data Quality Report R07 20200305-202459.xlsx</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Provider Submissions Report</td>
+          <td class="govuk-table__cell"><a href="#">ILR Provider Submissions Report R07 20200305-202528.xlsx</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Period End Data Extract Report</td>
+          <td class="govuk-table__cell"><a href="#">Data Extract Report R07 20200309-114716.csv</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Internal Data Match Report</td>
+          <td class="govuk-table__cell"><a href="#">Apprenticeship Internal Data Match Report.csv</a></td>
+        </tr>
+      </tbody>
+    </table>
 
 
+    <div class="flex space-between">
+      <h2 class="govuk-heading-m">Sample reports</h2>
+    </div>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">Report name</th>
+          <th class="govuk-table__header" scope="col">Download</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">10003915 Reports</td>
+          <td class="govuk-table__cell"><a href="#">Reports.zip</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">10004177 Reports</td>
+          <td class="govuk-table__cell"><a href="#">Reports.zip</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">10033440 Reports</td>
+          <td class="govuk-table__cell"><a href="#">Reports.zip</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">10003161 Reports</td>
+          <td class="govuk-table__cell"><a href="#">Reports.zip</a></td>
+        </tr>
+      </tbody>
+    </table>
 
-
-
+    <div class="flex space-between">
+      <h2 class="govuk-heading-m">MCA Reports</h2>
+    </div>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">Report name</th>
+          <th class="govuk-table__header" scope="col">Download</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">90000439 CPCA Reports</td>
+          <td class="govuk-table__cell"><a href="#">Reports.zip</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">90000440 London Reports</td>
+          <td class="govuk-table__cell"><a href="#">Reports.zip</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">90000441 GMCA Reports</td>
+          <td class="govuk-table__cell"><a href="#">Reports.zip</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">90000442 LCRCA Reports</td>
+          <td class="govuk-table__cell"><a href="#">Reports.zip</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">90000443 TVCA Reports</td>
+          <td class="govuk-table__cell"><a href="#">Reports.zip</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">90000444 WECA Reports</td>
+          <td class="govuk-table__cell"><a href="#">Reports.zip</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">90000445 WMCA Reports</td>
+          <td class="govuk-table__cell"><a href="#">Reports.zip</a></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
-
-
-
-
-
-
-
 
 {% endblock %}

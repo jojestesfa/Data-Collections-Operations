@@ -1141,7 +1141,7 @@ $(".show-hidden-check-box input").on("change" , function() {
 
 });
 
-$("#pause-all-jobs").click(function(e){
+$("#pause-all-jobs").bind('click',function(e){
   $(this).hide();
   $(".confirm-pause").show();
   e.preventDefault();
@@ -1156,7 +1156,15 @@ $(".yes-pause").click(function(e){
   $(".show-continue").show();
   e.preventDefault();
 });
-
+$("#sendCollectionClosedEmail").bind('click', function(e){
+  $("#periodEndContinue").removeClass("govuk-button--disabled").attr("href", "period-end-part-2");
+  e.preventDefault();
+});
+$("#NCSsendCollectionClosedEmail").bind('click', function(e){
+  $(this).addClass("govuk-button--disabled")
+  $("#NCSperiodEndContinue").removeClass("govuk-button--disabled").attr("href", "ncs-period-end-part-2");
+  e.preventDefault();
+});
 $(".cancel-pause").click(function(e){
   $(".confirm-pause").hide();
   $("#pause-all-jobs").show();
