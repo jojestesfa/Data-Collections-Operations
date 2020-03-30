@@ -677,7 +677,8 @@ $(document).ready(function () {
 });
 
 $('#startRound3').click(function(e){
-  $(this).hide();
+  //$(this).hide();
+  $(this).addClass('govuk-button--disabled');
   // $(this).text('Pause');
   $('.green-dot').removeClass('hidden');
   $('.awaiting-1').addClass('line-height-adjustment');
@@ -685,6 +686,8 @@ $('#startRound3').click(function(e){
   $('.time-started').show();
   $('.spinner1').show();
   $('.start-period-end-text').hide();
+  $('#continueState').removeClass('govuk-!-font-weight-bold');
+  $('#toBeContinued').addClass('govuk-!-font-weight-bold');
   setTimeout(function()
   {
     $('.awaiting-1').hide();
@@ -693,7 +696,65 @@ $('#startRound3').click(function(e){
     $('.hide-complete-1').show();
     $('.awaiting-2').html('in progress...');
     $('.awaiting-2').addClass('line-height-adjustment');
-  }, 1000);
+  }, 0);
+  setTimeout(function()
+  {
+
+    $('.awaiting-2').hide();
+    $('.hide-complete-2').show();
+    $('.spinner2').hide();
+    $('.spinner3').show();
+    $('.awaiting-3').html('in progress...');
+    $('.awaiting-3').addClass('line-height-adjustment');
+  }, 2000);
+  setTimeout(function()
+  {
+
+    $('.awaiting-3').hide();
+    $('.hide-complete-3').show();
+    $('.spinner3').hide();
+    $('.spinner4').show();
+    $('.awaiting-4').html('in progress...');
+    $('.awaiting-4').addClass('line-height-adjustment');
+
+  }, 5000);
+  setTimeout(function()
+  {
+
+    $('.spinner4').hide();
+    $('.awaiting-4').hide();
+    $('.hide-complete-4').show();
+    $('#startRound3').hide();
+    $('.green-dot').hide();
+    $('.govuk-warning-text__icon').removeClass('custom');
+  }, 7000);
+
+  e.preventDefault();
+});
+
+$('#startPeriodEnd').click(function(e){
+  //$(this).hide();
+  $(this).addClass('govuk-button--disabled');
+  debugger;
+  // $(this).text('Pause');
+  //$('.green-dot').removeClass('hidden');
+  $('#wrapper').find('ul.app-task-list__items')[0].find('li')[0].removeClass('status-processing-hide');
+  $('.awaiting-1').addClass('line-height-adjustment');
+  $('.awaiting-1').text('in progress...');
+  $('.time-started').show();
+  $('.spinner1').show();
+  $('.start-period-end-text').hide();
+  $('#continueState').removeClass('govuk-!-font-weight-bold');
+  $('#toBeContinued').addClass('govuk-!-font-weight-bold');
+  setTimeout(function()
+  {
+    $('.awaiting-1').hide();
+    $('.spinner1').hide();
+    $('.spinner2').show();
+    $('.hide-complete-1').show();
+    $('.awaiting-2').html('in progress...');
+    $('.awaiting-2').addClass('line-height-adjustment');
+  }, 0);
   setTimeout(function()
   {
 
@@ -1154,10 +1215,11 @@ $(".yes-pause").click(function(e){
   $(".pause-confirmation").show();
   $(".paused-job").text("Paused");
   $(".show-continue").show();
+  $("#sendCollectionClosedEmail").removeClass("govuk-button--disabled");
   e.preventDefault();
 });
 $("#sendCollectionClosedEmail").bind('click', function(e){
-  $("#periodEndContinue").removeClass("govuk-button--disabled").attr("href", "period-end-part-2");
+  $("#periodEndContinue").removeClass("govuk-button--disabled").attr("href", "period-end-part-1");
   e.preventDefault();
 });
 $("#NCSsendCollectionClosedEmail").bind('click', function(e){

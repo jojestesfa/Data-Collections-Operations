@@ -1592,6 +1592,29 @@ html {
     line-height: 1.25;
     margin: 0 0 5px 0
 }
+.triangle-right {
+    float: left;
+    margin-top: 5px;
+    margin-right: 5px;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-left: 12px solid #000;
+    border-bottom: 6px solid transparent
+}
+.triangle-down {
+    float: right;
+    margin-top: 3px;
+    margin-left: 5px;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 9px solid #000;
+}
+.status-hide, .status-processing-hide, .app-proceed-button-hide {
+  display: none;
+}
 
 @media print {
     .home-services__heading {

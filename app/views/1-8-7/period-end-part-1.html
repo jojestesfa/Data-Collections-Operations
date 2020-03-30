@@ -105,9 +105,9 @@
   </div>
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">Period end
-    <span class="govuk-caption-l">Period R07 of year 1920</span>
+    <span class="govuk-caption-l">Period R07 of Year 1920</span>
     </h1>
-    <a class="govuk-button govuk-button--disabled govuk-!-margin-bottom-2 govuk-!-margin-left-0" id=""  href="#">Start period end</a>
+    <a class="govuk-button govuk-!-margin-bottom-2 govuk-!-margin-left-0" id="startPeriodEnd"  href="#">Start period end</a>
 
 
     <ol class="app-task-list">
@@ -117,7 +117,11 @@
         </h2>
         <ul class="app-task-list__items govuk-!-padding-left-0 govuk-!-margin-bottom-0">
           <li class="app-task-list__item" id="start-internal-report-sub-path">
-            Start internal reports subpath - Status : Completed <a href="#internal-reports-path"> ❯</a>
+            Start internal reports subpath <span class="status-processing-hide"> - Status : Processing</span><span class="status-hide"> - Status : Completed</span> <a href="#internal-reports-path"> ❯</a>
+          </li>
+          <li class="app-task-list__item app-task-list-continue app-proceed-button-hide">
+            <button>Proceed<div class="triangle-down"></div></button>
+
           </li>
         </ul>
       </li>
@@ -125,7 +129,7 @@
         <ul class="app-task-list__items govuk-!-padding-left-0 govuk-!-margin-bottom-0">
           <li class="app-task-list__item" id="reference-data-fcs">
             <span id="continueState" class="">Reference data FCS</span>
-           <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2">
+           <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2 status-hide">
               <li>Job Id : 180723, Status : Completed</li>
             </ul>
               <!--<div><a id="startRound3" href="#" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-2 govuk-!-margin-left-5">Proceed</a></div> -->
@@ -133,21 +137,21 @@
 
           <li class="app-task-list__item" id="referenceDataEPA">
             <span id="continueState" class="">Reference data EPA</span>
-           <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2">
+           <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2 status-hide">
               <li>Job Id : 180725, Status : Completed</li>
             </ul>
               <!--<div><a id="startRound3" href="#" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-2 govuk-!-margin-left-5">Proceed</a></div> -->
           </li>
           <li class="app-task-list__item" id="PeriodEndDCSummarisation">
             <span id="continueState" class="">Period end DC Summarisation</span>
-            <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2">
+            <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2 status-hide">
               <li>Job Id : 180727, Status : Completed</li>
             </ul>
               <!--<div><a id="startRound3" href="#" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-2 govuk-!-margin-left-5">Proceed</a></div> -->
           </li>
-          <li class="app-task-list__item"  id="PeriodEndESFSummarisation">
+          <li class="app-task-list__item"  id="PeriodEndESFSummarisation ">
             <span id="continueState" class="">Period end ESF Summarisation</span>
-           <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2">
+           <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2 status-hide">
               <li>Job Id : 180731, Status : Completed</li>
             </ul>
               <!--<div><a id="startRound3" href="#" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-2 govuk-!-margin-left-5">Proceed</a></div> -->
@@ -155,7 +159,7 @@
 
           <li class="app-task-list__item" id="MCAReports">
             <span id="continueState" class="">MCA Reports</span>
-             <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2">
+             <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2 status-hide">
                 <li>Job Id : 180739, Provider : WMCA, Status : Completed</li>
                 <li>Job Id : 180738, Provider : WECA, Status : Completed</li>
                 <li>Job Id : 180737, Provider : TVCA, Status : Completed</li>
@@ -169,7 +173,7 @@
 
           <li class="app-task-list__item" id="DASPeriodEndSubmissions">
             <span id="continueState" class="">DAS period end submissions</span>
-           <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2">
+           <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2 status-hide">
               <li>Job Id : 182585, Provider : 10083544, Status : <strong>Failed </strong>&nbsp;&nbsp; <a href="#"> Retry</a></li>
               <li>Job Id : 182584, Provider : 10083362, Status : <strong>Failed </strong>&nbsp;&nbsp; <a href="#"> Retry</a></li>
               <li>Job Id : 182583, Provider : 10081982, Status : <strong>Failed </strong>&nbsp;&nbsp; <a href="#"> Retry</a></li>
@@ -187,19 +191,19 @@
 
           <li class="app-task-list__item" id="das-period-end-initiated">
             <span id="continueState" class="">DAS Period End Initiated</span>
-           <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2">
+           <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2 status-hide">
               <li>Job Id : 182604, Status : Completed</li>
             </ul>
               <!--<div><a id="startRound3" href="#" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-2 govuk-!-margin-left-5">Proceed</a></div> -->
           </li>
 
           <li class="app-task-list__item" id="start-data-warehouse-1-subpath">
-            <span id="continueState" class="">Start Data Warehouse 1 SubPath - Status : Completed <a href="#data-warehouse-1-path"> ❯</a></span>
+            <span id="continueState" class="">Start Data Warehouse 1 SubPath <span class="status-hide">- Status : Completed</span> <a href="#data-warehouse-1-path"> ❯</a></span>
           </li>
 
           <li class="app-task-list__item" id="das-period-end-processing">
             <span id="continueState" class="">DAS Period End Processing<a href="#das-started-path"> ❯</a></span>
-            <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2">
+            <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2 status-hide">
               <li>Job Id : 182637, Status : Completed</li>
               <li>Job Id : 182605, Status : Completed</li>
             </ul>
@@ -209,50 +213,50 @@
 
           <li class="app-task-list__item" id="PeriodEndMetricsReport">
             <span id="continueState" class="">Period End Metrics Report</span>
-            <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2">
+            <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2 status-hide">
               <li>Job Id : 182614, Status : Completed</li>
             </ul>
           </li>
 
           <li class="app-task-list__item" id="PeriodEndAppSummarisation">
             <span id="continueState" class="">Period End App Summarisation</span>
-            <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2">
+            <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2 status-hide">
               <li>Job Id : 182615, Status : Completed</li>
             </ul>
           </li>
 
           <li class="app-task-list__item" id="start-fcs-handover-subpath">
-            <span id="continueState" class="">Start FCS Handover SubPath - Status : Completed <a href="#fcs-hand-over-path"> ❯ </a></span>
+            <span id="continueState" class="">Start FCS Handover SubPath <span class="status-hide">- Status : Completed</a> <a href="#fcs-hand-over-path"> ❯ </a></span>
           </li>
 
           <li class="app-task-list__item" id="PeriodEndAppSummarisation">
             <span id="continueState" class="">Period End Data Extract Report</span>
-            <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2">
+            <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2 status-hide">
               <li>Job Id : 182644, Status : Completed</li>
             </ul>
           </li>
 
           <li class="app-task-list__item" id="PeriodEndAppSummarisation">
             <span id="continueState" class="">Internal Data Match Report</span>
-            <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2">
+            <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2 status-hide">
               <li>Job Id : 182646, Status : Completed</li>
             </ul>
           </li>
 
           <li class="app-task-list__item" id="PeriodEndAppSummarisation">
             <span id="continueState" class="">ACT Count Report</span>
-            <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2">
+            <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2 status-hide">
               <li>Job Id : 182647, Status : Completed</li>
             </ul>
           </li>
 
           <li class="app-task-list__item" id="start-standard-file-subpath">
-            <span id="continueState" class="">Start Standard File SubPath - Status : Completed <a href="#standard-file-path"> ❯</a></span>
+            <span id="continueState" class="">Start Standard File SubPath <span class="status-hide">- Status : Completed </span><a href="#standard-file-path"> ❯</a></span>
           </li>
 
           <li class="app-task-list__item" id="PeriodEndAppSummarisation">
             <span id="continueState" class="">DAS Period End Report Preparation</span>
-            <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2">
+            <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2 status-hide">
               <li>Job Id : 184493, Provider : 10084430, Status : Completed</li>
               <li>Job Id : 184492, Provider : 10083760, Status : Completed</li>
               <li>Job Id : 184491, Provider : 10083696, Status : Completed</li>
@@ -269,7 +273,7 @@
 
           <li class="app-task-list__item" id="PeriodEndAppSummarisation">
             <span id="continueState" class="">Apps Additional Payments Report</span>
-            <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2">
+            <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2 status-hide">
               <li>Job Id : 186340, Provider : 10084430, Status : Completed</li>
               <li>Job Id : 186339, Provider : 10083760, Status : Completed</li>
               <li>Job Id : 186338, Provider : 10083696, Status : Completed</li>
@@ -286,7 +290,7 @@
 
           <li class="app-task-list__item" id="PeriodEndAppSummarisation">
             <span id="continueState" class="">Apps Co-Investment Contributions Report</span>
-            <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2">
+            <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2 status-hide">
               <li>Job Id : 188186, Provider : 10084430, Status : Completed</li>
               <li>Job Id : 188185, Provider : 10083760, Status : Completed</li>
               <li>Job Id : 188184, Provider : 10083696, Status : Completed</li>
@@ -303,7 +307,7 @@
 
           <li class="app-task-list__item" id="AppsMonthlyPaymentReport">
             <span id="continueState" class="">Apps Monthly Payment Report</span>
-            <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2">
+            <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2 status-hide">
               <li>Job Id : 190032, Provider : 10084430, Status : Completed</li>
               <li>Job Id : 190031, Provider : 10083760, Status : Completed</li>
               <li>Job Id : 190030, Provider : 10083696, Status : Completed</li>
@@ -320,7 +324,7 @@
 
           <li class="app-task-list__item" id="AppsDataMatchMonthEndReport">
             <span id="continueState" class="">Apps Data Match Month End Report</span>
-            <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2">
+            <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2 status-hide">
               <li>Job Id : 193730, Provider : 10084430, Status : Completed</li>
               <li>Job Id : 193729, Provider : 10083760, Status : Completed</li>
               <li>Job Id : 193728, Provider : 10083696, Status : Completed</li>
@@ -335,8 +339,8 @@
             </ul>
           </li>
           <li class="app-task-list__item" id="start-data-warehouse-2-subpath">
-            <span id="continueState" class="">Start Data Warehouse 2 SubPath - Status : Completed <a href="#data-warehouse-2-path"> ❯</a></span>
-            <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2">
+            <span id="continueState" class="">Start Data Warehouse 2 SubPath <span class="status-hide">- Status : Completed </span> <a href="#data-warehouse-2-path"> ❯</a></span>
+            <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2 status-hide">
               <li>Job Id : 250502, Provider : 10001531, Status : Completed</li>
               <li>Job Id : 250501, Provider : 10005859, Status : Completed</li>
               <li>Job Id : 250500, Provider : 10012892, Status : Completed</li>
@@ -357,7 +361,7 @@
       <h2 class="app-task-list__section" id="das-started-path"><a href="#das-period-end-processing">❮</a> DAS Started Path</h2>
       <ul class="app-task-list__items govuk-!-padding-left-0 govuk-!-margin-left-3">
         <li class="app-task-list__item" id="das-started-email">
-          <strong><span id="continueState">DAS Started Email - Status : Completed</span></strong>
+          <strong><span id="continueState">DAS Started Email <span class="status-hide">- Status : Completed</span></span></strong>
         </li>
       </ul>
     </li>
@@ -367,12 +371,12 @@
     <ul class="app-task-list__items govuk-!-padding-left-0 govuk-!-margin-left-3">
       <li class="app-task-list__item" id="startInternalReportSubPath">
         <span id="continueState">Data Warehouse 1</span>
-        <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2">
+        <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2 status-hide">
           <li>Job Id : 193730, Provider : 10084430, Status : Completed</li>
         </ul>
       </li>
       <li class="app-task-list__item" id="data-warehouse-1-email">
-        <span id="continueState"  class="govuk-!-font-weight-bold">Data warehouse 1 Email - Status : Completed</span>
+        <span id="continueState"  class="govuk-!-font-weight-bold">Data warehouse 1 Email  <span class="status-hide">- Status : Completed</span></span>
       </li>
     </ul>
   </li>
@@ -381,12 +385,12 @@
     <ul class="app-task-list__items govuk-!-padding-left-0 govuk-!-margin-left-3">
       <li class="app-task-list__item" id="startInternalReportSubPath">
         <span id="continueState">Data Warehouse 2</span>
-        <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2">
-          <li>Job Id : 193823, Provider : 10084430, Status : Completed</li>
+        <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2 status-hide">
+          <li>Job Id : 193823, Provider : 10084430 <span class="status-hide">, Status : Completed</span></li>
         </ul>
       </li>
       <li class="app-task-list__item" id="data-warehouse-2-email">
-        <span id="continueState">Data warehouse 2 Email - Status : Completed</span>
+        <span id="continueState">Data warehouse 2 Email  <span class="status-hide">- Status : Completed</span></span>
       </li>
     </ul>
   </li>
@@ -407,19 +411,19 @@
     <ul class="app-task-list__items govuk-!-padding-left-0 govuk-!-margin-left-3">
       <li class="app-task-list__item" id="period-end-data-quality-report">
         <span id="continueState">Period End Data Quality Report</span>
-        <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2">
+        <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2  status-hide">
           <li>Job Id : 180724, Status : Completed</li>
         </ul>
       </li>
       <li class="app-task-list__item" id="provider-submission-report">
         <span id="continueState">Provider Submissions Report</span>
-        <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2">
+        <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2  status-hide">
           <li>Job Id : 180724, Status : Completed</li>
         </ul>
       </li>
       <li class="app-task-list__item" id="period-end-collection-stats">
         <span id="continueState" class="govuk-!-font-weight-bold">Period End Collection Stats</span>
-        <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2">
+        <ul class="app-task-list__items govuk-!-padding-left-5 govuk-!-margin-top-2 govuk-!-margin-bottom-2 status-hide">
           <li>Job Id : 190035, Status : Completed</li>
         </ul>
       </li>
@@ -430,10 +434,10 @@
     <h2 class="app-task-list__section" id="fcs-hand-over-path"><a href="#start-fcs-handover-subpath">❮ </a>  FCS Hand Over Path</h2>
     <ul class="app-task-list__items govuk-!-padding-left-0 govuk-!-margin-left-3">
       <li class="app-task-list__item" id="fcs-handover-email">
-        <span id="continueState">FCS Hand Over Email - Status : Completed</span>
+        <span id="continueState">FCS Hand Over Email <span class="status-hide">- Status : Completed</span></span>
       </li>
       <li class="app-task-list__item" id="fcs-team-handover-email">
-        <span id="continueState" class="govuk-!-font-weight-bold"  >FCS Team Hand Over Email - Status : Completed</span>
+        <span id="continueState" class="govuk-!-font-weight-bold"  >FCS Team Hand Over Email <span class="status-hide">- Status : Completed</span></span>
       </li>
     </ul>
   </li>
