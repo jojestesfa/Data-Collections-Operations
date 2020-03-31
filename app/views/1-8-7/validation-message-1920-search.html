@@ -1,0 +1,239 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  DC Operations - Home
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+<!-- <label for="autocomplete-overlay">Select your country</label> -->
+
+
+
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="dashboard">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          <a class="govuk-breadcrumbs__link" href="reference-data-dashboard">Reference data</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          <a class="govuk-breadcrumbs__link" href="validation-messages-1920">Validation messages 19-20</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Rule name search
+        </li>
+      </ol>
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <br>
+      {% include "./includes/search-validation-data.html" %}
+  </div>
+  <main class="govuk-main-wrapper app-main-class" id="main-content"  role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds govuk-!-margin-top-6">
+        <h1 class="govuk-heading-xl">{{ data['input-autocomplete'] }}<span class="govuk-caption-m">Academic period : {{ data['validation-message-period'] }}</span></h1>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-width-15">Date</th>
+              <th scope="col" class="govuk-table__header">Severity</th>
+              <th scope="col" class="govuk-table__header">FIS enabled</th>
+              <th scope="col" class="govuk-table__header">SLD enabled</th>
+              <th scope="col" class="govuk-table__header">Message changed?</th>
+              <th scope="col" class="govuk-table__header govuk-width-17">Modified by</th>
+              <th scope="col" class="govuk-table__header">Message</th>
+              <th scope="col" class="govuk-table__header"></th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row" id="modify-row">
+              <th scope="row" class="govuk-table__header">20 January 2020 at 15:22pm</th>
+
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                Error
+              </td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                N
+              </td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                Y
+              </td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                Y
+              </td>
+              <td class="govuk-table__cell">Lynne BURDON</td>
+              <td class="govuk-table__cell">The Additional delivery hours must not be returned for learning aims that started prior to 15 September 2020</td>
+              <td class="govuk-table__cell"><button class="govuk-button" data-module="govuk-button" id="modify-rule">Modify</button></td>
+            </tr>
+            <tr class="govuk-table__row row-hide" id="edit-row">
+              <th scope="row" class="govuk-table__header">20 January 2020 at 15:22pm</th>
+
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                <select class="govuk-select" id="severity" name="severity">
+                  <option value="Warning" selected>W</option>
+                  <option value="Error">E</option>
+                </select>
+              </td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                <select class="govuk-select" id="fis-enabled" name="fis-enabled">
+                  <option value="Y" selected>Y</option>
+                  <option value="N">N</option>
+                </select>
+              </td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                <select class="govuk-select" id="sld-enabled" name="sld-enabled">
+                  <option value="Y" selected>Y</option>
+                  <option value="N">N</option>
+                </select>
+              </td>
+              <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+              <td class="govuk-table__cell"><textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint">The Additional delivery hours must not be returned for learning aims that started prior to 15 September 2020</textarea></td>
+              <td class="govuk-table__cell"><button class="govuk-button" data-module="govuk-button" id="save-rule">Save</button></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">20 January 2020 at 15:22pm</th>
+
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                Error
+              </td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                N
+              </td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                Y
+              </td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                Y
+              </td>
+              <td class="govuk-table__cell">Lynne BURDON</td>
+              <td class="govuk-table__cell">The Additional delivery hours must not be returned for learning aims that started prior to 15 September 2020</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">20 January 2020 at 15:22pm</th>
+
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                Error
+              </td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                N
+              </td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                Y
+              </td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                Y
+              </td>
+              <td class="govuk-table__cell">Lynne BURDON</td>
+              <td class="govuk-table__cell">The Additional delivery hours must not be returned for learning aims that started prior to 15 September 2020</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">20 January 2020 at 15:22pm</th>
+
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                Error
+              </td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                N
+              </td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                Y
+              </td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                Y
+              </td>
+              <td class="govuk-table__cell">Lynne BURDON</td>
+              <td class="govuk-table__cell">The Additional delivery hours must not be returned for learning aims that started prior to 15 September 2020</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">20 January 2020 at 15:22pm</th>
+
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                Error
+              </td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                N
+              </td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                Y
+              </td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                Y
+              </td>
+              <td class="govuk-table__cell">Lynne BURDON</td>
+              <td class="govuk-table__cell">The Additional delivery hours must not be returned for learning aims that started prior to 15 September 2020</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">20 January 2020 at 15:22pm</th>
+
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                Error
+              </td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                N
+              </td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                Y
+              </td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                Y
+              </td>
+              <td class="govuk-table__cell">Lynne BURDON</td>
+              <td class="govuk-table__cell">The Additional delivery hours must not be returned for learning aims that started prior to 15 September 2020</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">20 January 2020 at 15:22pm</th>
+
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                Error
+              </td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                N
+              </td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                Y
+              </td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                Y
+              </td>
+              <td class="govuk-table__cell">Lynne BURDON</td>
+              <td class="govuk-table__cell">The Additional delivery hours must not be returned for learning aims that started prior to 15 September 2020</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+
+
+
+
+
+
+
+{% include "./includes/auto-js.html" %}
+
+{% endblock %}

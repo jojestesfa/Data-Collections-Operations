@@ -14,23 +14,29 @@
 
 
 <div class="govuk-width-container">
-  <div class="govuk-breadcrumbs">
-    <ol class="govuk-breadcrumbs__list">
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="dashboard">Home</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item" aria-current="page">
-        <a class="govuk-breadcrumbs__link" href="reference-data-dashboard">Reference data</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item" aria-current="page">
-        Campus identifiers reference data
-      </li>
-    </ol>
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="dashboard">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          <a class="govuk-breadcrumbs__link" href="reference-data-dashboard">Reference data</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Validation messages 19-20
+        </li>
+      </ol>
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <br>
+      {% include "./includes/search-validation-data.html" %}
   </div>
   <main class="govuk-main-wrapper app-main-class" id="main-content"  role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds govuk-!-margin-top-6">
-        <h1 class="govuk-heading-xl">Campus identifiers</h1>
+        <h1 class="govuk-heading-xl">Validation messages 19-20<span class="govuk-caption-m">Your recent submission and reports.</span></h1>
       </div>
     </div>
     <div class="govuk-grid-row">
@@ -38,23 +44,25 @@
         <details class="govuk-details" data-module="govuk-details" open>
           <summary class="govuk-details__summary">
             <span class="govuk-details__summary-text">
-              Upload Campus Identifiers Reference Data CSV
+              Upload validation message reference data CSV
             </span>
           </summary>
           <div class="govuk-details__text">
-            <h3 class="govuk-heading-m">Choose Campus Identifiers reference data file to upload</h3>
+            <h3 class="govuk-heading-m">Choose validation message reference data file to upload</h3>
             <div class="govuk-form-group">
               <label class="govuk-label" for="file-upload-1">
                 Upload a file
               </label>
               <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
             </div>
-            <button class="govuk-button" data-module="govuk-button" id="upload-csv">
+            <button class="govuk-button" data-module="govuk-button" id="upload-csv-validation">
               Upload
             </button>
+
           </div>
         </details>
       </div>
+
     </div>
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
@@ -64,29 +72,38 @@
               <th scope="col" class="govuk-table__header govuk-width-15">Date</th>
               <th scope="col" class="govuk-table__header">Submitted by</th>
               <th scope="col" class="govuk-table__header">File</th>
-              <th scope="col" class="govuk-table__header">Return</th>
               <th scope="col" class="govuk-table__header govuk-width-17">Status</th>
               <th scope="col" class="govuk-table__header">Reports</th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
+            <tr class="govuk-table__row row-hide" id="new-upload">
+              <th scope="row" class="govuk-table__header">31 March 2020 at 15:22pm</th>
+              <td class="govuk-table__cell">Lynne BURDON</td>
+              <td class="govuk-table__cell"><a href="#">ValidationMessagesRD--20200206.CSV.csv</a></td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                <span class="spinner-uploading"><img class="" style="width:45%; text-align:left" src="/public/images/spinner-gif-13.gif" alt=""></span>
+                <span class="status-message row-hide"><p class="green-font govuk-!-margin-bottom-1 govuk-!-font-weight-bold">Job finished</p>
+                <p class="govuk-!-margin-bottom-1 govuk-!-font-weight-bold">23189 records</p>
+                <p class="govuk-!-margin-bottom-0 govuk-!-font-weight-bold">235 Warnings</p></span>
+              </td>
+              <td class="govuk-table__cell"></td>
+            </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">20 January 2020 at 15:22pm</th>
               <td class="govuk-table__cell">Lynne BURDON</td>
-              <td class="govuk-table__cell"><a href="#">Campus-identifiers-20200217-122234.csv</a></td>
-              <td class="govuk-table__cell">A55</td>
+              <td class="govuk-table__cell"><a href="#">ValidationMessagesRD--20200206.CSV.csv</a></td>
               <td class="govuk-table__cell govuk-!-font-weight-bold">
                 <p class="green-font govuk-!-margin-bottom-1 govuk-!-font-weight-bold">Job finished</p>
                 <p class="govuk-!-margin-bottom-1 govuk-!-font-weight-bold">23189 records</p>
                 <p class="govuk-!-margin-bottom-0 govuk-!-font-weight-bold">235 Warnings</p>
               </td>
-              <td class="govuk-table__cell"><a href="#">Campus-identifiersRD-202001051533-validation-report-20200101120523.CSV</a></td>
+              <td class="govuk-table__cell"><a href="#">ValidationMessagesRD--20200206-validation report-20200101120523.csv</a></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">16 December 2019 at 8:00:12am</th>
               <td class="govuk-table__cell">Lynne BURDON</td>
-              <td class="govuk-table__cell"><a href="#">Campus-identifiers-20200217-122234.csv</a></td>
-              <td class="govuk-table__cell">A54</td>
+              <td class="govuk-table__cell"><a href="#">ValidationMessagesRD--20200206.CSV.csv</a></td>
               <td class="govuk-table__cell govuk-!-font-weight-bold">
                 <p class="green-font govuk-!-margin-bottom-1 govuk-!-font-weight-bold">Job finished</p>
                 <p class="govuk-!-margin-bottom-1 govuk-!-font-weight-bold">23189 records</p>
@@ -96,8 +113,7 @@
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">14 November 2019 at 8:00:12am</th>
               <td class="govuk-table__cell">Lynne BURDON</td>
-              <td class="govuk-table__cell"><a href="#">Campus-identifiers-20200217-122234.csv</a></td>
-              <td class="govuk-table__cell">A53</td>
+              <td class="govuk-table__cell"><a href="#">ValidationMessagesRD--20200206.CSV.csv</a></td>
               <td class="govuk-table__cell govuk-!-font-weight-bold">
                 <p class="green-font govuk-!-margin-bottom-1 govuk-!-font-weight-bold">Job finished</p>
                 <p class="govuk-!-margin-bottom-1 govuk-!-font-weight-bold">23189 records</p>
@@ -107,32 +123,29 @@
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">19 October 2019 at 1:00pm	</th>
               <td class="govuk-table__cell">Lynne BURDON</td>
-              <td class="govuk-table__cell"><a href="#">Campus-identifiers-20200217-122234.csv</a></td>
-              <td class="govuk-table__cell">A52</td>
+              <td class="govuk-table__cell"><a href="#">ValidationMessagesRD--20200206.CSV.csv</a></td>
               <td class="govuk-table__cell govuk-!-font-weight-bold">
                 <p class="green-font govuk-!-margin-bottom-1 govuk-!-font-weight-bold">Job finished</p>
                 <p class="govuk-!-margin-bottom-1 govuk-!-font-weight-bold">23189 records</p>
                 <p class="govuk-!-margin-bottom-0 govuk-!-font-weight-bold">235 Warnings</p>
               </td>
-              <td class="govuk-table__cell"><a href="#">Campus-identifiersRD-202001051533-validation-report-20200101120523.CSV</a></td>
+              <td class="govuk-table__cell"><a href="#">ValidationMessagesRD--20200206-validation report-20200101120523.csv</a></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">18 September 2019 at 1:00pm	</th>
               <td class="govuk-table__cell">Lynne BURDON</td>
-              <td class="govuk-table__cell"><a href="#">Campus-identifiers-20200217-122234.csv</a></td>
-              <td class="govuk-table__cell">A51</td>
+              <td class="govuk-table__cell"><a href="#">ValidationMessagesRD--20200206.CSV.csv</a></td>
               <td class="govuk-table__cell govuk-!-font-weight-bold">
                 <p class="green-font govuk-!-margin-bottom-1 govuk-!-font-weight-bold">Job finished</p>
                 <p class="govuk-!-margin-bottom-1 govuk-!-font-weight-bold">23189 records</p>
                 <p class="govuk-!-margin-bottom-0 govuk-!-font-weight-bold">235 Warnings</p>
               </td>
-              <td class="govuk-table__cell"><a href="#">Campus-identifiersRD-202001051533-validation-report-20200101120523.CSV</a></td>
+              <td class="govuk-table__cell"><a href="#">ValidationMessagesRD--20200206-validation report-20200101120523.csv</a></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">17 August 2019 at 1:00pm	</th>
               <td class="govuk-table__cell">Lynne BURDON</td>
-              <td class="govuk-table__cell"><a href="#">Campus-identifiers-20200217-122234.csv</a></td>
-              <td class="govuk-table__cell">A50</td>
+              <td class="govuk-table__cell"><a href="#">ValidationMessagesRD--20200206.CSV.csv</a></td>
               <td class="govuk-table__cell govuk-!-font-weight-bold">
                 <p class="green-font govuk-!-margin-bottom-1 govuk-!-font-weight-bold">Job finished</p>
                 <p class="govuk-!-margin-bottom-1 govuk-!-font-weight-bold">23189 records</p>
@@ -142,106 +155,97 @@
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">15 July 2019 at 1:00pm	</th>
               <td class="govuk-table__cell">Lynne BURDON</td>
-              <td class="govuk-table__cell"><a href="#">Campus-identifiers-20200217-122234.csv</a></td>
-              <td class="govuk-table__cell">A49</td>
+              <td class="govuk-table__cell"><a href="#">ValidationMessagesRD--20200206.CSV.csv</a></td>
               <td class="govuk-table__cell govuk-!-font-weight-bold">
                 <p class="green-font govuk-!-margin-bottom-1 govuk-!-font-weight-bold">Job finished</p>
                 <p class="govuk-!-margin-bottom-1 govuk-!-font-weight-bold">23189 records</p>
                 <p class="govuk-!-margin-bottom-0 govuk-!-font-weight-bold">235 Warnings</p>
               </td>
-              <td class="govuk-table__cell"><a href="#">Campus-identifiersRD-202001051533-validation-report-20200101120523.CSV</a></td>
+              <td class="govuk-table__cell"><a href="#">ValidationMessagesRD--20200206-validation report-20200101120523.csv</a></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">18 June 2019 at 1:00pm	</th>
               <td class="govuk-table__cell">Lynne BURDON</td>
-              <td class="govuk-table__cell"><a href="#">Campus-identifiers-20200217-122234.csv</a></td>
-              <td class="govuk-table__cell">A48</td>
+              <td class="govuk-table__cell"><a href="#">ValidationMessagesRD--20200206.CSV.csv</a></td>
               <td class="govuk-table__cell govuk-!-font-weight-bold">
                 <p class="green-font govuk-!-margin-bottom-1 govuk-!-font-weight-bold">Job finished</p>
                 <p class="govuk-!-margin-bottom-1 govuk-!-font-weight-bold">23189 records</p>
                 <p class="govuk-!-margin-bottom-0 govuk-!-font-weight-bold">235 Warnings</p>
               </td>
-              <td class="govuk-table__cell"><a href="#">Campus-identifiersRD-202001051533-validation-report-20200101120523.CSV</a></td>
+              <td class="govuk-table__cell"><a href="#">ValidationMessagesRD--20200206-validation report-20200101120523.csv</a></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">23 May 2019 at 1:00pm	</th>
               <td class="govuk-table__cell">Lynne BURDON</td>
-              <td class="govuk-table__cell"><a href="#">Campus-identifiers-20200217-122234.csv</a></td>
-              <td class="govuk-table__cell">A48</td>
+              <td class="govuk-table__cell"><a href="#"></a></td>
               <td class="govuk-table__cell govuk-!-font-weight-bold"><span class="red-font">Job failed</span></td>
-              <td class="govuk-table__cell"><a href="#">Campus-identifiersRD-202001051533-validation-report-20200101120523.CSV</a></td>
+              <td class="govuk-table__cell"><a href="#">ValidationMessagesRD--20200206-validation report-20200101120523.csv</a></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">20  April 2019 at 1:00pm	</th>
               <td class="govuk-table__cell">Lynne BURDON</td>
-              <td class="govuk-table__cell"><a href="#">Campus-identifiers-20200217-122234.csv</a></td>
-              <td class="govuk-table__cell">A47</td>
+              <td class="govuk-table__cell"><a href="#">ValidationMessagesRD--20200206.CSV.csv</a></td>
               <td class="govuk-table__cell govuk-!-font-weight-bold">
                 <p class="green-font govuk-!-margin-bottom-1 govuk-!-font-weight-bold">Job finished</p>
                 <p class="govuk-!-margin-bottom-1 govuk-!-font-weight-bold">23189 records</p>
                 <p class="govuk-!-margin-bottom-0 govuk-!-font-weight-bold">235 Warnings</p>
               </td>
-              <td class="govuk-table__cell"><a href="#">Campus-identifiersRD-202001051533-validation-report-20200101120523.CSV</a></td>
+              <td class="govuk-table__cell"><a href="#">ValidationMessagesRD--20200206-validation report-20200101120523.csv</a></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">13 March 2019 at 1:00pm	</th>
               <td class="govuk-table__cell">Lynne BURDON</td>
-              <td class="govuk-table__cell"><a href="#">Campus-identifiers-20200217-122234.csv</a></td>
-              <td class="govuk-table__cell">A46</td>
+              <td class="govuk-table__cell"><a href="#">ValidationMessagesRD--20200206.CSV.csv</a></td>
               <td class="govuk-table__cell govuk-!-font-weight-bold">
                 <p class="green-font govuk-!-margin-bottom-1 govuk-!-font-weight-bold">Job finished</p>
                 <p class="govuk-!-margin-bottom-1 govuk-!-font-weight-bold">23189 records</p>
                 <p class="govuk-!-margin-bottom-0 govuk-!-font-weight-bold">235 Warnings</p>
               </td>
-              <td class="govuk-table__cell"><a href="#">Campus-identifiersRD-202001051533-validation-report-20200101120523.CSV</a></td>
+              <td class="govuk-table__cell"><a href="#">ValidationMessagesRD--20200206-validation report-20200101120523.csv</a></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">12 February 2019 at 1:00pm	</th>
               <td class="govuk-table__cell">Lynne BURDON</td>
-              <td class="govuk-table__cell"><a href="#">Campus-identifiers-20200217-122234.csv</a></td>
-              <td class="govuk-table__cell">A45</td>
+              <td class="govuk-table__cell"><a href="#">ValidationMessagesRD--20200206.CSV.csv</a></td>
               <td class="govuk-table__cell govuk-!-font-weight-bold">
                 <p class="green-font govuk-!-margin-bottom-1 govuk-!-font-weight-bold">Job finished</p>
                 <p class="govuk-!-margin-bottom-1 govuk-!-font-weight-bold">23189 records</p>
                 <p class="govuk-!-margin-bottom-0 govuk-!-font-weight-bold">235 Warnings</p>
               </td>
-              <td class="govuk-table__cell"><a href="#">Campus-identifiersRD-202001051533-validation-report-20200101120523.CSV</a></td>
+              <td class="govuk-table__cell"><a href="#">ValidationMessagesRD--20200206-validation report-20200101120523.csv</a></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">18 January 2019 at 1:00pm	</th>
               <td class="govuk-table__cell">Lynne BURDON</td>
-              <td class="govuk-table__cell"><a href="#">Campus-identifiers-20200217-122234.csv</a></td>
-              <td class="govuk-table__cell">A44</td>
+              <td class="govuk-table__cell"><a href="#">ValidationMessagesRD--20200206.CSV.csv</a></td>
               <td class="govuk-table__cell govuk-!-font-weight-bold">
                 <p class="green-font govuk-!-margin-bottom-1 govuk-!-font-weight-bold">Job finished</p>
                 <p class="govuk-!-margin-bottom-1 govuk-!-font-weight-bold">23189 records</p>
                 <p class="govuk-!-margin-bottom-0 govuk-!-font-weight-bold">235 Warnings</p>
               </td>
-              <td class="govuk-table__cell"><a href="#">Campus-identifiersRD-202001051533-validation-report-20200101120523.CSV</a></td>
+              <td class="govuk-table__cell"><a href="#">ValidationMessagesRD--20200206-validation report-20200101120523.csv</a></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">17 December 2018 at 1:00pm</th>
               <td class="govuk-table__cell">Lynne BURDON</td>
-              <td class="govuk-table__cell"><a href="#">Campus-identifiers-20200217-122234.csv</a></td>
-              <td class="govuk-table__cell">A43</td>
+              <td class="govuk-table__cell"><a href="#">ValidationMessagesRD--20200206.CSV.csv</a></td>
               <td class="govuk-table__cell govuk-!-font-weight-bold">
                 <p class="green-font govuk-!-margin-bottom-1 govuk-!-font-weight-bold">Job finished</p>
                 <p class="govuk-!-margin-bottom-1 govuk-!-font-weight-bold">23189 records</p>
                 <p class="govuk-!-margin-bottom-0 govuk-!-font-weight-bold">235 Warnings</p>
               </td>
-              <td class="govuk-table__cell"><a href="#">Campus-identifiersRD-202001051533-validation-report-20200101120523.CSV</a></td>
+              <td class="govuk-table__cell"><a href="#">ValidationMessagesRD--20200206-validation report-20200101120523.csv</a></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">17 November 2018 at 1:00pm</th>
               <td class="govuk-table__cell">Lynne BURDON</td>
-              <td class="govuk-table__cell"><a href="#">Campus-identifiers-20200217-122234.csv</a></td>
-              <td class="govuk-table__cell">A42</td>
+              <td class="govuk-table__cell"><a href="#">ValidationMessagesRD--20200206.CSV.csv</a></td>
               <td class="govuk-table__cell govuk-!-font-weight-bold">
                 <p class="green-font govuk-!-margin-bottom-1 govuk-!-font-weight-bold">Job finished</p>
                 <p class="govuk-!-margin-bottom-1 govuk-!-font-weight-bold">23189 records</p>
                 <p class="govuk-!-margin-bottom-0 govuk-!-font-weight-bold">235 Warnings</p>
               </td>
-              <td class="govuk-table__cell"><a href="#">Campus-identifiersRD-202001051533-validation-report-20200101120523.CSV</a></td>
+              <td class="govuk-table__cell"><a href="#">ValidationMessagesRD--20200206-validation report-20200101120523.csv</a></td>
             </tr>
 
           </tbody>

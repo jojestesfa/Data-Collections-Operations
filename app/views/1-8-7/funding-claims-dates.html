@@ -19,7 +19,7 @@
       <li class="govuk-breadcrumbs__list-item">
         <a class="govuk-breadcrumbs__link" href="dashboard">Home</a>
       </li>
-      <li class="govuk-breadcrumbs__list-item" aria-current="page">
+      <li class="govuk-breadcrumbs__list-item" aria-current="page" >
         <a class="govuk-breadcrumbs__link" href="reference-data-dashboard">Reference data</a>
       </li>
       <li class="govuk-breadcrumbs__list-item" aria-current="page">
@@ -27,10 +27,20 @@
       </li>
     </ol>
   </div>
+  <div class="banner-success-without-action status-hide" id="add-message">
+    <p class="banner-message">
+      New claim dates added successfully
+    </p>
+  </div>
+  <div class="banner-success-without-action status-hide" id="update-message">
+    <p class="banner-message">
+      Claim dates updated successfully
+    </p>
+  </div>
   <main class="govuk-main-wrapper app-main-class" id="main-content"  role="main">
     <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds govuk-!-margin-top-6">
-        <h1 class="govuk-heading-xl">Funding claim dates</h1>
+      <div class="govuk-grid-column-full govuk-!-margin-top-6">
+        <h1 class="govuk-heading-xl">Funding claim dates <button class="govuk-button position-right " data-module="govuk-button" id="add-new-claim-dates">Add new claim dates</button></h1>
       </div>
     </div>
     <div class="govuk-grid-row">
@@ -49,6 +59,50 @@
             </tr>
           </thead>
           <tbody class="govuk-table__body">
+            <tr class="govuk-table__row row-hide" id="add-table-row">
+              <td scope="row" class="govuk-table__cell">
+                <select class="govuk-select" id="sort" name="sort">
+                  <option value="published" selected>19/20-Final</option>
+                  <option value="published"d<>19/20-YearEnd</option>
+                </select>
+            </td>
+              <td class="govuk-table__cell"><input class="govuk-input govuk-input--width-7" type="date" id="date2" name="date" value="" placeholder="DD/MM/YYYY"></td>
+              <td class="govuk-table__cell"><input class="govuk-input govuk-input--width-7" type="date" id="date2" name="date" value="" placeholder="DD/MM/YYYY"></td>
+              <td class="govuk-table__cell"><input class="govuk-input govuk-input--width-7" type="date" id="date2" name="date" value="" placeholder="DD/MM/YYYY"></td>
+              <td class="govuk-table__cell"><input class="govuk-input govuk-input--width-7" type="date" id="date2" name="date" value="" placeholder="DD/MM/YYYY"></td>
+              <td class="govuk-table__cell"><select class="govuk-select" id="sort" name="sort">
+                <option value="published" selected>Y</option>  <option value="published" selected>N</option>
+              </select></td>
+              <td class="govuk-table__cell"><input class="govuk-input govuk-input--width-7" type="date" id="date2" name="date" value="" placeholder="DD/MM/YYYY"></td>
+              <td class="govuk-table__cell govuk-table__header--numeric"><button class="govuk-button" data-module="govuk-button" id="save-table-row">Save</button></td>
+            </tr>
+            <tr class="govuk-table__row row-hide" id="modify-added-table-row">
+              <td scope="row" class="govuk-table__cell">
+                <select class="govuk-select" id="sort" name="sort">
+                  <option value="published" selected>19/20-Final</option>
+                  <option value="published"d<>19/20-YearEnd</option>
+                </select>
+            </td>
+              <td class="govuk-table__cell"><input class="govuk-input govuk-input--width-7" type="date" id="date2" name="date" value="" placeholder="DD/MM/YYYY"></td>
+              <td class="govuk-table__cell"><input class="govuk-input govuk-input--width-7" type="date" id="date2" name="date" value="" placeholder="DD/MM/YYYY"></td>
+              <td class="govuk-table__cell"><input class="govuk-input govuk-input--width-7" type="date" id="date2" name="date" value="" placeholder="DD/MM/YYYY"></td>
+              <td class="govuk-table__cell"><input class="govuk-input govuk-input--width-7" type="date" id="date2" name="date" value="" placeholder="DD/MM/YYYY"></td>
+              <td class="govuk-table__cell"><select class="govuk-select" id="sort" name="sort">
+                <option value="published" selected>Y</option>  <option value="published" selected>N</option>
+              </select></td>
+              <td class="govuk-table__cell"><input class="govuk-input govuk-input--width-7" type="date" id="date2" name="date" value="" placeholder="DD/MM/YYYY"></td>
+              <td class="govuk-table__cell govuk-table__header--numeric"><button class="govuk-button" data-module="govuk-button" id="update-table-row">Save</button></td>
+            </tr>
+            <tr class="govuk-table__row row-hide" id="saved-table-row">
+              <td scope="row" class="govuk-table__cell">1920-YearEnd</td>
+              <td class="govuk-table__cell">22 October 2020 at 07:00</td>
+              <td class="govuk-table__cell">13 February 2021 at 18:00</td>
+              <td class="govuk-table__cell">10 February 2020 at 07:00</td>
+              <td class="govuk-table__cell">13 February 2020 at 18:00</td>
+              <td class="govuk-table__cell">N</td>
+              <td class="govuk-table__cell">13 February 2020 at 18:00</td>
+              <td class="govuk-table__cell"><button class="govuk-button modify-table-row" data-module="govuk-button" id="modify-table-row">Modify</button></td>
+            </tr>
             <tr class="govuk-table__row">
               <td scope="row" class="govuk-table__cell">1920-MidYear</td>
               <td class="govuk-table__cell">10 February 2020 at 07:00</td>
@@ -57,7 +111,7 @@
               <td class="govuk-table__cell">13 February 2020 at 18:00</td>
               <td class="govuk-table__cell">N</td>
               <td class="govuk-table__cell">13 February 2020 at 18:00</td>
-              <td class="govuk-table__cell"><button class="govuk-button" data-module="govuk-button" id="upload-csv">Modify</button></td>
+              <td class="govuk-table__cell"><button class="govuk-button modify-table-row" data-module="govuk-button" id="modify-table-row1">Modify</button></td>
             </tr>
             <tr class="govuk-table__row">
               <td scope="row" class="govuk-table__cell">1819-Final</td>

@@ -321,11 +321,21 @@ $(document).ready(function () {
       location.href="campus-identifiers-upload#reference-data-report";
       $('#new-csv-upload-row').hide();
   });
+  $("#upload-csv-validation").click(function() {
+      //location.href="validation-messages-1920#file-upload";
+      $('#new-upload').show();
+      setTimeout(function()
+      {
+        $('#new-upload span.spinner-uploading').hide();
+        $('#new-upload span.status-message').show();
+      }, 2500);
+  });
 
   $('#new-csv-upload-row').hide();
   //$('#new-csv-upload-spinner').fadeOut(3000);
 
   $('#new-csv-upload-spinner').fadeOut(2000, function(){$('#new-csv-upload-row').fadeIn(0)});
+
   $("#frm-button").click(function() {
     if ($('#unpublish').is(':checked')) {
                     window.location.replace("frm-report-choice-sel-unpublish");
@@ -733,62 +743,81 @@ $('#startRound3').click(function(e){
 });
 
 $('#startPeriodEnd').click(function(e){
-  //$(this).hide();
+  var processingContainer = $('#start-internal-report-sub-path span.status-processing-hide');
+  var statusHide = $('#start-internal-report-sub-path span.status-hide');
+
   $(this).addClass('govuk-button--disabled');
-  debugger;
-  // $(this).text('Pause');
-  //$('.green-dot').removeClass('hidden');
-  $('#wrapper').find('ul.app-task-list__items')[0].find('li')[0].removeClass('status-processing-hide');
-  $('.awaiting-1').addClass('line-height-adjustment');
-  $('.awaiting-1').text('in progress...');
-  $('.time-started').show();
+  processingContainer.removeClass('status-processing-hide');
   $('.spinner1').show();
-  $('.start-period-end-text').hide();
-  $('#continueState').removeClass('govuk-!-font-weight-bold');
-  $('#toBeContinued').addClass('govuk-!-font-weight-bold');
   setTimeout(function()
   {
-    $('.awaiting-1').hide();
+    processingContainer.addClass('status-processing-hide');
     $('.spinner1').hide();
-    $('.spinner2').show();
-    $('.hide-complete-1').show();
-    $('.awaiting-2').html('in progress...');
-    $('.awaiting-2').addClass('line-height-adjustment');
-  }, 0);
-  setTimeout(function()
-  {
-
-    $('.awaiting-2').hide();
-    $('.hide-complete-2').show();
-    $('.spinner2').hide();
-    $('.spinner3').show();
-    $('.awaiting-3').html('in progress...');
-    $('.awaiting-3').addClass('line-height-adjustment');
+    statusHide.removeClass('status-hide');
+    $('#start-internal-report-sub-path-button').removeClass('app-proceed-button-hide');
   }, 2000);
-  setTimeout(function()
-  {
-
-    $('.awaiting-3').hide();
-    $('.hide-complete-3').show();
-    $('.spinner3').hide();
-    $('.spinner4').show();
-    $('.awaiting-4').html('in progress...');
-    $('.awaiting-4').addClass('line-height-adjustment');
-
-  }, 5000);
-  setTimeout(function()
-  {
-
-    $('.spinner4').hide();
-    $('.awaiting-4').hide();
-    $('.hide-complete-4').show();
-    $('#startRound3').hide();
-    $('.green-dot').hide();
-    $('.govuk-warning-text__icon').removeClass('custom');
-  }, 7000);
-
   e.preventDefault();
 });
+
+
+$('.proceedButton').click(function(e){
+  var proceedToNext = $(this).closest('li.wrapper').next('li.wrapper');
+  proceedToNext.find('span#continueState:first').css('font-weight','bold');
+  proceedToNext.find('ul.status-hide:first').removeClass('status-hide');
+
+  proceedToNext.find('ul.status-hide:first li span.status-processing-hide').removeClass('status-processing-hide');
+  $('.spinner1').show();
+  setTimeout(function()
+  {
+    proceedToNext.find('ul.status-hide:first li span.status-processing-hide').addClass('status-processing-hide');
+    proceedToNext.find('ul.status-hide:first li span.status-hide').removeClass('status-hide');
+    $('.spinner1').hide();
+    //statusHide.removeClass('status-hide');
+    $('#start-internal-report-sub-path-button').removeClass('app-proceed-button-hide');
+  }, 2000);
+
+});
+
+
+$('#add-new-claim-dates').click(function(e){
+  $('#add-table-row').show();
+})
+$('#save-table-row').click(function(e){
+  $('.banner-success-without-action').hide()
+  $(this).closest('tr').hide();
+  $('#saved-table-row').show();
+  $('#add-message').show();
+  setTimeout(function()
+  {
+    $('#add-message').hide();
+  }, 3000);
+})
+
+$('.modify-table-row').click(function(e){
+  $('#modify-added-table-row').show();
+  $(this).closest('tr').hide();
+})
+
+$('#update-table-row').click(function(e){
+  $('.banner-success-without-action').hide()
+  $(this).closest('tr').hide();
+  $('#saved-table-row').show();
+  $('#update-message').show();
+  setTimeout(function()
+  {
+    $('#update-message').hide();
+  }, 3000);
+})
+
+$('#modify-rule').click(function(e){
+  $(this).closest('tr').hide();
+  $('#edit-row').show();
+})
+
+$('#save-rule').click(function(e){
+  $(this).closest('tr').hide();
+  $('#modify-row').show();
+})
 
 $(".rerun-job").click(function(e){
   $(this).hide();
